@@ -34,7 +34,7 @@ open ~/Applications/妥帖.app
 
 1. 首次使用时，从 [项目 GitHub 仓库](https://github.com/eastchendong/OK-Paste) 克隆仓库；已有本地副本时拉取最新的 `main`。也可以使用 GitHub Desktop 完成克隆或拉取。
 2. 在本地仓库中找到 `desktop-preview/preview/TuotieDesktopPreview-macos-arm64.zip`，双击解压。
-3. 双击解压得到的 `TuotieDesktopPreview.app`，体验既有版本的组件交互。该 ZIP 是拆分前已有的构建。
+3. 双击解压得到的 `TuotieDesktopPreview.app`，体验桌面组件交互。当前 ZIP 由独立仓库的 `cbdfcd9` 源码构建。
 
 首次克隆的终端操作示例：
 
