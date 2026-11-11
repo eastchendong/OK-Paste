@@ -16,7 +16,24 @@
 
 新配置默认使用 DeepSeek 官方 Chat Completions（`https://api.deepseek.com`，模型 `deepseek-flash`）。在妥帖菜单「设置」填写自己的 API Key，详见[模型接口](docs/model-api.md)。
 
-当前快照的拖放与结果反馈仍有源码依赖留在原工作区，构建状态见[项目记忆](PROJECT_MEMORY.md)。
+## 从源码构建
+
+在 macOS 上准备 Node 24、pnpm 和 Xcode Command Line Tools，从仓库根目录运行：
+
+```sh
+pnpm install --frozen-lockfile
+pnpm build
+```
+
+生成 macOS 桌面审查包时，在仓库根目录执行以下命令。产物位于 `desktop-preview/preview/`。
+
+```sh
+(cd desktop-preview && TUOTIE_CODESIGN_IDENTITY=- zsh build.sh --package-only)
+```
+
+审查包构建不会安装应用。日常安装的固定签名与运行时配置见[桌面宿主说明](desktop-preview/README.md)。
+
+## 运行
 
 已安装时直接打开 `~/Applications/妥帖.app`。不要为日常使用执行旧版 `pnpm start`。运行数据保存在 `~/Library/Application Support/Tuotie/runtime/.local/`，密钥和采集内容不提交。
 
