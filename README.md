@@ -1,5 +1,7 @@
 # 妥帖 / OK Paste
 
+[**下载 macOS arm64 预览包**](https://github.com/eastchendong/OK-Paste/releases/download/v0.3.0-preview/TuotieDesktopPreview-macos-arm64.zip) · Apple Silicon，macOS 13+
+
 基于参考内容、当前应用/目标位置和自然语言工作的本机桌面 Agent。日常入口为 Swift/AppKit 悬浮宿主，加载共享 HTML/JS 并启动 TypeScript 服务；Electron/React 入口保留作历史开发用途。
 
 **接手先读 [当前交接速读](docs/current-handoff.md)**。本仓库以课程仓库中已跟踪的原型文件为起点，包含拆分时这些文件的本机修改。
@@ -40,3 +42,7 @@ pnpm build
 Blender 已配置普通启动后自动接入；Figma 插件需打开一次，运行后自动连接和重连。连接成功不等于生成或写入成功；Blender 仍需预览后确认，普通应用仍需用户手动粘贴。完整支持范围见上表文档。
 
 组件源在 `ui/`，`components-preview.html` 等由脚本生成。[桌面宿主与分发包说明](desktop-preview/README.md) 保留安装和打包方法。概念汇报存放在原课程仓库。
+
+## 许可
+
+项目自有代码和素材采用 [PolyForm Noncommercial 1.0.0](LICENSE)，许可范围内可作非商业使用，商用须另获授权。第三方组件及素材沿用各自的授权，参见[素材来源与许可](assets/README.md)及随附的许可文件。

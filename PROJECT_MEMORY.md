@@ -1,5 +1,9 @@
 # 妥帖 / OK Paste · 项目记忆
 
+## 2026-11-11 · GitHub Releases 与非商用许可
+
+将已验证的 macOS arm64 预览 ZIP 发布为 [v0.3.0-preview](https://github.com/eastchendong/OK-Paste/releases/tag/v0.3.0-preview)。README 提供 ZIP 直链，仓库采用 PolyForm Noncommercial 1.0.0，第三方组件及素材沿用各自的授权。
+
 ## 2026-11-11 · macOS arm64 预览包更新
 
 从 `cbdfcd9` 的干净源码重新构建并替换 `desktop-preview/preview/TuotieDesktopPreview-macos-arm64.zip`。已校验 arm64 架构、ad-hoc 签名、ZIP 完整性与包内资源。SHA-256 为 `cf77c0b446467ba77ba67aa93b3a8e6fcacce280b902b1bd7dfad8bbaa59ddab`。
