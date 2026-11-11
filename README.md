@@ -4,6 +4,13 @@
 
 基于参考内容、当前应用/目标位置和自然语言工作的本机桌面 Agent。日常入口为 Swift/AppKit 悬浮宿主，加载共享 HTML/JS 并启动 TypeScript 服务；Electron/React 入口保留作历史开发用途。
 
+## 项目贡献者
+
+OK Paste 源自交互设计课程中的团队原型，独立仓库延续了两位组员的工作。
+
+- [**@ziqqyhi**](https://github.com/ziqqyhi) 搭建独立桌面组件预览，整理组件交互和预览包交接。
+- [**@WANYiran**](https://github.com/WANYiran) 实现 Office 实时编辑、跨应用粘贴及基于上下文的推荐，并参与 Agent 核心重构。
+
 **接手先读 [当前交接速读](docs/current-handoff.md)**。本仓库以课程仓库中已跟踪的原型文件为起点，包含拆分时这些文件的本机修改。
 
 | 需要了解 | 入口 |
