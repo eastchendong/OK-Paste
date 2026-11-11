@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-04",
+  "reportedIssue": "Reference traffic sign stalled at planning and existing apple assets dominated recommendations.",
+  "changes": [
+    "shared procedural modeling capability contract",
+    "reference-drop intent at actual cursor",
+    "pending-drop plan survives foreground updates",
+    "retry and canceled-planning recovery retain drop cursor",
+    "preview material API guidance without relaxing guard"
+  ],
+  "validation": {
+    "relatedTestsPassed": 21,
+    "newTestsPassed": 7,
+    "typeScript": "passed",
+    "realConfiguredModelAndIndependentBlender": "passed",
+    "cases": [
+      {
+        "case": "traffic-reference-with-only-unrelated-apple",
+        "assets": [
+          "apple.glb"
+        ],
+        "plan": {
+          "title": "在拖放落点创建红色 STOP 交通标志模型预览",
+          "needsClarification": false
+        },
+        "codeCalls": 1,
+        "lookCalls": 1,
+        "usedAssetImport": false,
+        "addedObjects": [
+          "StopSign_Face",
+          "StopSign_Back",
+          "StopSign_Border",
+          "StopSign_Pole",
+          "StopSign_TextMain",
+          "StopSign_TextSub"
+        ],
+        "originalUnchanged": true,
+        "cancelRestored": true
+      },
+      {
+        "case": "apple-reference-with-no-assets",
+        "assets": [],
+        "plan": {
+          "title": "在拖放落点程序化创建红苹果模型预览",
+          "needsClarification": false
+        },
+        "codeCalls": 1,
+        "lookCalls": 1,
+        "usedAssetImport": false,
+        "addedObjects": [
+          "AppleStem",
+          "AppleBody"
+        ],
+        "originalUnchanged": true,
+        "cancelRestored": true
+      }
+    ],
+    "systemAccessRejected": true,
+    "cancelRestoredFingerprint": true
+  },
+  "boundaries": {
+    "testTransport": "temporary JSON-lines adapter to independent background Blender, not production MCP transport",
+    "liveMcpTransportRetested": false,
+    "nativeDragRetested": false,
+    "userSceneModified": false,
+    "dailyClipboardModifiedByValidation": false,
+    "visualQuality": "Real rendered images reached the model; fixture framing crops the traffic sign and shows a small apple. No complete visual or geometry fidelity claim.",
+    "firstModelExecution": "Reached 16-turn limit on guarded global material/object queries; material-access guidance added and both cases rerun successfully; guard unchanged."
+  },
+  "runtime": {
+    "status": "synced_and_sidecar_restarted",
+    "sourceHashesMatch": true,
+    "health": true,
+    "phaseBefore": "planning",
+    "phaseAfter": "idle",
+    "nativeHostResigned": false,
+    "blenderTransactionModuleReloaded": false,
+    "userSceneEdited": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-05",
+  "feature": "native package capsule and companion flight",
+  "timingMs": {
+    "morph": 200,
+    "companionFlight": 560,
+    "arrivalUnfold": 240,
+    "cancelReturn": 320
+  },
+  "payload": "existing local pack-drag.okpaste file URL via NSDraggingSession",
+  "validation": {
+    "desktopTestsPassed": 77,
+    "newBehaviorTests": 8,
+    "uiArtifactConsistency": "passed",
+    "swiftTypecheck": "passed",
+    "nativeAppAndZipBuild": "passed",
+    "offscreenNativeViewFrames": [
+      "source",
+      "morph",
+      "capsule",
+      "capsule-one",
+      "capsule-200"
+    ],
+    "negativeGlobalScreenCoordinates": "passed"
+  },
+  "boundaries": {
+    "physicalEscapeRetested": false,
+    "nativeDragEndToEndRetested": false,
+    "multiMonitorNativeFlightRetested": false,
+    "offscreenGlassIsNotDesktopMaterialProof": true,
+    "modelTriggeredByMotion": false,
+    "sourceDataChangedByMotion": false
+  },
+  "runtime": {
+    "status": "installed_and_relaunched",
+    "previousSigningMode": "ad-hoc-cdhash",
+    "signingMode": "certificate",
+    "binaryMatchesBuild": true,
+    "uiMatchesBuild": true,
+    "serviceHealthy": true,
+    "accessibility": true,
+    "oldAccessibilityEntryRemoved": true,
+    "fixedSigningMigration": "completed_with_explicit_user_approval_and_actual_native_update_retention",
+    "activeVariant": "B-with-motion"
+  }
+}

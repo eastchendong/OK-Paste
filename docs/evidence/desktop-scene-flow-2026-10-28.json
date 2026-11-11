@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-10-28T00:47:00+08:00",
+  "flow": "Native desktop UI: browser Copy → custom instruction → Blender temporary preview → Apply → Undo",
+  "instruction": "保留篮内已有苹果，在篮外桌面的右侧再放一颗参考图中的苹果，尺寸自然，底部贴着桌面。",
+  "preview": {
+    "task": "f7c2ce6a-811c-482b-b29c-f685c8e52db2",
+    "status": {
+      "taskId": "f7c2ce6a-811c-482b-b29c-f685c8e52db2",
+      "version": 1,
+      "committed": false,
+      "changes": {
+        "added": [
+          "Apple_Red_New"
+        ],
+        "removed": [],
+        "modified": []
+      },
+      "originalUnchanged": true
+    },
+    "originalAssetObjects": [
+      {
+        "name": "apple",
+        "id": "668472a0-dfa9-4e11-9653-cb1f9dd856dd",
+        "position": [
+          -0.1175277978181839,
+          0.1732316017150879,
+          0.0824998989701271
+        ]
+      }
+    ],
+    "previewAssetObjects": [
+      {
+        "name": "Apple_Red_New",
+        "id": "cf4b582a-3a61-4e4b-9dd4-fe1e8b989259",
+        "position": [
+          0.8999999761581421,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "apple.001",
+        "id": "668472a0-dfa9-4e11-9653-cb1f9dd856dd",
+        "position": [
+          -0.1175277978181839,
+          0.1732316017150879,
+          0.0824998989701271
+        ]
+      }
+    ]
+  },
+  "commit": {
+    "status": {
+      "taskId": "f7c2ce6a-811c-482b-b29c-f685c8e52db2",
+      "version": 1,
+      "committed": true,
+      "changes": {
+        "added": [
+          "Apple_Red_New"
+        ],
+        "removed": [],
+        "modified": []
+      },
+      "originalUnchanged": null
+    },
+    "formalAssetObjects": [
+      {
+        "name": "apple",
+        "id": "668472a0-dfa9-4e11-9653-cb1f9dd856dd",
+        "position": [
+          -0.1175277978181839,
+          0.1732316017150879,
+          0.0824998989701271
+        ]
+      },
+      {
+        "name": "Apple_Red_New",
+        "id": "cf4b582a-3a61-4e4b-9dd4-fe1e8b989259",
+        "position": [
+          0.8999999761581421,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "formalMatchesCommittedState": true
+  },
+  "undo": {
+    "transactionRemoved": true,
+    "assets": [
+      {
+        "name": "apple",
+        "id": "668472a0-dfa9-4e11-9653-cb1f9dd856dd",
+        "position": [
+          -0.1175277978181839,
+          0.1732316017150879,
+          0.0824998989701271
+        ]
+      }
+    ]
+  },
+  "copyIdentityRegression": {
+    "checkedAt": "2026-10-27T16:39:57.766Z",
+    "added": [
+      "CopyIdentityCheck"
+    ],
+    "modified": [],
+    "originalUnchanged": true,
+    "commit": true,
+    "undoRestored": true
+  },
+  "limits": [
+    "Developer-operated UI, not new human acceptance",
+    "Two execution retries before successful mutation; import and collection-link guidance added afterwards",
+    "No claim of other app execution yet"
+  ]
+}

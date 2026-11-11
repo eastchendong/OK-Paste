@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-07",
+  "ui": {
+    "sharedComposer": true,
+    "defaultRecommendationEditable": true,
+    "customPromptDuringPlanning": true,
+    "frozenDropIdentity": true,
+    "previewRequiresApply": true,
+    "nativeWebKitLayoutPassed": true
+  },
+  "performanceChanges": [
+    "Skip repeated planning for custom prompt at a trustworthy frozen drop or existing preview; keep replanning for changed context/clarification.",
+    "First Blender recommendation limited to one direction and 1024 output tokens.",
+    "Reuse final model-checked look image for UI preview.",
+    "Limit automatic post-look corrections to one; preserve user-directed continuation.",
+    "Native completion polling reduced from1500ms to500ms."
+  ],
+  "checks": {
+    "backend": 324,
+    "desktop": 157,
+    "typescript": true,
+    "frontendBuild": true,
+    "uiArtifacts": true,
+    "signedNativeBuild": true
+  },
+  "realIsolatedBlender": {
+    "model": "existing glm-5.3-flash via Ark",
+    "recommendationMs": 15695,
+    "generationMs": 62931,
+    "calls": 3,
+    "previewChanged": true,
+    "originalUnchanged": true,
+    "commitConfirmed": true,
+    "undoRestored": true,
+    "geometryUnavailableReason": "inconsistent-window-metrics"
+  },
+  "boundaries": {
+    "sampleCount": 1,
+    "speedupGuarantee": false,
+    "userSceneWritten": false,
+    "physicalShortcutRetested": false,
+    "physicalDragRetested": false,
+    "deepseekActivated": false
+  },
+  "runtime": {
+    "installed": true,
+    "healthy": true,
+    "sourceHashesMatch": true,
+    "modelConfigurationPreserved": true,
+    "permissionsChanged": false
+  }
+}

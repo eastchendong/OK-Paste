@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>妥帖 Word 接口测试</title>
+<style>
+  body { margin:20px; font:14px/1.6 system-ui,sans-serif; color:#1c2024; }
+  h1 { font-size:18px; } button { margin:4px 0; padding:8px 12px; }
+  pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:12px; background:#f2f4f6; }
+</style>
+<h1>妥帖 Word 接口测试</h1>
+<p>仅在专用测试文稿中运行。保持文稿未保存，以验证读取的是当前编辑内容。</p>
+<button data-action="read" disabled>读取正文与选区</button>
+<button data-action="locate" disabled>定位测试段落</button>
+<button data-action="replace" disabled>替换选中测试文字</button>
+<p>替换后在 Word 按 ⌘Z，再读取正文，检查原文和格式是否恢复。此处不把反向替换冒充原生撤销。</p>
+<pre id="output" role="status">等待 Office.js 连接 Word…</pre>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<script type="module" src="word-probe.js"></script>
+</html>

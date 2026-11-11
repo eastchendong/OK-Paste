@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-28",
+  "version": "0.3.0",
+  "kind": "developer verification; synthetic sources only",
+  "logicTests": 67,
+  "sharedComponentTests": 16,
+  "nativeToolbar": {
+    "visual": "actual AppKit component rendered offscreen",
+    "image": "selection-toolbar-2026-10-28.png",
+    "actions": [
+      "Magic Copy",
+      "Start from here"
+    ],
+    "sizePoints": [
+      292,
+      40
+    ],
+    "previousSingleCopyPopup": "user confirmed appeared",
+    "latestNativeEndToEnd": "not verified after ad-hoc rebuild; last AX preflight false",
+    "noNewRecording": true
+  },
+  "contextChecks": [
+    "whole active package",
+    "discard late foreground plans",
+    "hide stale Blender directions on ChatGPT focus",
+    "empty bundle stays collapsed",
+    "empty anchor causes no capture or model call",
+    "later references remain assigned to explicit edit anchor",
+    "copy failure retains source bundle and preview"
+  ],
+  "jianying": {
+    "transport": "stdio",
+    "capcutMcpCommit": "2859abf0d2905df0020d7079408be5ce8d2186cd",
+    "pyJianYingDraft": "0.3.1",
+    "testedRealResources": [
+      "transition:叠化",
+      "video_scene_effect:动感模糊"
+    ],
+    "checks": [
+      "actual serialized catalog IDs",
+      "isolated preview",
+      "append draft index preserving other projects",
+      "refuse undo if newly encrypted native content appears",
+      "archive unchanged generated draft on undo",
+      "extract actual video contact sheet",
+      "blob video explicitly unreadable"
+    ],
+    "nativePlayback": "not verified; existing encrypted timeline is not edited"
+  }
+}

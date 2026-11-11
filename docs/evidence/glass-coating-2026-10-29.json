@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "kind": "actual WKWebView minimal fixture render",
+  "scope": "WebKit white coating only; native NSGlassEffectView and real desktop backdrop are not part of this fixture",
+  "background": "same repeating blue / teal stripes at corresponding control positions",
+  "controls": [
+    "recommendation button",
+    "composer",
+    "bundle"
+  ],
+  "beforeWhiteAlpha": 0.7,
+  "afterWhiteAlpha": 0.3,
+  "afterSimulatedReflection": "none",
+  "samePointRGBBefore": [
+    0.8093424439430237,
+    0.8762664794921875,
+    0.9056666493415833
+  ],
+  "samePointRGBAfter": [
+    0.5280926823616028,
+    0.7024970650672913,
+    0.7781341671943665
+  ],
+  "samePointEqualAcrossThreeControls": true,
+  "sharedDesktopChecks": {
+    "passed": 21,
+    "failed": 0
+  },
+  "installedRuntimeSynced": true,
+  "hostReSigned": false,
+  "accessibilityAfterRestart": true,
+  "canonicalComponentHTMLSHA256": "d35c3edcb958030713eb521e0a3372fd06477859549a475e2e7535502569848f"
+}

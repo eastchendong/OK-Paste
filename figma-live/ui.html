@@ -1,0 +1,21 @@
+<!doctype html><html><meta charset="utf-8"><style>html,body,iframe{margin:0;width:100%;height:100%;border:0}body{font:13px system-ui;color:#183b68;background:#f6f7f8}#connection{padding:16px;line-height:1.7}#connection small{color:#657080}iframe[hidden],[hidden]{display:none}</style>
+<div id="connection" role="status"><strong>正在自动连接妥帖…</strong><p>妥帖启动后会自动接通，无需反复打开插件。</p><small>使用期间请保持此插件运行。</small></div>
+<iframe id="bridge" hidden src="https://localhost:47722/figma.html"></iframe>
+<script>
+const frame=document.getElementById('bridge'),origin='https://localhost:47722',pending=new Map();
+let lastHeartbeat=Date.now();
+window.onmessage=event=>{
+ if(!event.data||typeof event.data!=='object')return;
+ if(event.source===frame.contentWindow&&event.origin===origin&&event.data.type==='bridge-heartbeat'){lastHeartbeat=Date.now();frame.hidden=false;document.getElementById('connection').hidden=true;return;}
+ if(event.source===frame.contentWindow&&event.origin===origin&&event.data.type==='host-command'){
+  const id=event.data.id;if(typeof id!=='string'||pending.has(id))return;
+  pending.set(id,setTimeout(()=>pending.delete(id),30000));parent.postMessage({pluginMessage:event.data},'*');
+ }else if(event.source!==frame.contentWindow&&event.data.pluginMessage&&event.data.pluginMessage.type==='host-result'){
+  // Figma may deliver sandbox replies without a parent Window as event.source.
+  const result=event.data.pluginMessage,timer=pending.get(result.id);if(!timer)return;
+  clearTimeout(timer);pending.delete(result.id);frame.contentWindow.postMessage(result,origin);
+ }
+};
+// A failed initial load contains no client script. Retry only outside host operations.
+setInterval(()=>{if(!pending.size&&Date.now()-lastHeartbeat>8000){lastHeartbeat=Date.now();frame.hidden=true;document.getElementById('connection').hidden=false;frame.src=origin+'/figma.html?reconnect='+lastHeartbeat;}},2000);
+</script></html>

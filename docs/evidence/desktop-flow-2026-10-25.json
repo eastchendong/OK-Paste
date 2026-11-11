@@ -1,0 +1,70 @@
+{
+  "recordedOn": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "taskId": "8e997be5-b655-49fe-b6e7-37e4633294d5",
+  "evidenceType": "Selected state transitions and API timing metadata from actual desktop run; not a full transcript or recording",
+  "userFeedback": "挺好的，整体下来除了比较慢没有问题",
+  "excludedEarlierReceipt": "Earlier completion-choice response was explicitly corrected as an accidental click; not counted",
+  "stages": [
+    {
+      "stage": "collected",
+      "firstObservedAtUTC": "2026-10-25T07:36:12.403Z"
+    },
+    {
+      "stage": "analyzing",
+      "firstObservedAtUTC": "2026-10-25T07:36:12.409Z"
+    },
+    {
+      "stage": "intent",
+      "firstObservedAtUTC": "2026-10-25T07:36:29.209Z"
+    },
+    {
+      "stage": "preparing",
+      "firstObservedAtUTC": "2026-10-25T07:36:56.011Z"
+    },
+    {
+      "stage": "preview",
+      "firstObservedAtUTC": "2026-10-25T07:41:03.608Z"
+    },
+    {
+      "stage": "committing",
+      "firstObservedAtUTC": "2026-10-25T07:41:32.806Z"
+    },
+    {
+      "stage": "done",
+      "firstObservedAtUTC": "2026-10-25T07:41:32.963Z"
+    }
+  ],
+  "timing": {
+    "intentMs": 16800,
+    "previewMs": 247597,
+    "commitMs": 157,
+    "executionModelRequests": 16,
+    "executionModelTotalMs": 245995,
+    "executionToolCalls": {
+      "execute_blender_code": 11,
+      "look": 2,
+      "get_scene_info": 2
+    }
+  },
+  "contextSummary": "Existing apple inside basket; actual drop hit tabletop outside basket. Recommended one additional apple on the table while preserving the basket apple.",
+  "observedPreviewChanges": {
+    "added": [
+      "OKPaste.AppleRoot.001",
+      "OKPaste.AppleRoot.002",
+      "apple.002"
+    ],
+    "removed": [
+      "OKPaste.AppleRoot"
+    ],
+    "modified": [
+      "apple"
+    ]
+  },
+  "limits": [
+    "No typed compound user request was recorded in this desktop run.",
+    "Visual success does not prove every object identity was preserved; old apple hierarchy changes require follow-up.",
+    "Current source includes later safeguards and outcome logging that were build/unit tested but not individually user tested.",
+    "No API Key, images, full prompts, raw logs, or hidden reasoning included."
+  ]
+}

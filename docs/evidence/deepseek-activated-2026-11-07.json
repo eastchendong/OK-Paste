@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-07",
+  "configuration": {
+    "base": "https://api.deepseek.com",
+    "model": "deepseek-flash",
+    "keyConfigured": true,
+    "fastExecution": true,
+    "recommendations": true
+  },
+  "apiChecks": [
+    {
+      "stage": "text",
+      "ok": true,
+      "durationMs": 836
+    },
+    {
+      "stage": "vision",
+      "ok": true,
+      "durationMs": 763
+    }
+  ],
+  "blender": {
+    "realModel": "deepseek-flash",
+    "realUpstreamMcp": true,
+    "independentBackgroundScene": true,
+    "originalUnchanged": true,
+    "tools": 7,
+    "commitConfirmed": true,
+    "undoRestored": true,
+    "geometryUnavailableReason": "inconsistent-window-metrics"
+  },
+  "compatibilityFix": "DeepSeek present_plan must use tool_choice=required; execution remains auto. Tool calls normalized to standard request fields.",
+  "runtime": {
+    "switched": true,
+    "clipboardUnchanged": true,
+    "persistentSignatureAndPermissionsPreserved": true,
+    "credentialsTracked": false
+  },
+  "boundaries": {
+    "nativePhysicalDragRetested": false,
+    "physicalShortcutRetested": false,
+    "productionSceneWritten": false,
+    "allCandidatesSemanticallyGuaranteed": false
+  },
+  "checks": {
+    "backendPassed": 325,
+    "targetedPassed": 45,
+    "typescript": true,
+    "uiConsistency": true
+  }
+}

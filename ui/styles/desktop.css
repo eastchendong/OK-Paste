@@ -1,0 +1,89 @@
+.desktop-overlay-mode { --g-blur:18px; --g-saturation:140%; --g-radius:22px; --g-angle:145deg; --g-highlight:.45; --g-shift:0px; --g-chroma:0 0 0 transparent; --desktop-glass-tint:var(--surface-glass-tint); }
+html, body { min-width: 0 !important; width: 100%; height: 100%; background: transparent !important; overflow: hidden !important; }
+.wallpaper, .catalog-sidebar, .catalog-view, .app { display: none !important; }
+.dock, .selection-menu, .detail-backdrop, .toast, .drop-confirm { pointer-events: auto; }
+.desktop-overlay-mode #bundle .bundle-header, .desktop-overlay-mode #bundle .bundle-card-copy { cursor: grab; }
+.desktop-overlay-mode #bundle { user-select:none; -webkit-user-select:none; }
+.drop-confirm { position: fixed; left: 50%; top: 38%; transform: translate(-50%, -50%); width: min(360px, calc(100vw - 48px)); z-index: 30; padding: 16px 16px 14px; border-radius: 22px; color: var(--slate-12); }
+.drop-confirm h3 { margin: 2px 0 8px; font-size: 16px; line-height: 1.3; }
+.drop-confirm p { margin: 0; }
+.drop-confirm-app { color: var(--jade-11); font-size: 12px; font-weight: 700; }
+.drop-confirm-copy { margin-top: 4px !important; color: var(--slate-12); font-size: 13px; line-height: 1.5; }
+.drop-confirm .task-actions { justify-content: flex-end; }
+.drop-confirm .task-actions button:disabled { opacity: .45; }
+.scene-changes { margin: 6px 14px; color: var(--slate-11); font-size: 12px; line-height: 1.4; }
+.office-result { margin: 8px 0; font-size: 13px; line-height: 1.65; color: var(--slate-11); }
+.office-result p { margin: 0 0 10px; max-height: 180px; overflow: auto; white-space: pre-wrap; }
+.office-result p:last-child { margin-bottom: 0; }
+#bundle .bundle-body { border-top:0; padding:0; }
+#bundle.demo-bundle:hover { transform:none; }
+.desktop-overlay-mode #intentPanel .direction-option.demo-glass { border-radius:var(--g-radius); background:var(--white-a9); }
+.desktop-overlay-mode #intentPanel .direction-composer.demo-glass { width:min(100%,300px); border-radius:var(--g-radius); background:var(--white-a9); }
+.desktop-overlay-mode #intentPanel .direction-composer.demo-glass:hover { transform:none; }
+.desktop-overlay-mode .work-composer.demo-glass { --g-outer-radius:var(--task-radius); background:var(--white-a8); border-color:var(--white-a8); }
+.glass, .demo-glass, .dock .direction-option, .dock .direction-status, .dock .direction-composer, .completion-header, .adjustment-menu {
+  -webkit-backdrop-filter: none !important; backdrop-filter: none !important;
+}
+/* AppKit already renders the glass. Keep one thin, shared wash instead of
+   covering it with the catalog's 70–90% white and simulated reflections. */
+.desktop-overlay-mode .desktop-native-glass { background:var(--desktop-glass-tint) !important; }
+.desktop-overlay-mode .desktop-native-glass.demo-glass::before { content:none !important; }
+.desktop-overlay-mode #intentPanel .direction-option.desktop-native-glass:hover { background:rgba(255,255,255,.36) !important; }
+.result-details {margin:8px 14px;font-size:12px;line-height:1.6;color:var(--slate-11);}
+.result-details p {max-height:180px;overflow:auto;white-space:pre-wrap;}
+.archive-list {display:grid;gap:4px;}
+.archive-item .bundle-card-copy {align-self:center;}
+.archive-item p,.archive-item small {font-size:12px;line-height:1.6;color:var(--slate-11);overflow-wrap:anywhere;}
+.archive-item p {margin:4px 0;white-space:pre-wrap;}
+.focus-location { padding:0 9px; }
+.focus-state { font-size:10px; font-weight:500; opacity:.65; }
+
+/* Every task phase shares the same content edge as the compact collection. */
+.desktop-overlay-mode #dock:is([data-assistant-state="working"],[data-assistant-state="complete"]) { width:48px; height:48px; }
+.desktop-overlay-mode #dock:is([data-assistant-state="working"],[data-assistant-state="complete"]) .pet-anchor { width:48px; height:48px; padding:0; }
+.desktop-overlay-mode #dock:is([data-assistant-state="working"],[data-assistant-state="complete"]) .pet-status { display:none; }
+.desktop-overlay-mode #dock:is([data-assistant-state="working"],[data-assistant-state="complete"]) #taskPanel { position:absolute; left:64px; top:0; width:var(--task-width); max-width:calc(100vw - 88px); margin:0; padding:0; border:0; background:transparent; box-shadow:none; visibility:visible; opacity:1; pointer-events:auto; transform:none; }
+.desktop-overlay-mode #taskPanel .work-composer, .desktop-overlay-mode #taskPanel .adjustment-composer { width:100%; margin:0; min-height:var(--task-composer-height); border-radius:var(--task-radius); box-shadow:var(--surface-stack-shadow); }
+.desktop-overlay-mode #taskPanel .icon-button { width:28px; height:28px; border-radius:10px; }
+.desktop-overlay-mode #taskPanel .work-stop { border-radius:50%; }
+.desktop-overlay-mode #taskPanel .icon-button .ui-icon { width:18px; height:18px; }
+.desktop-overlay-mode #taskPanel .work-stop .ui-icon { width:10px; height:10px; }
+
+.desktop-overlay-mode #taskPanel { overflow-y:auto; scrollbar-width:none; overscroll-behavior:contain; }
+
+/* Explicit paste uses the shared IP, composer, task and collection in one grid. */
+#officePastePanel { position:fixed; z-index:120; width:calc(64px + var(--task-width)); max-width:calc(100vw - 24px); pointer-events:auto; }
+#officePastePanel[hidden] { display:none; }
+.desktop-overlay-mode #officePastePanel #dock { position:relative; display:grid; grid-template-columns:48px minmax(0,1fr); column-gap:16px; row-gap:10px; align-items:start; width:100%; height:auto; left:0 !important; top:0 !important; bottom:auto !important; margin:0; padding:0; transform:none; }
+.desktop-overlay-mode #officePastePanel #dockPet { grid-column:1; grid-row:1; width:48px; height:48px; padding:0; margin:0; }
+.desktop-overlay-mode #officePastePanel #dock :is(#intentPanel,#taskPanel) { position:static; grid-column:2; grid-row:1; width:100%; max-width:none; margin:0; padding:0; border:0; background:transparent; box-shadow:none; transform:none; animation:none; transition:none; visibility:visible; opacity:1; pointer-events:auto; }
+.desktop-overlay-mode #officePastePanel #dock #bundleStack { position:static; grid-column:2; grid-row:2; width:100%; margin:0; }
+#officePastePanel :is(#intentPanel,#taskPanel,#bundleStack)[hidden] { display:none; }
+#officePastePanel :is(.pet-status,#directionActions) { display:none !important; }
+#officePastePanel .office-placement-note { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+#officePastePanel #intentInput { min-height:22px; padding:2px 4px; font-size:12px; line-height:22px; }
+#officePastePanel .direction-composer { width:100%; min-height:var(--task-composer-height); margin:0; padding:5px 7px 5px 14px; }
+#officePastePanel .paste-composer .mention-editor { position:relative; }
+#officePastePanel .paste-target-row { display:flex; align-items:center; gap:8px; padding:3px 8px 0 14px; min-height:24px; color:var(--slate-11); font-size:11px; }
+#officePastePanel [data-paste-target] { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+#officePastePanel [data-end-paste] { display:flex; align-items:center; justify-content:center; flex:none; width:24px; height:24px; padding:0; border:0; border-radius:50%; background:transparent; color:inherit; cursor:pointer; }
+#officePastePanel [data-end-paste]:hover { background:var(--slate-a3); }
+#officePastePanel [data-end-paste] .ui-icon { width:12px; height:12px; }
+#officePastePanel .paste-composer .mention-editor[data-empty="true"]::before { content:attr(data-placeholder); position:absolute; top:2px; left:4px; right:4px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--slate-11); pointer-events:none; }
+#officePastePanel .icon-button { width:28px; height:28px; border-radius:10px; }
+#officePastePanel .paste-processing { justify-content:space-between; color:var(--blue-12); font-size:13px; font-weight:600; }
+#officePastePanel .paste-processing .work-stop { flex-shrink:0; }
+#officePastePanel .paste-completion { display:flex; align-items:center; gap:8px; min-height:48px; padding:8px 12px 8px 16px; border:var(--surface-border); border-radius:var(--task-radius); box-shadow:var(--surface-stack-shadow); color:var(--blue-12); }
+#officePastePanel .paste-completion h3 { flex:1; margin:0; font-size:14px; line-height:22px; }
+#officePastePanel .paste-completion .secondary { flex-shrink:0; margin:0; min-height:28px; padding:5px 11px; border:0; border-radius:14px; background:var(--blue-a3); color:var(--blue-12); font-size:12px; font-weight:600; cursor:pointer; }
+#officePastePanel .paste-completion .secondary:hover { background:var(--blue-a4); }
+
+/* Folding changes only presentation, so active writes and drafts retain their lifetime. */
+#officePastePanel.folded { width:48px; }
+.desktop-overlay-mode #officePastePanel.folded #dock { grid-template-columns:48px; }
+.desktop-overlay-mode #officePastePanel.folded #dock > :not(#dockPet) { display:none; }
+#officePastePanel :is([data-end-paste], .completion-close) { width:auto; padding:0 8px; border-radius:12px; font-size:11px; }
+
+/* The panel settles immediately; the companion handles its own travel. */
+.desktop-overlay-mode #dock, .desktop-overlay-mode #dock .pet-anchor { transition:none; }
+.desktop-overlay-mode #dockBot { position:relative; z-index:2; }

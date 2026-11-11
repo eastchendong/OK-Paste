@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-27T17:00:04.144Z",
+  "sourceType": "text",
+  "instruction": "保留篮子和已有苹果。把桌面改成浅蓝色，在篮外桌面创建一个绿色小立方体，边长 0.12 米，不新增苹果。",
+  "changes": {
+    "added": [
+      "GreenCube"
+    ],
+    "removed": [],
+    "modified": [
+      "Table"
+    ]
+  },
+  "originalUnchanged": true,
+  "cancelRestored": true,
+  "result": "预览结果符合预期：桌面基色已改为浅蓝色，边长 0.12 米的绿色小立方体放在篮子右前方（约 x=0.95, y=-0.3）的桌面上，位于篮外且无重叠；篮子和苹果保持原样，未新增苹果。以上修改仅应用在临时预览副本中，尚未写入正式场景，请确认后提交。",
+  "toolCalls": 2
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-02",
+  "scope": "Word v2 structured patches, real Office.js host, real configured model, revision replacement and stepwise undo",
+  "fixture": "Word-v2-验收-20261102-2205.docx",
+  "isolation": {
+    "syntheticDocument": true,
+    "isolatedContentStore": true,
+    "originalUserDocumentPreserved": true,
+    "oldTaskFinishedWithUserApproval": true
+  },
+  "automatedChecks": {
+    "typescript": "passed",
+    "backendPassed": 142,
+    "backendSkipped": 10,
+    "desktopPassed": 56,
+    "generatedUi": "current",
+    "diffWhitespace": "passed"
+  },
+  "liveHost": {
+    "protocolVersion": 2,
+    "richInsertion": true,
+    "replacement": true,
+    "firstVersionRestored": true,
+    "originalBodyAndFormattingRestored": true,
+    "finalParagraphBoundaryGuardRetested": true
+  },
+  "liveModel": {
+    "successfulRevisions": 2,
+    "firstHeading": { "fontSizePt": 16, "bold": true, "color": "0070C0" },
+    "secondHeading": { "fontSizePt": 18, "bold": true, "color": "0070C0" },
+    "imagesInEachVersion": 1,
+    "stepwiseUndoRestoredOriginal": true
+  },
+  "runtime": { "updated": true, "health": true, "finalPhase": "idle" },
+  "notVerifiedInThisRun": [
+    "Physical global shortcut through the complete native UI",
+    "Word native Command+Z",
+    "All existing platform integrations"
+  ],
+  "limits": [
+    "Rich blocks require a paragraph start or empty line; plain text also supports mid-paragraph insertion",
+    "Edits are limited to the range created by this task",
+    "PNG/JPEG source images only; no arbitrary original document reformatting, tables or floating images",
+    "Version history is in memory, at most 20 revisions, with no restart recovery",
+    "Unknown host write outcomes freeze the task instead of automatic retry or rollback",
+    "Word may regenerate drawing identifiers; restoration compares main-body content and formatting, not complete file bytes",
+    "Excel and PowerPoint have not migrated to the Word multi-version protocol"
+  ],
+  "reproduction": "scripts/word-revision-check.ts"
+}

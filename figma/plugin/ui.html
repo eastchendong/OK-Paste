@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><style>body{font:12px system-ui;margin:16px;color:#283348}p{line-height:1.6}#status{font-weight:600}</style><p id="status">正在连接妥帖…</p><p>请在妥帖使用内容包。设计先在独立副本预览，确认后保留；原稿保留。关闭插件将断开连接。</p><script>
+const token=__TUOTIE_TOKEN__,url='http://localhost:47723',session=Date.now().toString(36)+Math.random().toString(36).slice(2);let sequence=0;
+const pending=new Map();
+window.onmessage=event=>{const message=event.data?.pluginMessage;const task=pending.get(message?.id);if(task){pending.delete(message.id);clearTimeout(task.timer);message.error?task.reject(new Error(message.error)):task.resolve(message.result);}};
+function plugin(payload){return new Promise((resolve,reject)=>{const id=String(++sequence);const timer=setTimeout(()=>{pending.delete(id);reject(new Error('Figma 操作超时'));},12000);pending.set(id,{resolve,reject,timer});parent.postMessage({pluginMessage:{id,...payload}},'*');});}
+async function request(path,body){const response=await fetch(url+path,{method:body?'POST':'GET',headers:{'X-Tuotie-Token':token,...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined});const result=await response.json();if(!response.ok)throw new Error(result.error||'连接失败');return result;}
+async function poll(){try{
+ const context=await plugin({kind:'snapshot'});await request('/snapshot',{session,context});
+ const {commands}=await request('/commands');
+ for(const command of commands){let response;try{response={result:await plugin({kind:'command',name:command.name,args:command.args})};}catch(error){response={error:error.message};}await request('/result',{id:command.id,...response});}
+ document.getElementById('status').textContent='已连接 · '+context.documentName;
+}catch(error){document.getElementById('status').textContent=error.message==='Failed to fetch'?'等待妥帖连接：请聚焦 Figma':error.message;}finally{setTimeout(poll,450);}}
+poll();
+</script></html>

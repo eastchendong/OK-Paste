@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-04",
+  "timezone": "Asia/Shanghai",
+  "branch": "wanyiran1104",
+  "revision": "2703537",
+  "scope": "Local Figma development plugin installation and connection only",
+  "plugin": {
+    "name": "妥帖 · 矢量创作",
+    "directory": "~/figma-live-plugin",
+    "id": "Figma-assigned ID retained locally; intentionally omitted",
+    "source": "prototype/figma-live",
+    "command": "connect",
+    "observedUiStatus": "已连接 · 交互设计"
+  },
+  "transport": {
+    "url": "https://localhost:47722",
+    "certificateExpires": "2026-12-04",
+    "certificateHosts": ["localhost", "127.0.0.1"],
+    "certificateIsCa": false,
+    "trust": "Current user SSL trust for the specific server certificate",
+    "hostnamePolicyStringUsed": false,
+    "tlsVerificationDisabled": false,
+    "systemHttpsStatus": 200,
+    "explicitCertificateVerifiedHttpsStatus": 200
+  },
+  "checks": {
+    "command": "pnpm exec vitest run tests/figma-host.test.ts tests/figma-live.test.ts tests/bridge-client.test.ts",
+    "filesPassed": 3,
+    "testsPassed": 21,
+    "installedCodeSyntaxCheck": true,
+    "installedUiMatchesSource": true
+  },
+  "documentMutationCommandsIssued": false,
+  "modelGenerationTested": false,
+  "undoWorkflowRetested": false,
+  "notes": [
+    "Old Tuotie MCP plugin files retained.",
+    "User completed all native system authentication prompts.",
+    "Chromium ignores macOS trust settings with a hostname-specific policy string; final trust uses the specific non-CA localhost server certificate.",
+    "Reuse the configured certificate and existing permissions to minimize further password prompts."
+  ]
+}

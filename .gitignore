@@ -1,0 +1,26 @@
+.env
+.env.*
+!.env.example
+.local/
+node_modules/
+.DS_Store
+Thumbs.db
+~$*
+*.log
+*.tmp
+*-preview.png
+/video/
+__pycache__/
+*.pyc
+
+dist/
+browser/content.js
+browser/background.js
+browser-image/background.js
+desktop-preview/build/
+desktop-preview/preview/*.app/
+*.blend1
+
+# Explicitly reviewed, synthetic demo evidence (root ignores *-preview.png).
+!docs/evidence/compound-preview.png
+!assets/models/apple-preview.png

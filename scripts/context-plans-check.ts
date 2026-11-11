@@ -1,0 +1,8 @@
+import path from'node:path';import fs from'node:fs';import{BlenderClient}from'../src/blender-client';import{AgentClient}from'../src/agent-client';
+const root=path.resolve('.'),c=new BlenderClient(root),agent=new AgentClient(root);const source='data:image/jpeg;base64,'+fs.readFileSync('assets/reference/apple.jpg').toString('base64');
+async function spatialAt(world:number[]){const code=`import bpy,json,spatial\nfrom bpy_extras import view3d_utils as v\nfrom mathutils import Vector\na=next(a for a in bpy.context.screen.areas if a.type=='VIEW_3D')\nr=next(r for r in a.regions if r.type=='WINDOW')\np=v.location_3d_to_region_2d(r,a.spaces.active.region_3d,Vector(${JSON.stringify(world)}))\nprint('OKPASTE_JSON:'+json.dumps(spatial.cursor_facts(bpy.context,a,r,p)))`;
+ const result=await c.raw('execute_blender_code',{code,user_prompt:'比较真实鼠标射线落点在篮子和篮外桌面时的意图推荐。'});const text=(result.content as any[]).filter(x=>x.type==='text').map(x=>x.text).join('\n');return JSON.parse(text.slice(text.lastIndexOf('OKPASTE_JSON:')+13));}
+try{await c.connect();const scene=await c.op('context');const screenshot=await c.look();const assets=[{name:'苹果',kind:'apple',path:path.join(root,'assets/models/apple.glb')}];const conversation=[{role:'user',text:'把参考图片中的物体再添加一个到我拖放的位置，保留现有物体，并避免重叠。请结合已有内容推荐。'}];const results:any={};
+ for(const[name,world]of[['inside',[0,.15,.1]],['outside',[.9,0,.005]]]as const){const cursor=await spatialAt([...world]);const context={...scene,cursor};const plan=await agent.plan({source,sceneImage:screenshot,context,conversation,assets});results[name]={cursor,plan};console.log(name,JSON.stringify(results[name]));}
+ fs.writeFileSync('.local/context-plans-check.json',JSON.stringify(results,null,2));
+}finally{await c.close();}

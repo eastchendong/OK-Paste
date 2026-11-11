@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-28",
+  "featureCommit": "25edf61",
+  "recordedSource": {
+    "name": "妥帖-Blender-完整演示-精简.mp4",
+    "sha256": "23bbe8d0007bd816b9a838da5469d2a1dc38ef38a3af935e883a2434cdd5e501",
+    "previousEvidence": "../../evidence/desktop-full-flow-2026-10-28.json"
+  },
+  "editing": {
+    "newScreenRecording": false,
+    "speed": "original",
+    "sourceCrop": [
+      0,
+      122,
+      1512,
+      860
+    ],
+    "notificationMask": [
+      752,
+      850,
+      760,
+      132
+    ],
+    "notice": "The first two videos show verified footage from before the 0.3 UI; the third is a labelled update using actual component art, not a claimed native end-to-end recording."
+  },
+  "videos": [
+    {
+      "name": "01-blender-full-flow.mp4",
+      "sha256": "d9b334da6a296e13d85218eeade154e2169c8d362de7f70dc47a2d8994862398",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "15/1"
+        }
+      ],
+      "format": {
+        "duration": "71.000000",
+        "size": "1504674"
+      }
+    },
+    {
+      "name": "02-preview-apply-undo.mp4",
+      "sha256": "2397ea27d71d1dae45bc83af9b019f2d4e519bbbad5f010ef7f27efdbbe038fb",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "15/1"
+        }
+      ],
+      "format": {
+        "duration": "38.000000",
+        "size": "720409"
+      }
+    },
+    {
+      "name": "03-v0.3-progress.mp4",
+      "sha256": "8b3739c52535acc6e7b36c0d7d236c8455565dbb58de1bb4eb5925e7ebea7022",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "15/1"
+        }
+      ],
+      "format": {
+        "duration": "30.000000",
+        "size": "428496"
+      }
+    }
+  ],
+  "review": {
+    "allThreeVideosDecodedWithoutErrors": true,
+    "sampledFramesVisuallyInspected": true,
+    "sourceBrowserTabsAndSystemMenubarRemoved": true,
+    "unrelatedBottomRightNotificationsMasked": true,
+    "latestFeatureVideoIsLabelledUpdateRatherThanNativeAcceptance": true
+  }
+}

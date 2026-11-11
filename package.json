@@ -1,0 +1,56 @@
+{
+  "name": "ok-paste-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/main.cjs",
+  "scripts": {
+    "build": "node scripts/sync-component-library.mjs && tsc --noEmit && vite build && node scripts/build.mjs",
+    "start": "pnpm build && node scripts/start.mjs",
+    "probe": "tsx scripts/probe.ts",
+    "test": "vitest run",
+    "blender": "/Applications/Blender.app/Contents/MacOS/Blender --python blender/start.py",
+    "check:placement": "tsx scripts/placement-check.ts",
+    "setup:mcp": "node scripts/setup.mjs",
+    "setup:blender-auto": "node scripts/setup-blender-auto.mjs",
+    "setup:office": "node scripts/setup-office.mjs",
+    "check:office": "tsx scripts/office-agent-check.ts",
+    "check:agent-scene": "tsx scripts/agent-scene-check.ts",
+    "test:blender-state": "python3 tests/blender-preview-state-check.py",
+    "check:blender-preview-commit": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python tests/blender-preview-commit-check.py",
+    "check:agent": "tsx scripts/agent-integration.ts",
+    "clipboard:serve": "tsx scripts/clipboard-serve.ts",
+    "clipboard:check": "tsx scripts/clipboard-browser-check.ts",
+    "setup:jianying": "node scripts/setup-jianying.mjs",
+    "setup:figma": "node scripts/prepare-figma-plugin.mjs",
+    "setup:figma-mcp": "tsx scripts/setup-figma.ts",
+    "pretest": "node scripts/sync-component-library.mjs",
+    "ui:build": "node scripts/sync-component-library.mjs",
+    "ui:check": "node scripts/build-ui.mjs --check",
+    "setup:desktop-signing": "python3 scripts/setup-desktop-signing.py",
+    "test:desktop-signing": "node --test desktop-preview/tests/desktop-signing.mjs && python3 -m unittest discover -s tests -p test_desktop_signing_setup.py"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "electron": "45.0.0",
+    "esbuild": "0.28.2",
+    "happy-dom": "21.0.4",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24"
+  }
+}

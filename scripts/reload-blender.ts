@@ -1,0 +1,3 @@
+import path from 'node:path';import{BlenderClient}from'../src/blender-client';
+const c=new BlenderClient(path.resolve('.'));
+try{await c.connect();console.log(await c.raw('execute_blender_code',{code:"import operations, importlib, spatial\n_active=bpy.context.window_manager.get('okpaste_ai_mode',False)\nfor task in list(operations.PREVIEWS):operations.cancel(task)\noperations.set_mode(False)\nbpy.utils.unregister_class(operations.OKPASTE_FH_reference)\nbpy.utils.unregister_class(operations.OKPASTE_OT_drop_reference)\nimportlib.reload(operations)\noperations.register("+JSON.stringify(path.resolve('.'))+")\noperations.set_mode(_active)\nimportlib.reload(spatial)\nprint('reloaded')",user_prompt:'更新测试原型的拖放接入，不更改正式用户场景。'}));}finally{await c.close();}

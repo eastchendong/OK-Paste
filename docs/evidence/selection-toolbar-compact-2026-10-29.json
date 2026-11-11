@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-29",
+  "beforeSize": [
+    240,
+    48
+  ],
+  "afterSize": [
+    214,
+    32
+  ],
+  "fontSize": 11,
+  "iconSize": 14,
+  "buttonHeight": 24,
+  "placement": "below full selection with 6 pt gap; flip above only if insufficient room; constrain to visible screen",
+  "nativePlacementTests": 9,
+  "browserFrontendTests": 12,
+  "sharedDesktopTests": 21,
+  "typeCheck": true,
+  "nativeBuild": true,
+  "nativeViewOffscreenRenderAndTextFit": true,
+  "browserFrontendVersion": "0.3.3",
+  "runtimeUpdated": true,
+  "nativeFrontmostSelectionEndToEndConfirmed": false,
+  "notes": "TextEdit synthetic selection was established, but target-window automation did not make it the source app observed by the host; no real foreground placement claim."
+}

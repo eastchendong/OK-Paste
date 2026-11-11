@@ -1,0 +1,71 @@
+import {afterEach,describe,expect,it} from 'vitest';
+import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {spawnSync} from 'node:child_process';
+import {ClipboardStore} from '../src/clipboard/store';import {JianyingTarget} from '../src/targets/jianying';import {observeVideo} from '../src/video-reference';
+const project=process.cwd(),python=path.join(project,'.local/jianying-venv/bin/python');
+const available=fs.existsSync(python),targets:JianyingTarget[]=[],roots:string[]=[];
+afterEach(async()=>{await Promise.all(targets.splice(0).map(target=>target.dispose()));roots.splice(0).forEach(root=>fs.rmSync(root,{recursive:true,force:true}));});
+function fixture(){
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'tuotie-jianying-'));roots.push(root);
+ fs.mkdirSync(path.join(root,'jianying'));fs.copyFileSync(path.join(project,'jianying/mcp_server.py'),path.join(root,'jianying/mcp_server.py'));
+ const store=new ClipboardStore(path.join(root,'.local/clipboard'));
+ fs.symlinkSync(path.dirname(path.dirname(python)),path.join(root,'.local/jianying-venv'),'dir');
+ const video=path.join(root,'素材.mp4');
+ const result=spawnSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-f','lavfi','-i','testsrc2=size=320x180:rate=30:duration=2','-c:v','libx264','-pix_fmt','yuv420p',video],{encoding:'utf8'});
+ if(result.status!==0)throw new Error(result.stderr);
+ const item=store.add({type:'video',source:{title:'转场参考'},body:{mime:'video/mp4',dataUrl:'data:video/mp4;base64,'+fs.readFileSync(video).toString('base64'),currentTime:0}});
+ const drafts=path.join(root,'real-drafts');fs.mkdirSync(drafts);
+ const old=path.join(drafts,'已有工程');fs.mkdirSync(old);fs.writeFileSync(path.join(old,'draft_info.json'),'encrypted-original-placeholder');
+ fs.writeFileSync(path.join(old,'draft_meta_info.json'),'encrypted-project-metadata');
+ fs.writeFileSync(path.join(drafts,'root_meta_info.json'),JSON.stringify({all_draft_store:[{draft_id:'original-id',draft_name:'已有工程',draft_fold_path:old}],draft_ids:['original-id'],user_setting:'preserve'}));
+ const target=new JianyingTarget(root,{appName:'剪映',bundleId:'com.lemon.lvpro',windowTitle:'已有工程'},store,drafts,'');targets.push(target);
+ return {root,store,item,target,drafts,old,media:path.resolve(store.directory,'files',item.body.file as string)};
+}
+describe('Jianying MCP',()=>{
+ it.skipIf(!available)('does not register or archive a draft on the verified incompatible 11.6.0 editor',async()=>{
+  const {root,store,drafts}=fixture();
+  const target=new JianyingTarget(root,{appName:'剪映',bundleId:'com.lemon.lvpro'},store,drafts,'11.6.0');targets.push(target);
+  const context=await target.read();expect(context.importIssue).toContain('无法打开');target.begin();
+  expect(()=>target.commit()).toThrow('预览和内容包已保留');
+  expect(JSON.parse(fs.readFileSync(path.join(drafts,'root_meta_info.json'),'utf8')).all_draft_store).toHaveLength(1);
+  expect(store.list()).toHaveLength(1);
+ });
+ it.skipIf(!available)('uses real catalog IDs in an isolated draft, installs it, and undoes without editing existing projects',async()=>{
+  const {target,media,drafts,old}=fixture();
+  const context=await target.read();expect(context.currentProject).toMatchObject({name:'已有工程',readableTimeline:false});
+  expect(target.tools().map(tool=>tool.name)).toContain('add_video_effect');
+  const transition=await target.invoke('describe_effect',{catalog:'transition',name:'叠化'}) as any;
+  expect(transition.result.metadata).toMatchObject({is_vip:false,resource_id:'6724845717472416269'});
+  target.begin();
+  await target.invoke('create_draft',{name:'model-cannot-overwrite-user-project',width:320,height:180,fps:30,replace:true});
+  await target.invoke('add_track',{draft:'ignored',track_type:'video',track_name:'main'});
+  const first=await target.invoke('add_video',{draft:'ignored',track:'main',path:media,start:0,duration:2}) as any;
+  await target.invoke('add_video',{draft:'ignored',track:'main',path:media,start:2,duration:2});
+  await target.invoke('add_transition',{draft:'ignored',segment_id:first.result.segment_id,transition:'叠化',duration:0.25});
+  const effect=await target.invoke('describe_effect',{catalog:'video_scene_effect',name:'动感模糊'}) as any;
+  await target.invoke('add_video_effect',{draft:'ignored',segment_id:first.result.segment_id,effect:'动感模糊'});
+  const preview=JSON.parse(fs.readFileSync(path.join(target.previewPath,'draft_content.json'),'utf8'));
+  expect(JSON.stringify(preview)).toContain('6724845717472416269');expect(JSON.stringify(preview)).toContain(effect.result.metadata.resource_id);
+  expect(target.previewChanged).toBe(true);expect(fs.readdirSync(drafts)).toHaveLength(2);
+  expect(fs.readFileSync(path.join(old,'draft_info.json'),'utf8')).toBe('encrypted-original-placeholder');
+  const installed=target.commit();expect(fs.existsSync(path.join(installed.path,'draft_content.json'))).toBe(true);
+  const installedContent=JSON.parse(fs.readFileSync(path.join(installed.path,'draft_content.json'),'utf8'));
+  const savedVideo=installedContent.materials.videos[0].path;
+  expect(savedVideo.startsWith(path.join(installed.path,'materials')+path.sep)).toBe(true);
+  expect(fs.readFileSync(savedVideo)).toEqual(fs.readFileSync(media));
+  fs.unlinkSync(media);expect(fs.statSync(savedVideo).size).toBeGreaterThan(0);
+  const index=JSON.parse(fs.readFileSync(path.join(drafts,'root_meta_info.json'),'utf8'));
+  expect(index.all_draft_store).toHaveLength(2);expect(index.draft_ids).toHaveLength(2);expect(index.all_draft_store[1].draft_json_file).toBe(path.join(installed.path,'draft_content.json')); expect(index.user_setting).toBe('preserve');
+  const changed=path.join(installed.path,'draft_info.json');fs.writeFileSync(changed,'encrypted-new-native-edit');
+  expect(()=>target.undo()).toThrow('草稿已经在剪映改变');
+  fs.unlinkSync(changed);target.undo();expect(fs.existsSync(installed.path)).toBe(false);
+  expect(JSON.parse(fs.readFileSync(path.join(drafts,'root_meta_info.json'),'utf8')).all_draft_store).toEqual([{draft_id:'original-id',draft_name:'已有工程',draft_fold_path:old}]);
+  expect(fs.readFileSync(path.join(old,'draft_info.json'),'utf8')).toBe('encrypted-original-placeholder');
+ },30000);
+ it.skipIf(!available)('observes actual copied video frames and does not claim inaccessible blob video was seen',async()=>{
+  const {root,store,item}=fixture();
+  const observed=await observeVideo(root,store,item);
+  expect(observed.image).toMatch(/^data:image\/jpeg;base64,/);expect(observed.observation).toMatchObject({sourceStartSeconds:0});
+  const inaccessible=store.add({type:'video',body:{resourceUrl:'blob:https://news.example/not-readable'}});
+  const unknown=await observeVideo(root,store,inaccessible);expect(unknown.image).toBe('');expect(unknown.observation).toMatchObject({readable:false});
+ },30000);
+});

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>妥帖 · 新版 IP 动效</title>
+  <style>
+    /* @tuotie:styles */
+    html,body { min-width:0; min-height:100%; }
+    body { margin:0; background:#f5f9fc; color:#233b4d; font:14px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif; }
+    .mp-page { width:min(100% - 64px,960px); margin:0 auto; padding:48px 0 40px; }
+    .mp-eyebrow { margin:0 0 8px; color:#658699; font-size:12px; letter-spacing:.14em; }
+    .mp-heading { margin:0; font-size:30px; font-weight:600; letter-spacing:-.04em; line-height:1.4; }
+    .mp-intro { margin:10px 0 28px; color:#6b8292; font-size:13px; }
+    .mp-topline { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:16px; }
+    .mp-tabs { display:flex; flex-wrap:wrap; padding:4px; gap:3px; border-radius:12px; background:#e9f0f5; }
+    .mp-tab { border:0; background:none; color:#698395; border-radius:9px; padding:8px 12px; font-size:13px; white-space:nowrap; }
+    .mp-tab[aria-selected="true"] { color:#214a65; background:#fff; box-shadow:0 1px 4px #42627b12; }
+    .mp-badge { color:#7190a3; font-size:12px; white-space:nowrap; }
+    .mp-panels { display:grid; grid-template-columns:minmax(0,1fr) 212px; gap:16px; }
+    .mp-card { min-width:0; margin:0; border:1px solid #dfebf2; border-radius:22px; background:#fff; overflow:hidden; }
+    .mp-stage-wrap { position:relative; width:100%; aspect-ratio:8/5; background:radial-gradient(ellipse at 50% 52%,#e8f5ff 0,#f6fbff 51%,#fff 78%); overflow:hidden; }
+    .mp-stage { position:absolute; left:0; top:0; width:560px; height:350px; transform-origin:0 0; transform:scale(var(--mp-scale,1)); pointer-events:none; user-select:none; }
+    .mp-stage::before { content:""; position:absolute; width:180px; height:16px; left:190px; top:273px; border-radius:50%; background:#9fc2dc18; filter:blur(5px); }
+    #mpLarge { position:absolute; left:152px; top:37px; --companion-size:256px; --companion-scale:4; }
+    .mp-caption { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:15px 20px; border-top:1px solid #edf3f7; font-size:12px; color:#7891a2; }
+    .mp-caption strong { color:#3d6076; font-weight:500; }
+    .mp-actual { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:30px 20px; text-align:center; }
+    .mp-actual-frame { display:grid; place-items:center; width:112px; height:112px; margin-bottom:24px; border:1px solid #e0edf5; border-radius:26px; background:#f7fbfe; }
+    #mpActual { --companion-size:48px; --companion-scale:.75; }
+    .mp-actual h2 { margin:0 0 6px; font-size:13px; font-weight:500; }
+    .mp-actual p { margin:0; color:#8197a5; font-size:11px; }
+    .mp-controls { margin-top:16px; padding:20px; border:1px solid #dfebf2; border-radius:18px; background:#fff; }
+    .mp-control-row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+    .mp-buttons { display:flex; gap:8px; }
+    .mp-control { border:1px solid #dbe8f0; border-radius:9px; padding:7px 14px; background:#f7fbfe; color:#41657b; font-size:12px; }
+    .mp-control.mp-primary { background:#e4f1fb; color:#275b7c; border-color:#cfe4f3; min-width:64px; }
+    .mp-time { color:#648194; font-size:12px; font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .mp-timeline { display:block; width:100%; margin:0; }
+    .mp-notes { display:flex; justify-content:space-between; gap:16px; margin:15px 2px 0; color:#7b92a2; font-size:12px; }
+    .mp-notes p { margin:0; }
+    .mp-reduced { display:none; }
+    .mp-page[data-reduced="true"] .mp-reduced { display:block; }
+    .mp-page[data-reduced="true"] .mp-control { opacity:.5; cursor:default; }
+    @media(max-width:640px) {
+      .mp-page { width:calc(100% - 32px); padding-top:28px; }
+      .mp-heading { font-size:25px; }
+      .mp-intro { max-width:29em; margin-bottom:22px; }
+      .mp-topline { align-items:flex-start; flex-direction:column; gap:10px; }
+      .mp-tabs { width:100%; }
+      .mp-tab { flex:1; padding:8px 11px; }
+      .mp-badge { padding-left:3px; }
+      .mp-panels { grid-template-columns:minmax(0,1fr); gap:12px; }
+      .mp-actual { flex-direction:row; justify-content:flex-start; padding:17px 22px; text-align:left; gap:20px; }
+      .mp-actual-frame { width:76px; height:76px; margin:0; border-radius:18px; flex:none; }
+      .mp-caption { padding:12px 16px; }
+      .mp-controls { padding:16px; margin-top:12px; }
+      .mp-control { padding:7px 11px; }
+      .mp-notes { flex-direction:column; gap:4px; }
+    }
+    @media(prefers-reduced-motion:reduce) { .mp-page * { animation:none !important; transition:none !important; } }
+  </style>
+</head>
+<body>
+  <main class="mp-page" id="mpPage">
+    <p class="mp-eyebrow">妥帖 TUOTIE</p>
+    <h1 class="mp-heading">折起灵感，妥帖回应</h1>
+    <p class="mp-intro">新版折角 IP · 七种表情，对应每一次真实互动</p>
+    <div class="mp-topline">
+      <div class="mp-tabs" role="tablist" aria-label="小人的状态">
+        <button class="mp-tab" role="tab" data-pose="idle" aria-selected="false">闲置</button>
+        <button class="mp-tab" role="tab" data-pose="nod" aria-selected="false">加入内容</button>
+        <button class="mp-tab" role="tab" data-pose="received" aria-selected="false">收到任务</button>
+        <button class="mp-tab" role="tab" data-pose="thinking" aria-selected="false">思考</button>
+        <button class="mp-tab" role="tab" data-pose="working" aria-selected="true">工作中</button>
+        <button class="mp-tab" role="tab" data-pose="success" aria-selected="false">成功</button>
+        <button class="mp-tab" role="tab" data-pose="failure" aria-selected="false">失败</button>
+      </div>
+      <span class="mp-badge" id="mpMode">2.4 秒 · 循环</span>
+    </div>
+    <section class="mp-panels" aria-label="同一个小人的两种尺寸">
+      <figure class="mp-card">
+        <div class="mp-stage-wrap" id="mpStageWrap">
+          <div class="mp-stage" id="mpStage" role="img" aria-label="放大观察：渐变折角角色扫视工作"><div id="mpLargeMount"><!-- @tuotie:companion-large --></div></div>
+        </div>
+        <figcaption class="mp-caption"><strong>放大观察</strong><span>同一角色 · 同一时间</span></figcaption>
+      </figure>
+      <section class="mp-card mp-actual" aria-label="48 点实际尺寸">
+        <div class="mp-actual-frame" id="mpActualMount"><!-- @tuotie:companion-actual --></div>
+        <div><h2>实际尺寸 · 48 pt</h2><p>在桌面边缘的大小</p></div>
+      </section>
+    </section>
+    <section class="mp-controls" aria-label="动效播放控制">
+      <div class="mp-control-row">
+        <div class="mp-buttons"><button class="mp-control mp-primary" id="mpPlay">暂停</button><button class="mp-control" id="mpReplay">重播</button></div>
+        <output class="mp-time" id="mpTime" for="mpTimeline">0.00 / 2.40 秒</output>
+      </div>
+      <input class="mp-timeline" id="mpTimeline" type="range" min="0" max="2400" step="1" value="0" aria-label="动效时间">
+    </section>
+    <div class="mp-notes"><p id="mpDescription">视线从左下扫到右上，铅笔轻轻跟随。</p><p class="mp-reduced">已减少动态：显示完整静态姿态。</p><p id="mpHint">拖动时间轴，查看每一帧。</p></div>
+    <noscript><style>
+      .mp-stage-wrap { min-height:220px; }
+      .mp-stage { width:100%; height:100%; transform:none; }
+      .mp-stage::before,.mp-controls,.mp-tabs,.mp-badge,#mpHint { display:none; }
+      #mpLarge { left:50%; top:50%; --companion-size:160px; --companion-scale:2.5; transform:translate(-50%,-50%); }
+    </style><p>当前显示静态小人；在浏览器打开此页可播放动效。</p></noscript>
+  </main>
+  <script>
+    /* @tuotie:companion-asset-base */
+    /* @tuotie:companion-components */
+    /* @tuotie:companion-motion */
+    (()=>{
+      const PAGE=document.getElementById('mpPage');
+      const ENGINE=window.TuotieCompanionMotion;
+      const DURATION=ENGINE.durations;
+      const LABELS={
+        idle:['5.6 秒 · 循环','安静等待，偶尔眨一下眼。','放大观察：折角角色轻轻眨眼'],
+        nod:['0.76 秒 · 播放一次','新资料已收到，轻轻点头回应。','放大观察：折角角色点头'],
+        received:['0.8 秒 · 播放一次','Wink 一下，准备开始。','放大观察：折角角色眨一只眼'],
+        thinking:['1.8 秒 · 循环','三个小气泡交替浮起，正在整理思路。','放大观察：折角角色思考冒泡'],
+        working:['2.4 秒 · 循环','视线从左下扫到右上，铅笔轻轻跟随。','放大观察：渐变折角角色扫视工作'],
+        success:['1.45 秒 · 播放一次','开心跳两下，星光亮起，最后安静落定。','放大观察：折角角色开心跳舞'],
+        failure:['1 秒 · 播放一次','轻轻低头，停下来等待下一步。','放大观察：折角角色低头'],
+      };
+      if(!document.getElementById('mpLarge'))document.getElementById('mpLargeMount').innerHTML=companionMarkup({id:'mpLarge',className:'orb',pose:'working'});
+      if(!document.getElementById('mpActual'))document.getElementById('mpActualMount').innerHTML=companionMarkup({id:'mpActual',className:'orb',pose:'working'});
+      const roots=[document.getElementById('mpLarge'),document.getElementById('mpActual')];
+      const timeline=document.getElementById('mpTimeline'),playButton=document.getElementById('mpPlay');
+      const media=window.matchMedia('(prefers-reduced-motion: reduce)');
+      // One clock drives both real components. A hidden view clears its previous
+      // timestamp, so returning to it never adds the time spent out of view.
+      const previewClock={pose:'working',time:0,playing:true,last:null,onScreen:true,reduced:media.matches};
+      function duration(){return DURATION[previewClock.pose]||0;}
+      function render(){
+        const end=duration();
+        if(previewClock.reduced)previewClock.time=end;
+        for(const root of roots)ENGINE.seek(root,previewClock.pose,previewClock.time);
+        timeline.max=String(end||1);timeline.value=String(previewClock.time);
+        timeline.disabled=!end||previewClock.reduced;
+        playButton.textContent=previewClock.playing&&end&&!previewClock.reduced?'暂停':'播放';
+        playButton.disabled=!end||previewClock.reduced;
+        document.getElementById('mpReplay').disabled=!end||previewClock.reduced;
+        document.getElementById('mpTime').textContent=`${(previewClock.time/1000).toFixed(2)} / ${(end/1000).toFixed(2)} 秒`;
+        PAGE.dataset.reduced=String(previewClock.reduced);
+      }
+      function setPose(pose){
+        if(!LABELS[pose])return;
+        previewClock.pose=pose;previewClock.time=0;previewClock.last=null;previewClock.playing=!previewClock.reduced;
+        for(const root of roots)ENGINE.setPose(root,pose,{eventKey:'motion-preview',animate:false,intro:false});
+        for(const tab of document.querySelectorAll('[data-pose]'))tab.setAttribute('aria-selected',String(tab.dataset.pose===pose));
+        document.getElementById('mpMode').textContent=LABELS[pose][0];
+        document.getElementById('mpDescription').textContent=LABELS[pose][1];
+        document.getElementById('mpStage').setAttribute('aria-label',LABELS[pose][2]);
+        render();
+      }
+      function seek(ms){previewClock.time=Math.max(0,Math.min(Number(ms)||0,duration()));previewClock.playing=false;previewClock.last=null;render();}
+      function play(){if(!duration()||previewClock.reduced)return;if(previewClock.time>=duration())previewClock.time=0;previewClock.playing=true;previewClock.last=null;render();}
+      function pause(){previewClock.playing=false;previewClock.last=null;render();}
+      function frame(now){
+        const canPlay=previewClock.playing&&!previewClock.reduced&&previewClock.onScreen&&!document.hidden&&duration()>0;
+        if(canPlay){
+          if(previewClock.last!==null){
+            const elapsed=Math.min(250,Math.max(0,now-previewClock.last));
+            previewClock.time+=elapsed;
+            if(ENGINE.isLoop(previewClock.pose))previewClock.time%=duration();
+            else if(previewClock.time>=duration()){previewClock.time=duration();previewClock.playing=false;}
+            render();
+          }
+          previewClock.last=now;
+        }else previewClock.last=null;
+        requestAnimationFrame(frame);
+      }
+      const resize=()=>document.getElementById('mpStage').style.setProperty('--mp-scale',document.getElementById('mpStageWrap').clientWidth/560);
+      new ResizeObserver(resize).observe(document.getElementById('mpStageWrap'));resize();
+      if(window.IntersectionObserver)new IntersectionObserver(entries=>{previewClock.onScreen=entries.some(entry=>entry.isIntersecting&&entry.intersectionRatio>=.15);previewClock.last=null;},{threshold:[0,.15]}).observe(document.getElementById('mpStageWrap'));
+      document.addEventListener('visibilitychange',()=>{previewClock.last=null;});
+      media.addEventListener('change',event=>{previewClock.reduced=event.matches;previewClock.last=null;if(event.matches)previewClock.playing=false;render();});
+      document.querySelectorAll('[data-pose]').forEach(tab=>tab.addEventListener('click',()=>setPose(tab.dataset.pose)));
+      timeline.addEventListener('input',()=>seek(timeline.value));
+      playButton.addEventListener('click',()=>previewClock.playing?pause():play());
+      document.getElementById('mpReplay').addEventListener('click',()=>{seek(0);play();});
+      window.TuotieMotionPreview=Object.freeze({setPose,seek,play,pause,state:()=>({pose:previewClock.pose,time:previewClock.time,duration:duration(),playing:previewClock.playing,reduced:previewClock.reduced,onScreen:previewClock.onScreen,suspended:document.hidden||!previewClock.onScreen})});
+      setPose('working');requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>

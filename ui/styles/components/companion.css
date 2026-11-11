@@ -1,0 +1,16 @@
+/* One companion, four deliberate places: edge, package, work, reply. */
+.dock[data-assistant-state] { left:28px; bottom:28px; }
+.dock .pet-anchor { position:relative; width:100%; flex-direction:row; align-items:center; gap:10px; transition:padding .45s cubic-bezier(.2,.8,.2,1); }
+.dock[data-assistant-state="idle"] { width:300px; }
+.dock[data-assistant-state="idle"] .orb { opacity:1; }
+.pet-status { max-width:216px; color:var(--blue-12); font-size:12px; font-weight:600; line-height:1.45; pointer-events:none; text-shadow:0 0 3px rgba(255,255,255,.95),0 1px 9px rgba(255,255,255,.8); }
+.dock[data-assistant-state="idle"] .pet-status { opacity:0; transition:opacity .2s; }
+.dock[data-assistant-state="idle"] .pet-anchor:is(:hover,:focus-within) .pet-status { opacity:.75; }
+.dock[data-assistant-state="ready"] .pet-anchor { padding-left:248px; }
+.dock[data-assistant-state="ready"] .pet-status { position:absolute; right:64px; text-align:right; }
+.dock[data-assistant-state="working"] { height:68px; bottom:clamp(230px,43vh,420px); }
+.dock[data-assistant-state="working"] .pet-anchor { padding-left:24px; }
+.dock[data-assistant-state="working"] .pet-status::after { content:""; display:inline-block; width:4px; height:4px; margin-left:7px; border-radius:50%; background:var(--blue-9); animation:work-beat 1s ease-in-out infinite; }
+.dock[data-assistant-state="complete"] { bottom:clamp(40px,12vh,110px); }
+.dock[data-assistant-state="complete"] .pet-anchor { padding-left:0; }
+@keyframes work-beat { 50% { opacity:.25; transform:scale(.6); } }

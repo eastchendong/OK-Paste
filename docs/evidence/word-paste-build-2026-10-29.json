@@ -1,0 +1,19 @@
+{
+  "scope": "Word 光标插入第一版，代码与本机宿主验证",
+  "automated": {
+    "typescript": "passed",
+    "prototype": {"passed": 79, "skipped": 10},
+    "desktop": {"passed": 35},
+    "nativeBuild": "passed",
+    "installedApp": "/Users/wanyiran/Applications/妥帖.app",
+    "nativeUI": "重新启动并展开内容包；AX 界面确认不再包含顶部输入框",
+    "localHTTPHealth": 200
+  },
+  "wordLive": {
+    "sideloaded": false,
+    "developmentCertificateTrusted": false,
+    "endToEndVerified": false,
+    "pending": "用户确认新增本地证书信任和 ReadWriteDocument 加载项权限",
+    "fixture": "独立合成文稿 文档2；用户 文档1 保留"
+  }
+}

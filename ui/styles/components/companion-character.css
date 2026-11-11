@@ -1,0 +1,67 @@
+/* Figma ai 形象 / 状态, 2026-11-07. Intrinsic SVG sizes are never overridden.
+   A 48pt source rig sits inside the existing 64pt animation stage. */
+.companion-character.orb {
+  position:relative; display:block; width:var(--companion-size,48px); height:var(--companion-size,48px);
+  overflow:visible; isolation:isolate; animation:none !important; color:#1f1e1e; pointer-events:none;
+}
+.companion-character img {
+  display:block; max-width:none; padding:0; margin:0; border:0;
+  user-select:none; pointer-events:none; -webkit-user-drag:none;
+}
+.companion-stage { position:absolute; left:0; top:0; width:64px; height:64px; transform:scale(var(--companion-scale,.75)); transform-origin:0 0; pointer-events:none; }
+.companion-placement { position:absolute; left:11px; top:8px; width:48px; height:48px; }
+.companion-rig,.companion-body,.companion-base,.companion-face { position:absolute; inset:0; width:48px; height:48px; }
+.companion-rig,.companion-body { transform-origin:50% 80%; }
+.companion-silhouette { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+.companion-art { position:relative; width:42.87229156px; height:42.87229156px; transform:rotate(-7.34276264deg); }
+.companion-art img { position:absolute; left:-8.76375px; top:-3.75525px; }
+.companion-thinking-shape,.companion-success-shape,.companion-failure-shape { visibility:hidden; }
+.companion-failure-shape { height:43.20525742px; }
+.companion-failure-shape .companion-art { width:43.4653244px; height:37.96148682px; }
+.companion-failure-shape .companion-art img { left:-8.62px; top:-3.75px; }
+.companion-eyes.orb-eyes { position:absolute; inset:0; width:48px; height:48px; animation:none !important; transform-origin:15px 20px; }
+.companion-eye { position:absolute; top:11.49988px; }
+.companion-eye-left { left:6.63135px; transform-origin:4.5px 8px; }
+.companion-eye-right { left:14.84058px; transform-origin:4.5px 8px; }
+.companion-thinking-eyes,.companion-gaze,.companion-happy-eyes,.companion-failure-eyes { position:absolute; inset:0; visibility:hidden; }
+.companion-thinking-eyes span,.companion-gaze span { position:absolute; width:5px; border-radius:99px; background:#1f1e1e; box-shadow:inset 0 1.376px 1.376px #ffffff40,.5px .5px 2px #ffffffcc; }
+.companion-thinking-eyes span:first-child { left:7px; top:17px; height:13px; }
+.companion-thinking-eyes span:last-child { left:14px; top:20px; height:8.847px; transform:rotate(-111.7deg); }
+.companion-gaze span:first-child { left:6.687px; top:22px; height:9px; transform:rotate(-9.2deg); }
+.companion-gaze span:last-child { left:15.99px; top:22px; height:9px; transform:rotate(33.85deg); }
+.companion-happy-eyes img { position:absolute; top:18px; }
+.companion-happy-eyes img:first-child { left:3.99975px; }
+.companion-happy-eyes img:last-child { left:13.99975px; }
+.companion-failure-eyes>span { position:absolute; transform:rotate(-4.86657deg); }
+.companion-failure-eyes>span:first-child { left:6.393px; top:22.004px; width:6.47936px; height:10.48037px; }
+.companion-failure-eyes>span:last-child { left:14.355px; top:21.526px; width:7.1228px; height:10.64263px; }
+.companion-failure-eyes img { position:absolute; left:-1.221px; top:-1.453px; }
+.companion-failure-eyes>span:last-child img { left:-.605px; top:-1.216px; }
+.companion-wink { position:absolute; left:-8.01428px; top:-2.20215px; visibility:hidden; opacity:0; }
+.companion-prop { position:absolute; visibility:hidden; opacity:0; pointer-events:none; }
+.companion-tool { left:0; top:31px; width:16px; height:20px; transform-origin:12px 16px; }
+.companion-tool>span { position:absolute; left:4.53px; top:.02px; width:6.52465px; height:19.007px; transform:rotate(-31.91deg); }
+.companion-bubble-left { left:4px; top:-7px; }
+.companion-bubble-middle { left:13px; top:-6px; }
+.companion-bubble-right { left:20px; top:-7px; }
+.companion-sparkle { width:8px; height:8px; transform-origin:center; }
+.companion-sparkle-top { left:31px; top:-5px; }
+.companion-sparkle-left { left:-3px; top:17px; }
+.companion-sparkle-right { left:44px; top:31px; }
+.companion-glint { display:block; width:8px; height:8px; background:#ffe588; clip-path:polygon(50% 0,64% 36%,100% 50%,64% 64%,50% 100%,36% 64%,0 50%,36% 36%); }
+.companion-sparkle-left .companion-glint { background:#94c9ff; }
+.companion-sparkle-right .companion-glint { background:#90e8da; }
+.companion-character[data-companion-pose="thinking"] .companion-normal-shape,
+.companion-character[data-companion-pose="success"] .companion-normal-shape,
+.companion-character[data-companion-pose="failure"] .companion-normal-shape,
+.companion-character:is([data-companion-pose="thinking"],[data-companion-pose="working"],[data-companion-pose="success"],[data-companion-pose="failure"]) .companion-eyes { visibility:hidden; }
+.companion-character[data-companion-pose="thinking"] :is(.companion-thinking-shape,.companion-thinking-eyes,.companion-bubble),
+.companion-character[data-companion-pose="working"] :is(.companion-gaze,.companion-tool),
+.companion-character[data-companion-pose="success"] :is(.companion-success-shape,.companion-happy-eyes,.companion-sparkle),
+.companion-character[data-companion-pose="failure"] :is(.companion-failure-shape,.companion-failure-eyes) { visibility:visible; opacity:1; }
+.companion-character[data-companion-pose="received"] .companion-base { visibility:hidden; }
+.companion-character:is([data-companion-pose="received"],[data-companion-pose="working"]) .companion-wink { visibility:visible; }
+.companion-character[data-companion-pose="received"] .companion-wink { opacity:1; }
+@media (prefers-reduced-motion:reduce) {
+  .companion-character * { animation:none !important; transition:none !important; }
+}

@@ -1,0 +1,25 @@
+{
+  "blender_version": "5.2.3 LTS",
+  "mesh_count": 1,
+  "vertex_count": 252,
+  "material_count": 1,
+  "loaded_images": [
+    "colormap"
+  ],
+  "bounds_min": [
+    -0.09814728051424026,
+    -0.09814728051424026,
+    0.0
+  ],
+  "bounds_max": [
+    0.09814728051424026,
+    0.09814728051424026,
+    0.19075341522693634
+  ],
+  "dimensions": [
+    0.19629456102848053,
+    0.19629456102848053,
+    0.19075341522693634
+  ],
+  "note": "Imported in an isolated factory-startup background process. No basket placement or MCP connection tested."
+}

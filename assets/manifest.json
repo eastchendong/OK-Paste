@@ -1,0 +1,32 @@
+{
+  "prepared_on": "2026-10-25",
+  "reference": {
+    "file": "reference/apple.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Red_Apple.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+    "author": "Abhijit Tembhekar",
+    "license": "CC-BY-2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "changes": "None; original JPEG copied unchanged",
+    "sha256": "bfbaf6828607d9b94fb54056877497ac32926aa75c09de4abd61bc05ba24e2a7"
+  },
+  "model": {
+    "file": "models/apple.glb",
+    "source_page": "https://kenney.nl/assets/food-kit",
+    "download_url": "https://kenney.nl/media/pages/assets/food-kit/83086fa91c-1719418518/kenney_food-kit.zip",
+    "archive_member": "Models/GLB format/apple.glb",
+    "author": "Kenney",
+    "license": "CC0-1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "style": "low-poly",
+    "changes": "Embedded the original colormap PNG into the GLB binary; geometry, UVs, and material settings unchanged",
+    "source_glb_sha256": "2a80ab65d5bc2cb4f2bca1e8176cbb591849a288596d4b2e76e411338761a526",
+    "sha256": "f3c294364ca559791e0331cad68ad80d7f48d99b1064987106e2be1f3e2b5f11",
+    "embedded_texture": true
+  },
+  "mapping": {
+    "reference_category": "apple",
+    "fixed_asset": "models/apple.glb",
+    "image_to_3d_generation": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-02",
+  "scope": "AI paste collection / composer / processing / completed UI",
+  "deferred": [
+    "caret following before send",
+    "blur / app switching policy"
+  ],
+  "checks": {
+    "desktopTests": 54,
+    "backendTests": 120,
+    "backendSkipped": 10,
+    "typescript": "passed",
+    "generatedArtifacts": "current",
+    "diffCheck": "passed",
+    "webkit": [
+      "1024pt and 360pt collection and scroll hit regions",
+      "source hover link hit region",
+      "single default recommendation overflow",
+      "compact processing",
+      "IP / task / collection alignment",
+      "viewport bounds"
+    ]
+  },
+  "deployment": {
+    "runtimeSynced": true,
+    "backendRestarted": true,
+    "nativeSignatureChanged": false,
+    "finalUIRequiresHostReopen": true
+  },
+  "limits": [
+    "Native UI automation timed out after app relaunch",
+    "No new live Word document end-to-end test this turn",
+    "Existing revision failure recovery remains unresolved"
+  ],
+  "userDataChanged": false
+}

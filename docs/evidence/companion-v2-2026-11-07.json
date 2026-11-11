@@ -1,0 +1,149 @@
+{
+  "date": "2026-11-07",
+  "source": "https://www.figma.com/design/OYmXBbfDyz3btW5Gw1uMJ4/?node-id=447-3",
+  "variant": "folded pastel triangle",
+  "states": {
+    "idle": 5600,
+    "nod": 760,
+    "received": 800,
+    "thinking": 1800,
+    "working": 2400,
+    "success": 1450,
+    "failure": 1000
+  },
+  "sourceAssetCount": 14,
+  "validation": {
+    "desktopTests": {
+      "passed": 160,
+      "failed": 0
+    },
+    "typeScriptAndFrontendBuild": true,
+    "generatedUI": true,
+    "webKitReviewFrames": 22,
+    "webKitActualSizePoints": 48,
+    "webKitNarrowWidths": [
+      340,
+      390
+    ],
+    "webKitLifecycle": [
+      "hidden pause and resume",
+      "offscreen pause and resume",
+      "working autoplay",
+      "success one-shot event deduplication",
+      "reduced motion static state"
+    ],
+    "webKitCollectionAndBlenderLayout": true,
+    "webKitEdgeOfficeAndFlight": true,
+    "chromiumIconRendering": true,
+    "nativeSignedPackageBuild": true,
+    "zipMatchesSource": true,
+    "oldMascotLayersExcludedFromZip": true
+  },
+  "deployment": {
+    "installedApp": "~/Applications/妥帖.app",
+    "reopened": true,
+    "nativeScreenshotObservedNewIdleIP": true,
+    "fixedCertificateContinuityVerified": true,
+    "configurationUnchanged": true,
+    "collectionUnchanged": true,
+    "privateBackupsLocalOnly": true,
+    "health": true,
+    "phase": "idle",
+    "canUndo": false,
+    "iconsMatch": {
+      "AppIcon.icns": true,
+      "StatusIcon.png": true
+    },
+    "filesMatch": {
+      "components-preview.html": {
+        "runtime": true,
+        "installed": true
+      },
+      "desktop-live.js": {
+        "runtime": true,
+        "installed": true
+      },
+      "desktop-overlay.js": {
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/body.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/eye-left.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/eye-right.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/wink.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/body-thinking.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/body-success.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/body-failure.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/eye-failure-left.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/eye-failure-right.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/bubble.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/bubble-small.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/eye-happy-left.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/eye-happy-right.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      },
+      "assets/companion/pencil.svg": {
+        "source": true,
+        "runtime": true,
+        "installed": true
+      }
+    }
+  },
+  "limitations": [
+    "No Figma source nodes were edited.",
+    "Seven-state motion was checked in isolated views; live app idle appearance was visually confirmed.",
+    "No new real-model generation, physical drag or Office/Blender/Figma write acceptance was performed for this visual change.",
+    "WebKit soft SVG mask rasterization becomes visible in greatly enlarged review frames; Chromium generates the crisp full-size app icon."
+  ],
+  "zipSha256": "c47572e64deb257fa350c1839f8a0e8db61b5096dc01499a334f78675ab446ec"
+}

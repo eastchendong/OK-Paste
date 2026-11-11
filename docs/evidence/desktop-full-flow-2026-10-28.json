@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-10-28T04:39:47.064Z",
+  "source": "Native browser Copy and Tuotie UI controls; real Agent Plan + Blender MCP",
+  "chosenAction": "把篮里的苹果移到桌面篮外位置",
+  "snapshots": [
+    {
+      "taskId": "c2565f5b-a440-452e-b6c9-baa95b031ecb",
+      "stage": "preview",
+      "status": {
+        "taskId": "c2565f5b-a440-452e-b6c9-baa95b031ecb",
+        "version": 1,
+        "committed": false,
+        "changes": {
+          "added": [],
+          "removed": [],
+          "modified": [
+            "apple"
+          ]
+        },
+        "originalUnchanged": true
+      },
+      "originalFingerprint": "61fa8c583456fbd651673448c6d9c49a918492334a4d78694e1d87eaa9fcf61f",
+      "originalCount": 53,
+      "previewCount": 53
+    },
+    {
+      "stage": "applied",
+      "status": {
+        "taskId": "c2565f5b-a440-452e-b6c9-baa95b031ecb",
+        "version": 1,
+        "committed": true,
+        "changes": {
+          "added": [],
+          "removed": [],
+          "modified": [
+            "apple"
+          ]
+        },
+        "originalUnchanged": null
+      },
+      "fingerprint": "30e08d7933558884220bdd6f3caa12f97cafe04f95b0dcbcd9a3ae8f6e104074",
+      "count": 53
+    },
+    {
+      "stage": "undone",
+      "fingerprint": "61fa8c583456fbd651673448c6d9c49a918492334a4d78694e1d87eaa9fcf61f",
+      "count": 53,
+      "sceneIsPreview": false,
+      "exactRestoration": true
+    }
+  ],
+  "videos": [
+    {
+      "name": "tuotie-blender-verified-2026-10-28.mp4",
+      "kind": "unedited full foreground recording",
+      "sha256": "1a85a32ff11847e121241e8dbaab40b30e58c9dc5c14428118d06de59ecfad5b",
+      "localFolder": "~/Library/Application Support/Tuotie/runtime/.local/recordings",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1512,
+            "height": 982,
+            "r_frame_rate": "15/1"
+          }
+        ],
+        "format": {
+          "duration": "149.000000",
+          "size": "2444930"
+        }
+      }
+    },
+    {
+      "name": "妥帖-Blender-完整演示-精简.mp4",
+      "kind": "waiting sections removed, original playback speed",
+      "sha256": "23bbe8d0007bd816b9a838da5469d2a1dc38ef38a3af935e883a2434cdd5e501",
+      "localFolder": "~/Library/Application Support/Tuotie/runtime/.local/recordings",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1512,
+            "height": 982,
+            "r_frame_rate": "15/1"
+          }
+        ],
+        "format": {
+          "duration": "65.000000",
+          "size": "1234660"
+        }
+      }
+    }
+  ],
+  "editing": {
+    "raw": "tuotie-blender-verified-2026-10-28.mp4",
+    "edited": "妥帖-Blender-完整演示-精简.mp4",
+    "editing": "Removed idle waiting only; original playback speed, no generated scenes or compositing.",
+    "sourceRangesSeconds": [
+      [
+        0,
+        20
+      ],
+      [
+        62,
+        74
+      ],
+      [
+        100,
+        113
+      ],
+      [
+        125,
+        134
+      ],
+      [
+        138,
+        149
+      ]
+    ],
+    "rawDurationSeconds": 149,
+    "editedDurationSeconds": 65
+  },
+  "acceptance": "Developer-operated native browser and desktop UI, real Agent Plan and Blender tools; not a new human user acceptance.",
+  "review": "Decoded both MP4s, inspected timeline contact sheet and final frame; browser source, thumbnail, recommendations, preview, apply, undo visibly present."
+}

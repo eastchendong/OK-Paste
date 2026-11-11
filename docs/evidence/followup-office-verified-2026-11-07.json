@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-07",
+  "scenes": [
+    "table-create",
+    "table-append",
+    "persona-avatars"
+  ],
+  "checks": {
+    "backendPassed": 228,
+    "backendSkipped": 10,
+    "desktopPassed": 85,
+    "typecheck": "passed",
+    "build": "passed",
+    "uiArtifacts": "current",
+    "diff": "passed",
+    "readOnlyReview": "formula dedup and general-PPT compatibility fixes verified"
+  },
+  "modelChecks": {
+    "synthetic": true,
+    "hostWrites": false,
+    "at": "2026-11-07T05:30:56.354Z",
+    "results": [
+      {
+        "durationMs": 9435,
+        "scene": "table-create",
+        "options": [
+          {
+            "label": "清除重复行",
+            "instruction": "选区内001的两条记录编号、状态、备注完全相同，保留首条，清空第二条重复行内容，不移动其他记录或表头。",
+            "direction": "deduplicate"
+          },
+          {
+            "label": "统一状态用语",
+            "instruction": "资料表明\"报名成功\"与\"已报名\"表示同一状态，将002的状态统一改为\"报名成功\"，其余内容和格式保持不变。",
+            "direction": "normalize-text"
+          },
+          {
+            "label": "精简备注",
+            "instruction": "在不丢失上午参加、携带学生证、协助签到引导等关键事实的前提下，精简备注措辞，保留各条记录的所有限定条件。",
+            "direction": "length"
+          }
+        ]
+      },
+      {
+        "durationMs": 10556,
+        "scene": "table-append",
+        "options": [
+          {
+            "label": "状态写法统一",
+            "instruction": "把第二行状态列的\"已完成报名\"改为与原记录\"已报名\"一致的写法，其余两行内容、表头和旧记录保持不变。",
+            "direction": "match-existing"
+          },
+          {
+            "label": "备注标注来源",
+            "instruction": "在两行新增记录的备注列末尾补注来源链接 https://example.org/synthetic-records，保留备注中已有的事实描述，不改其他单元格。",
+            "direction": "cite-source"
+          },
+          {
+            "label": "精简长备注",
+            "instruction": "把两行备注压缩为简短陈述（如\"上午到场，带学生证，可协助签到引导\"\"下午参加，可协助物料核对与图书整理\"），保留原有事实，不改姓名和状态列。",
+            "direction": "length"
+          }
+        ]
+      },
+      {
+        "durationMs": 8350,
+        "scene": "persona-avatars",
+        "options": [
+          {
+            "label": "两张改完整显示",
+            "instruction": "将本任务补入的两张头像（new-left 的 person-a、new-right 的 person-b）从 cover 切换为 contain，完整显示人物不裁切；保持 shapeId 与 imageId 对应，不动原有参考头像、位置、大小、文字及其他内容。",
+            "direction": "image-contain"
+          }
+        ]
+      }
+    ]
+  },
+  "nativeHostWritesRetested": false,
+  "runtimeSwitched": true,
+  "runtimeVerification": {
+    "newSession": true,
+    "fileHashesVerified": 4,
+    "phase": "idle",
+    "canUndo": false,
+    "nativeAX": "updated runtime/ui/components-preview.html loaded; idle collection UI visible"
+  }
+}

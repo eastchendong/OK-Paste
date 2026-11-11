@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-29",
+  "authorization": "User explicitly allowed loading and live testing of the PowerPoint add-in with current presentation read/write access.",
+  "host": {
+    "version": "16.110.2 (26062818)",
+    "license": "Office LTSC Standard for Mac 2024",
+    "powerPointApi110RuntimeCheck": true,
+    "addInVisibleStatus": "已连接 · 选择图片后按 ⌥⌘V",
+    "manifest": "~/Library/Containers/com.microsoft.Powerpoint/Data/Documents/wef/tuotie-powerpoint.xml",
+    "existingCertificateTrustChanged": false
+  },
+  "scope": "Real Office.js capture, model planning, standalone preview, live application and Tuotie undo through the local API. System global shortcut and popup are not yet verified.",
+  "fixture": "runtime/.local/powerpoint-check-LhurZM/妥帖-PowerPoint-测试.pptx",
+  "runDirectory": "runtime/.local/powerpoint-previews/9bf04fc2-2e6e-4801-b1cc-ccb533c8309a",
+  "checks": {
+    "selectedOriginalShapeIds": ["4", "5"],
+    "slideCount": 25,
+    "lastSlideMarker": true,
+    "lastSlideNotesMarker": true,
+    "realModelSuggestionCount": 3,
+    "realModelPreparedBothImages": true,
+    "previewOpenedInPowerPointWithoutRepairPrompt": true,
+    "previewVisual": "01 navy preserved, 02 green A, 03 purple B contained inside ellipse",
+    "movedToSlide2BeforeApply": true,
+    "applyConfirmedByOffice": true,
+    "originalSlide1VisuallyUpdated": true,
+    "appliedSnapshotSavedFromNativePowerPoint": true,
+    "unselectedPortraitSemanticAndImageHashUnchanged": true,
+    "other24SlidesSemanticContextUnchanged": true,
+    "tuotieUndoConfirmedByOffice": true,
+    "undoVisual": "02 orange restored, 03 original empty ellipse restored",
+    "undoSavedFromNativePowerPoint": true,
+    "other24SlidesAfterUndoUnchanged": true,
+    "unselectedPortraitAndOriginalSlotAfterUndoUnchanged": true,
+    "restoredPictureId": "11",
+    "powerPointAndBridgeRegressionTestsPassed": 8,
+    "liveConflictTest": "not performed; covered by existing unit tests",
+    "nativeGlobalShortcut": "automated key routed to PowerPoint instead of Carbon handler; user manual check requested",
+    "popupVisual": "pending manual shortcut check"
+  },
+  "dataHandling": "Only synthetic test presentation edited. Two synthetic source images were added to the active bundle. Successful application archived the task bundle, including one pre-existing synthetic Word test text, under the existing whole-bundle contract. No user presentation was modified.",
+  "limits": "No automatic background removal, arbitrary drop point, text editing, complex grouped or animated object editing. Multiple API operations are not an atomic transaction. Undo of a replaced picture creates a new object ID."
+}

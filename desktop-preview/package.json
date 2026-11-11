@@ -1,0 +1,22 @@
+{
+  "name": "tuotie-desktop-preview-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/shared-api.mjs tests/companion-motion.mjs tests/companion-integration.mjs tests/companion-preview.mjs tests/pack-drag-motion.mjs tests/desktop-signing.mjs tests/collection-interaction.mjs tests/ui-components.mjs tests/word-paste.mjs tests/input-paste.mjs tests/text-drag-update.mjs tests/word-version.mjs tests/powerpoint-paste.mjs tests/vector-paste.mjs tests/figma-relay.mjs tests/followup-recommendations.mjs tests/office-followup-recommendations.mjs tests/figma-followup-recommendations.mjs tests/paste-resume.mjs",
+    "test:shortcut-capture": "zsh test-shortcut-capture.sh",
+    "test:source-location": "zsh test-source-location.sh",
+    "test:native-glass": "zsh test-native-glass.sh",
+    "test:collection-layout": "zsh test-collection-layout.sh",
+    "test:selection-placement": "zsh test-selection-toolbar-placement.sh",
+    "pretest": "node ../scripts/sync-component-library.mjs",
+    "test:pack-drag-visual": "zsh test-pack-drag-visual.sh",
+    "test:native-pack-drop": "zsh test-native-pack-drop.sh",
+    "test:result-overlay": "zsh test-result-overlay.sh",
+    "test:companion-motion": "zsh test-companion-motion.sh && zsh test-companion-edge.sh",
+    "test:companion-edge": "zsh test-companion-edge.sh"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.3"
+  }
+}

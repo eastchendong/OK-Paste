@@ -1,0 +1,163 @@
+{
+  "sourceFileKey": "OYmXBbfDyz3btW5Gw1uMJ4",
+  "sourceBoardId": "447:3",
+  "sourceStateBoardId": "462:533",
+  "sourceUrl": "https://www.figma.com/design/OYmXBbfDyz3btW5Gw1uMJ4/?node-id=447-3",
+  "exportedOn": "2026-11-07",
+  "approvedVariant": "folded pastel triangle",
+  "palette": {
+    "sky": "#94C9FF",
+    "mint": "#90F9E8",
+    "sun": "#FFE588",
+    "fold": "#59666A",
+    "eyes": "#1F1E1E"
+  },
+  "canvas": {
+    "width": 64,
+    "height": 64,
+    "sourceBodyBounds": [
+      48,
+      48
+    ],
+    "placement": [
+      11,
+      8
+    ],
+    "rigScale": 1
+  },
+  "notes": [
+    "Original SVG bytes, gradients, filters, masks and root dimensions are preserved.",
+    "Body/face composition follows Figma design context and exported render bounds.",
+    "Four-point success glints are new code-native motion accents based on the Figma success direction.",
+    "Temporary asset URLs are not recorded or used at runtime.",
+    "Figma source was read only; no original node was mutated."
+  ],
+  "assets": [
+    {
+      "file": "body.svg",
+      "nodeId": "462:535",
+      "method": "unaltered design-context SVG download",
+      "width": 55.3898,
+      "height": 55.3898,
+      "viewBox": "0 0 55.3898 55.3898",
+      "sha256": "82e1f175b0a3b43d13f8720d939557b980cf77aaf3c86481bb64eeb29985a731"
+    },
+    {
+      "file": "eye-left.svg",
+      "nodeId": "462:547",
+      "method": "unaltered design-context SVG download",
+      "width": 9.53182,
+      "height": 16.962,
+      "viewBox": "0 0 9.53182 16.962",
+      "sha256": "6d1fc24d8380ca911b0ad2eb9fc1eb780b6e84123ea3c443f99533ec4a84f9b7"
+    },
+    {
+      "file": "eye-right.svg",
+      "nodeId": "462:549",
+      "method": "unaltered design-context SVG download",
+      "width": 9.53182,
+      "height": 16.962,
+      "viewBox": "0 0 9.53182 16.962",
+      "sha256": "178f3af630e4e6d4076e4485c766fa8e6bfd7f6ebc0186c71bf4884ac0174d24"
+    },
+    {
+      "file": "wink.svg",
+      "nodeId": "462:551",
+      "method": "unaltered design-context SVG download",
+      "width": 56.058,
+      "height": 57.4128,
+      "viewBox": "0 0 56.058 57.4128",
+      "sha256": "7709a356631dec04adbfafe21e7bc7c6e2bca7c418e0e034e7f0b963b874b1b8"
+    },
+    {
+      "file": "body-thinking.svg",
+      "nodeId": "462:629",
+      "method": "unaltered design-context SVG download",
+      "width": 55.3898,
+      "height": 55.3898,
+      "viewBox": "0 0 55.3898 55.3898",
+      "sha256": "9b16002d9a9d51496a2afbf488fa6f3f03c9d8a0814e16a694066a637fa6366e"
+    },
+    {
+      "file": "body-success.svg",
+      "nodeId": "462:748",
+      "method": "unaltered design-context SVG download",
+      "width": 55.3898,
+      "height": 55.3898,
+      "viewBox": "0 0 55.3898 55.3898",
+      "sha256": "ad20644ba0203b221e887933c00dc447de69263d101f78aaca687af22e490345"
+    },
+    {
+      "file": "body-failure.svg",
+      "nodeId": "462:568",
+      "method": "unaltered design-context SVG download",
+      "width": 55.8377,
+      "height": 50.4789,
+      "viewBox": "0 0 55.8377 50.4789",
+      "sha256": "8323de2a95440e0c3d5bd87fd0e756901ba849777444d0e46df2cb69003f5c69"
+    },
+    {
+      "file": "eye-failure-left.svg",
+      "nodeId": "462:580",
+      "method": "unaltered design-context SVG download",
+      "width": 9.47591,
+      "height": 14.4328,
+      "viewBox": "0 0 9.47591 14.4328",
+      "sha256": "c00e94a300897dafe3d1107b8d8023781c8ecb1d96510891ec964fc981a072fb"
+    },
+    {
+      "file": "eye-failure-right.svg",
+      "nodeId": "462:582",
+      "method": "unaltered design-context SVG download",
+      "width": 10.002,
+      "height": 14.3219,
+      "viewBox": "0 0 10.002 14.3219",
+      "sha256": "18c62dee1d7348818b4fd06baee7208c985578da664f1b4ecce942214d183f59"
+    },
+    {
+      "file": "bubble.svg",
+      "nodeId": "462:673",
+      "method": "unaltered design-context SVG download",
+      "width": 15.0,
+      "height": 15.0,
+      "viewBox": "0 0 15 15",
+      "sha256": "fe3ac3c4019c3cb1a7710906eaec19eba981be96c99c6f0d095a4162ca96d9f2"
+    },
+    {
+      "file": "bubble-small.svg",
+      "nodeId": "462:678",
+      "method": "unaltered design-context SVG download",
+      "width": 13.0,
+      "height": 13.0,
+      "viewBox": "0 0 13 13",
+      "sha256": "90cd4ed8ae9bdcbb832fa58094e9fd3cb4bdabcdd883796a3859dc5d4f587bf4"
+    },
+    {
+      "file": "eye-happy-left.svg",
+      "nodeId": "462:801",
+      "method": "unaltered design-context SVG download",
+      "width": 12.0005,
+      "height": 10.0003,
+      "viewBox": "0 0 12.0005 10.0003",
+      "sha256": "8c4fc1f720df37fb768510d3a76ed9b045cd6a8bc86a330d5dca8797a1cb5282"
+    },
+    {
+      "file": "eye-happy-right.svg",
+      "nodeId": "462:804",
+      "method": "unaltered design-context SVG download",
+      "width": 12.0005,
+      "height": 10.0003,
+      "viewBox": "0 0 12.0005 10.0003",
+      "sha256": "f19211119235d137b512483800f929e449e5b4c2f951db831327148a8e0ed3e8"
+    },
+    {
+      "file": "pencil.svg",
+      "nodeId": "465:1008",
+      "method": "unaltered design-context SVG download",
+      "width": 6.52465,
+      "height": 18.4524,
+      "viewBox": "0 0 6.52465 18.4524",
+      "sha256": "e92e0444086582416f68f451f06cab71a6dec6dc1d9b2b06e6f7ffe1cdab722a"
+    }
+  ]
+}

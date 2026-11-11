@@ -1,0 +1,17 @@
+{
+  "name": "妥帖 · 矢量创作",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["none"],
+    "devAllowedDomains": ["https://localhost:47722"]
+  },
+  "menu": [
+    {"name": "连接妥帖", "command": "connect"},
+    {"name": "在空白文件建立测试画布", "command": "fixture"},
+    {"name": "在独立测试稿建立修订验收空画框", "command": "fixture-revisions"}
+  ]
+}

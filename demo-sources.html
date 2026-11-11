@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>演示来源</title>
+    <style>
+      :root {
+        --slate-1:#fcfcfd; --slate-2:#f9f9fb; --slate-3:#f0f0f3; --slate-6:#d9d9e0;
+        --slate-11:#60646c; --slate-12:#1c2024; --blue-3:#e6f4fe;
+        --blue-7:#8ec8f6; --blue-11:#0d74ce; --blue-12:#113264;
+        --jade-5:#c3e9d7; --jade-9:#29a383; --orange-5:#ffd19a;
+      }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; padding:28px 20px 70px; background:var(--slate-3); color:var(--slate-12); font:14px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif; }
+      main { max-width:760px; margin:auto; }
+      a { color:var(--blue-11); }
+      a:focus-visible { outline:0.5px solid var(--blue-11); outline-offset:3px; }
+      header { margin-bottom:23px; }
+      header a { font-size:12px; text-decoration:none; }
+      h1 { margin:11px 0 5px; font-size:28px; line-height:1.2; }
+      header p { margin:0; color:var(--slate-11); font-size:12px; }
+      article { scroll-margin-top:20px; margin:0 0 16px; padding:25px; border:0.5px solid var(--slate-6); border-radius:18px; background:var(--slate-1); }
+      article:target { border-color:var(--blue-7); background:var(--blue-3); }
+      h2 { margin:0 0 4px; font-size:18px; }
+      .kind { margin:0 0 16px; color:var(--slate-11); font-size:12px; }
+      article p:last-child { margin-bottom:0; }
+      .photo { display:grid; place-items:center; min-height:170px; margin:0 0 12px; border-radius:12px; background:linear-gradient(140deg,var(--orange-5),var(--jade-5) 60%,var(--jade-9)); color:var(--blue-12); font-size:12px; }
+      table { width:100%; border-collapse:collapse; }
+      th,td { padding:9px 12px; border-bottom:0.5px solid var(--slate-6); text-align:left; }
+      th { color:var(--slate-11); font-size:12px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header><a href="components-preview.html">← 返回组件预览</a><h1>演示来源</h1><p>此页用于演示从内容包跳转到素材原始位置。实际产品会打开相应的网站、应用或文件。</p></header>
+      <article id="research"><h2>研究资料页</h2><p class="kind">行业趋势摘录所在位置</p><p>过去五年，行业服务逐步从单一交付转向更紧密的协作。用户更关注结果与过程是否贴合自己的工作语境，而不只是得到一段通用内容。</p></article>
+      <article id="gallery"><h2>本地相册</h2><p class="kind">展览现场照片所在位置</p><div class="photo" role="img" aria-label="展览现场照片的占位预览">照片预览示意</div><p>这张照片用于演示图片素材的来源位置。</p></article>
+      <article id="dataset"><h2>项目资料表</h2><p class="kind">季度观察数据所在位置</p><table><thead><tr><th>季度</th><th>观察量</th><th>变化</th></tr></thead><tbody><tr><td>Q1</td><td>1,280</td><td>—</td></tr><tr><td>Q2</td><td>1,450</td><td>+13%</td></tr><tr><td>Q3</td><td>1,610</td><td>+11%</td></tr></tbody></table></article>
+      <article id="shared"><h2>共享链接</h2><p class="kind">来源类别无法识别时的跳转示例</p><p>即使没有来源图标，也可以通过链接打开对应内容。</p></article>
+    </main>
+  </body>
+</html>

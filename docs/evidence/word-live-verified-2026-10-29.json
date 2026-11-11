@@ -1,0 +1,41 @@
+{
+  "application": "Microsoft Word 16.110.2",
+  "fixture": "word-live-test-2026-10-29.docx",
+  "transport": "Office.js, authenticated local HTTPS, native target adapter",
+  "installed": true,
+  "certificate": {
+    "scope": "current user, SSL, localhost",
+    "expires": "2026-11-28",
+    "systemVerification": "passed",
+    "wordWebViewConnected": true
+  },
+  "realChecks": {
+    "threeIndependentModelSuggestions": true,
+    "unsavedMarkerEnteredModel": "E2E-1029-1951",
+    "previewDidNotWrite": true,
+    "insertedAtSavedCaretAfterCurrentCaretMoved": true,
+    "insertedExactlyOnce": true,
+    "allOtherTextEqual": true,
+    "undoRestoredTextExactly": true,
+    "documentChangedAfterPreviewWasRejected": true,
+    "rejectedCommitRetainedActiveSource": true,
+    "normalContentDirectoryRestored": true,
+    "testItemsAbsentFromNormalPackage": true,
+    "physicalShortcutObservedWordReady": true,
+    "popupInputAboveThreeSuggestions": true,
+    "popupAndBackendBothWordTarget": true
+  },
+  "limits": {
+    "fullGlobalShortcutGestureVerified": true,
+    "popupVisualVerified": true,
+    "pending": null,
+    "scope": "main body, plain text insertion; headers, footers, textboxes and broad formatting fidelity are not fully verified"
+  },
+  "automated": {
+    "prototypePassed": 95,
+    "prototypeSkipped": 10,
+    "desktopPassed": 39,
+    "typescript": "passed",
+    "diffWhitespace": "passed"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-30",
+  "status": "native-host-and-live-product-verified",
+  "target": "Figma Design",
+  "checks": {
+    "backendTestsPassed": 116,
+    "backendTestsSkipped": 10,
+    "desktopTestsPassed": 46,
+    "typescriptAndWebBuild": "passed",
+    "swiftBuildAndRuntimePreparation": "passed",
+    "developmentPluginProjectCreatedThroughFigma": true,
+    "localHttpsFigmaBridge": "connected"
+  },
+  "nativeHost": {
+    "scope": "live Figma host read/import/undo; existing validated SVG; no model request in this check",
+    "originalNodeCount": 19,
+    "originalsPreserved": true,
+    "addedNodeCount": 25,
+    "addedTypes": [
+      "FRAME",
+      "GROUP",
+      "VECTOR"
+    ],
+    "editable": true,
+    "restoredExactly": true
+  },
+  "liveProduct": {
+    "scope": "Synthetic file only; actual Figma current-page context and source photo sent to configured product model",
+    "globalShortcut": "User physically pressed Option+Command+V and confirmed anchored composer with three suggestions",
+    "suggestions": [
+      "画软木塞玻璃瓶角色：方瓶身加浅蓝白填色，软木塞当帽子，加笑脸手脚",
+      "画开心表情的塞子瓶：软木塞微微歪斜，眯眼大笑，摆挥手姿势",
+      "画害羞表情的塞子瓶：脸颊加腮红圆点，微笑嘴角，双腿并拢站立"
+    ],
+    "actualModelGenerationAndHostApply": true,
+    "continuationAndReplacement": true,
+    "generatedShapes": 10,
+    "namedGroups": 3,
+    "toolCallsPerGeneration": [
+      1,
+      1
+    ],
+    "originalReferenceFrames": "Visually preserved; separate native-host check compared all original nodes",
+    "firstOutput": "Face and bottle coordinates were inconsistent; follow-up corrected the native vector result",
+    "finalGeometry": "Cork, neck, body, face and limbs visible in target frame; native grouped layers visible in Figma",
+    "finalSvgSha256": "0abe7f4c78101b5a567503b4d40d77272baa40cdfb5de3d96a6f8a4dfd3aa428",
+    "undoScope": "Exact restoration verified in separate live-host import/undo check, not separately repeated on final model output",
+    "finalState": "Corrected model output retained in test file; task finished; test photo archived by normal task rules"
+  },
+  "fixes": [
+    "Relay accepts Figma source-less sandbox replies only for an outstanding trusted command",
+    "Coordinate prompt explicitly uses one shared canvas coordinate system; groups do not translate shapes",
+    "After acknowledged vector commit, completion uses the artifact description rather than a stale conversational delivery claim"
+  ],
+  "limits": [
+    "Single unlocked top-level Frame without auto layout",
+    "Current-page context; other pages listed by name only",
+    "Unique connected file name matching, not file-key identity verification",
+    "Flat paths, ellipses and rectangles; no arbitrary model scripts",
+    "No transaction recovery after plugin restart",
+    "Generation quality may require natural-language adjustment; coordinate prompt addition was build/regression checked, not a new model quality benchmark"
+  ],
+  "notes": [
+    "Formal Figma file was not modified; only dedicated synthetic test file used",
+    "User unlocked Mac manually; no lock-screen bypass",
+    "System proxy remains restored; Adobe installation/login not resumed",
+    "No Git commit or push in this turn"
+  ]
+}

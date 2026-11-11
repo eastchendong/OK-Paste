@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-06",
+  "approvedVariant": "light-blue hexagon",
+  "figmaSource": "https://www.figma.com/design/OYmXBbfDyz3btW5Gw1uMJ4/?node-id=374-192",
+  "motionMs": {
+    "working": 2400,
+    "success": 1450
+  },
+  "desktopTests": {
+    "passed": 121,
+    "failed": 0
+  },
+  "nativeWebKit": {
+    "checks": [
+      "real SVG dimensions",
+      "shared deterministic seek",
+      "loop boundary",
+      "48 pt component bounds",
+      "390/340 pt no overflow",
+      "reduced complete static poses",
+      "hidden no catch-up",
+      "offscreen no catch-up",
+      "real WAAPI working autoplay",
+      "success completes once without same-event replay",
+      "outer dock transform preserved"
+    ],
+    "fixedFramePngCount": 17,
+    "autoplay": [
+      {
+        "name": "engine-working-autoplay",
+        "result": {
+          "animationCount": 3,
+          "currentTimes": [
+            167,
+            167,
+            167
+          ],
+          "outerTransformPreserved": true,
+          "phase": "running",
+          "playing": true
+        }
+      },
+      {
+        "name": "engine-success-autoplay-once",
+        "result": {
+          "complete": true,
+          "currentTime": 1450,
+          "outerTransformPreserved": true,
+          "sameEventKeyReplayed": false
+        }
+      }
+    ],
+    "edge": {
+      "viewportWidth": 1024,
+      "success850Right": 1022.677,
+      "success950Right": 1023.086,
+      "officeMarginUnchanged": true,
+      "activeFlightDestinationUnchanged": true
+    },
+    "collectionAndOfficeLayout": "passed"
+  },
+  "runtime": {
+    "health": true,
+    "phase": "idle",
+    "canUndo": false,
+    "uncertain": false,
+    "sameInstalledHostRestarted": true,
+    "nativeScreenshotShowsNewCharacter": true,
+    "resigned": false,
+    "files": [
+      {
+        "source": "components-preview.html",
+        "sha256": "eb46536053391c8e31e302e7e19aeab06a2c29769d023d2f6fa0e362970c7596",
+        "runtimeMatches": true
+      },
+      {
+        "source": "desktop-preview/desktop-overlay.js",
+        "sha256": "954970402d489c44955788aadf724c2c361107ecb6152e62c3ad1eb30af65573",
+        "runtimeMatches": true
+      },
+      {
+        "source": "desktop-preview/desktop-live.js",
+        "sha256": "8f952457c9281da737e41d86d6ab1072356cd1cd8bfec14bd68b5c4dacbce30a",
+        "runtimeMatches": true
+      },
+      {
+        "source": "companion-motion-preview.html",
+        "sha256": "ad5e0c0e5e44054b7b9c94c6d25d9ed8923029c7ae48abb272befd2d4643dfbf",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/burst.svg",
+        "sha256": "86f21b56b8f0e8d4040d6f58f2b674294f2958b02dcde8a7021a8b31d63e7beb",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/body.svg",
+        "sha256": "849b07e88fce23ee9e293f489f7ac003032f7982011428898b98f7395220df55",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/sparkle.svg",
+        "sha256": "d31773974a78bfce86f4fb72e78fbbbb31b8a9673506c41f040efa5e3f5dc8bb",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/partyhat.svg",
+        "sha256": "69595c6cf8900359d78f0c0f7a0ee02b0a81997da00db4535d6f96f9fd71080f",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/mouth.svg",
+        "sha256": "c30bc1e6a08a7b750b2155b51df74f07aac3ad7c932b7a3714adc688bf363546",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/tool.svg",
+        "sha256": "65cd94668579917e3c3b16e30f92e14170a250f5d80785ef834e1e7b43f4b4d7",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/manifest.json",
+        "sha256": "702ccc3878f215212b13a5b723963f64e203eaf264ae59c47b2fa9e1e9561ed4",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/eye.svg",
+        "sha256": "2aea21057a3a1ac76bba3b377ca6b841912800e78438265a2fd17a11a7c67ef3",
+        "runtimeMatches": true
+      },
+      {
+        "source": "ui/assets/companion/hardhat.svg",
+        "sha256": "5532f094addbac1a8911ffaa122751222206ce59c2573954566023a0d84221f9",
+        "runtimeMatches": true
+      }
+    ]
+  },
+  "limits": [
+    "No Figma mutation",
+    "No user document or scene test write",
+    "No new full physical interaction acceptance",
+    "No video/audio or native brand icon update",
+    "No commit or push"
+  ]
+}

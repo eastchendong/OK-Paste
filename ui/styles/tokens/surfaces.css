@@ -1,0 +1,12 @@
+:root {
+  --task-width:340px;
+  --task-composer-height:40px;
+  --task-gap:10px;
+  --task-radius:22px;
+  --task-inset:14px;
+  --surface-border: .5px solid rgba(255,255,255,.72);
+  --surface-glass-tint: rgba(255,255,255,.30);
+  --surface-stack-shadow: 0 5px 9px rgba(20,36,55,.09), 0 15px 25px -18px rgba(20,36,55,.28);
+  --surface-card-highlight: inset 0 .5px 0 rgba(255,255,255,.65);
+  --surface-control-shadow: inset 0 .5px 0 rgba(255,255,255,.55), 0 2px 7px rgba(20,36,55,.08);
+}

@@ -1,0 +1,28 @@
+{
+  "catalog": [
+    "styles/tokens/palette.css",
+    "styles/tokens/surfaces.css",
+    "styles/foundation.css",
+    "styles/workbench/scenario.css",
+    "styles/components/collection.css",
+    "styles/components/companion.css",
+    "styles/components/recommendations.css",
+    "styles/components/composer.css",
+    "styles/components/task-results.css",
+    "styles/components/detail-dialog.css",
+    "styles/components/motion.css",
+    "styles/components/companion-character.css",
+    "styles/workbench/catalog.css",
+    "styles/components/glass.css",
+    "styles/components/selection-toolbar.css",
+    "styles/components/previews.css",
+    "styles/workbench/assets.css",
+    "styles/workbench/responsive.css"
+  ],
+  "desktop": [
+    "styles/desktop.css"
+  ],
+  "collection": [
+    "styles/collection.css"
+  ]
+}

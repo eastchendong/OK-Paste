@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "妥帖 Copy",
+  "version": "0.2.0",
+  "description": "把网页里选中的文字、图片、视频或其他内容写入妥帖剪贴板。",
+  "host_permissions": [
+    "http://127.0.0.1:47721/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

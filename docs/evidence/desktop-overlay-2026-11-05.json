@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-05",
+  "architecture": "shared-native-desktop-overlay; target adapters only return read-only geometry",
+  "tophat": {
+    "userReference": true,
+    "integrated": false,
+    "callableLocalAPIObserved": false
+  },
+  "blenderProductionReadOnly": {
+    "stdioMCPAndTCP": true,
+    "realViewportImage": true,
+    "objects": 56,
+    "activeTransactions": 0,
+    "sceneWritten": false
+  },
+  "isolatedModelMCP": {
+    "transport": "production-upstream-stdio-mcp-and-tcp-handlers",
+    "fixture": "independent-background-Blender-on-random-port",
+    "assets": [],
+    "plan": {
+      "title": "程序化创建橙色路锥（含黑色底座与白色横条）",
+      "needsClarification": false
+    },
+    "execution": {
+      "calls": 2
+    },
+    "preview": {
+      "changes": {
+        "added": [
+          "TrafficCone_Base",
+          "TrafficCone_Body",
+          "TrafficCone_Stripes"
+        ],
+        "removed": [],
+        "modified": []
+      },
+      "originalUnchanged": true,
+      "realImageBytes": 269934
+    },
+    "commitConfirmed": true,
+    "undoRestored": true
+  },
+  "modelCheckBoundary": "Upstream TCP handlers pumped in an independent background Blender; look used real camera rendering. No new native drag or physical shortcut proof.",
+  "sharedNativeOverlay": {
+    "appActivationUnchanged": true,
+    "appInstalled": false,
+    "expiryAndExplicitHide": true,
+    "invalidGeometryRejected": true,
+    "nativeWindowsOpened": true,
+    "negativeGlobalCoordinates": true,
+    "normalizedPixelGeometryMapped": true,
+    "overlappingHolesRemainTransparent": true,
+    "realPanelMouseTransparent": true,
+    "realPanelNeverKeyOrMain": true,
+    "replacementTimerProtected": true,
+    "result": "passed",
+    "retinaAndOneX": true,
+    "systemInputSynthesized": false
+  },
+  "geometryCalibration": {
+    "blenderClientPixels": [
+      3024,
+      1660
+    ],
+    "blenderRawClientPoints": [
+      1512,
+      830
+    ],
+    "nativeWindowPoints": [
+      1512,
+      862
+    ],
+    "backingScale": 2,
+    "topInsetPoints": 32,
+    "productionSceneWritten": false
+  },
+  "automated": {
+    "backendPassed": 231,
+    "desktopPassed": 109,
+    "pureGeometryPythonPassed": 7,
+    "typeScript": "passed",
+    "swiftTypecheck": "passed",
+    "uiArtifacts": "current"
+  },
+  "boundaries": {
+    "blenderInternalDrawingRemoved": true,
+    "nativeOverlayOverRealGeneratedResultEndToEnd": false,
+    "physicalDragAndEscape": false,
+    "physicalShortcut": false,
+    "allAppGeometryAdapters": false,
+    "mixedScaleMultiDisplayUserAcceptance": false
+  },
+  "deployment": {
+    "status": "installed-and-started",
+    "persistentSigningUsed": true,
+    "installedIdentityContinuityVerified": true,
+    "permissionsChanged": false,
+    "health": true,
+    "blenderConnected": true,
+    "runtimeSourceHashesMatch": true,
+    "obsoleteBlenderDrawingHelperExists": false,
+    "phase": "idle",
+    "accessibilityPreflight": true
+  }
+}

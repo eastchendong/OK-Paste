@@ -1,0 +1,10 @@
+{
+  "scope": "fixed quick adjustments and shared task presentation",
+  "desktopTestsPassed": 41,
+  "typescript": "passed",
+  "uiArtifactCheck": "passed",
+  "visualReview": "standalone shared component fixture, working/done/adjustment",
+  "nativeAppRestarted": true,
+  "realOfficeFollowupReverified": false,
+  "knownPending": "revision must retain last successful result until replacement succeeds"
+}

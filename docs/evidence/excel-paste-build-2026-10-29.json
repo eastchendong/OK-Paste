@@ -1,0 +1,21 @@
+{
+  "scope": "Excel 选区编辑第一版，代码、合成工作簿和本机宿主验证",
+  "automated": {
+    "typescriptAndFrontendBuild": "passed",
+    "prototype": {"passed": 95, "skipped": 10},
+    "desktop": {"passed": 39},
+    "nativeBuild": "passed",
+    "diffCheck": "passed",
+    "installedApp": "/Users/wanyiran/Applications/妥帖.app"
+  },
+  "excelLive": {
+    "fixture": "独立合成工作簿1，Sheet1 A1:C4；未触碰用户现有工作簿",
+    "selectionModel": "工作簿 + 工作表名 + Office context.trackedObjects 持有的连续矩形 Range",
+    "sideloaded": true,
+    "developmentCertificateTrusted": true,
+    "endToEndVerified": true,
+    "verifiedFlow": "Excel 加载项显示已连接；选中 Sheet1!B2 后读取 A1:C4 完整有效区域；生成 1×1 预览‘完成编辑链路与写回撤销验证’；确认后写入；安全撤回先核对本次写入值，再恢复原值‘完成 Excel 单元格编辑链路’",
+    "physicalShortcutVerified": false,
+    "shortcutNote": "自动化合成按键会被 Excel 直接解释为选择性粘贴，不能作为全局事件 tap 的物理键盘验收；产品代码由辅助功能事件 tap 独占 ⌥⌘V，并在 tap 不可用时才注册 Carbon 兜底。"
+  }
+}

@@ -1,0 +1,5 @@
+.popup { position:fixed;z-index:2147483646;max-width:calc(100vw - 16px);user-select:none;animation:rise .18s ease both; }
+.popup[hidden],.popup [hidden] { display:none !important; }
+.note { position:absolute;top:calc(100% + 6px);left:0;max-width:100%;margin:0;padding:10px 12px;border-radius:12px;color:var(--blue-12);font-size:12px;white-space:normal; }
+@keyframes rise { from { opacity:0;transform:translateY(8px); } to { opacity:1;transform:translateY(0); } }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important;transition-duration:.01ms !important; } }

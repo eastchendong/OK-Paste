@@ -1,0 +1,237 @@
+{
+  "date": "2026-11-07",
+  "file": "妥帖 · Figma 矢量测试 · 1030",
+  "host": "real Figma Plugin API",
+  "model": "existing configured real model",
+  "capture": "guarded local product capture API; physical global hotkey was not successfully retested",
+  "ui": "installed native app: recover existing panel; icon and empty first submit; all second-round options; two undo actions per scene",
+  "fixtures": "nine new marked test frames in existing independent test file; sources isolated from daily clipboard store",
+  "cases": [
+    {
+      "scene": "character",
+      "target": "1107 · 角色 · 目标",
+      "initialRecommendation": [
+        "在目标画框内，按现有风格补全一个带软木塞的玻璃瓶角色，保留瓶身轮廓和表情。"
+      ],
+      "initialModelMs": 2542,
+      "v1Recommendations": {
+        "revision": 1,
+        "status": "ready",
+        "scene": "vector-character",
+        "options": [
+          {
+            "label": "瓶肩收圆更自然",
+            "instruction": "在 1107 · 角色 · 目标 画框内只调整玻璃瓶角色瓶颈到瓶身的过渡：把直角式瓶肩转折改成平缓的圆弧收肩（肩部圆角外扩约 8–10 单位），使瓶身轮廓更接近软木塞玻璃瓶的收颈造型；保持软木塞、浅色瓶身填充、深墨绿描边粗细、点状眼睛、微笑嘴、细线手脚及居中位置不变，不改画框与其他作品。",
+            "direction": "vector-shape"
+          },
+          {
+            "label": "简化瓶颈轮廓",
+            "instruction": "在 1107 · 角色 · 目标 画框内精简瓶身路径层次，把瓶颈与瓶身之间的多余转折段合并为一段顺滑路径，减少折点与重叠描边；保持软木塞、瓶身比例、深墨绿描边与浅色填充、点状眼与微笑嘴、细线手脚及居中构图不变，不改画框和其他对象。",
+            "direction": "vector-simplify"
+          },
+          {
+            "label": "嘴角弧度更明显",
+            "instruction": "在 1107 · 角色 · 目标 画框内把微笑嘴的下凹弧度稍微加深（端点高度差从约 5 增至约 7 单位，宽度基本不变），让笑意更清楚；表情仍用深墨绿细线、点状眼睛保持原大小与间距，瓶身、软木塞、手脚与整体位置均不改变。",
+            "direction": "vector-expression"
+          }
+        ]
+      },
+      "selectedOption": {
+        "label": "嘴角弧度更明显",
+        "instruction": "在 1107 · 角色 · 目标 画框内把微笑嘴的下凹弧度稍微加深（端点高度差从约 5 增至约 7 单位，宽度基本不变），让笑意更清楚；表情仍用深墨绿细线、点状眼睛保持原大小与间距，瓶身、软木塞、手脚与整体位置均不改变。",
+        "direction": "vector-expression"
+      },
+      "v2Result": "仅加深微笑嘴弧度：控制点 y 202→204，端点与其他部件不变",
+      "v2ChangedPixelBounds": [
+        138,
+        185,
+        162,
+        195
+      ],
+      "checks": {
+        "v1Revision": true,
+        "v2Revision": true,
+        "restoredV1Revision": true,
+        "restoredV1Recommendations": true,
+        "restoredV1AllPixelChannels": true,
+        "restoredV0AllPixelChannels": true,
+        "restoredInitialSceneVersion": true,
+        "originalNodeFactsPreservedEveryCheckpoint": true,
+        "originalTargetEmpty": true
+      },
+      "rawEvidenceDirectory": "/Users/wanyiran/Library/Application Support/Tuotie/runtime/.local/figma-recommendations-live-1794031651337",
+      "images": {
+        "first": {
+          "path": "docs/evidence/figma-recommendations-live-2026-11-07/character-first.png",
+          "sha256": "456c6910ba03c909a7a7b227c06d3abf771a9b731ee8238fbf8bceea1fc34296"
+        },
+        "second": {
+          "path": "docs/evidence/figma-recommendations-live-2026-11-07/character-second.png",
+          "sha256": "51ec48b3436191ec8087c278aee07913e10c47d7fd381362ba0c8e66ad50ff88"
+        }
+      }
+    },
+    {
+      "scene": "icon",
+      "target": "1107 · 图标 · 目标",
+      "initialRecommendation": [
+        "在目标画框内按现有风格补一个单色线性历史记录图标，圆润描边，不重做整套。"
+      ],
+      "initialModelMs": 2084,
+      "v1Recommendations": {
+        "revision": 1,
+        "status": "ready",
+        "scene": "vector-icon",
+        "options": [
+          {
+            "label": "收小图形并增留白",
+            "instruction": "把历史图标整体等比缩小约 10%（当前直径约 144、外缘贴近 246 方形边缘），使其在画框内四周留白与收藏（心形约 172×184）和下载图标（约 207×167）的视觉占位相当；保持 #123E4B、约 6px 描边、圆角线帽、无填充、无底色，不回改回转圆弧+箭头+时针分针的构成，不改其他图标和画框。",
+            "direction": "vector-weight"
+          },
+          {
+            "label": "把回转箭头改紧凑",
+            "instruction": "把圆弧断口处的箭头收成更紧凑的三段折角（两段箭头臂长度缩短、夹角略开），使箭头不突出圆弧轮廓、整体外接范围回到圆形内；保留单色 #123E4B 线性描边、约 6px、圆角线帽、无填充，保留时钟指针与回转圆弧的主体结构，不改其他图标和画框。",
+            "direction": "vector-simplify"
+          },
+          {
+            "label": "指针改为整点刻度感",
+            "instruction": "把时针分针改为更简化的两段指针（去掉分针末端多余长度，保持 90 度夹角，长度比例接近心形图标的简洁度），仍从圆心出发、端点为圆头；保持 #123E4B 约 6px 描边、无填充、无渐变，保留回转圆弧与箭头、时钟圆盘开口，不改其他图标和画框。",
+            "direction": "vector-symbol"
+          }
+        ]
+      },
+      "selectedOption": {
+        "label": "把回转箭头改紧凑",
+        "instruction": "把圆弧断口处的箭头收成更紧凑的三段折角（两段箭头臂长度缩短、夹角略开），使箭头不突出圆弧轮廓、整体外接范围回到圆形内；保留单色 #123E4B 线性描边、约 6px、圆角线帽、无填充，保留时钟指针与回转圆弧的主体结构，不改其他图标和画框。",
+        "direction": "vector-simplify"
+      },
+      "v2Result": "修正断口箭头：折角臂略加长、朝向指向圆弧回转方向，三段折角整体仍收在圆弧外接圆内不外凸；圆弧、指针与描边样式保持不变。",
+      "v2ChangedPixelBounds": [
+        75,
+        113,
+        104,
+        138
+      ],
+      "checks": {
+        "v1Revision": true,
+        "v2Revision": true,
+        "restoredV1Revision": true,
+        "restoredV1Recommendations": true,
+        "restoredV1AllPixelChannels": true,
+        "restoredV0AllPixelChannels": true,
+        "restoredInitialSceneVersion": true,
+        "originalNodeFactsPreservedEveryCheckpoint": true,
+        "originalTargetEmpty": true
+      },
+      "rawEvidenceDirectory": "/Users/wanyiran/Library/Application Support/Tuotie/runtime/.local/figma-recommendations-live-1794033491236",
+      "images": {
+        "first": {
+          "path": "docs/evidence/figma-recommendations-live-2026-11-07/icon-first.png",
+          "sha256": "8cdb42380af47fcc8b6ef48cff5db2ac3b7b7a4d1f542e1e2c0cf46c15e265f4"
+        },
+        "second": {
+          "path": "docs/evidence/figma-recommendations-live-2026-11-07/icon-second.png",
+          "sha256": "8ee73342401562a6e8eaccbd2285b1db8a7e53147c53ed67e9e9a0b443d9be82"
+        }
+      },
+      "failedAttempt": {
+        "error": "The operation was aborted due to timeout",
+        "revision": 1,
+        "keptV1Pixels": true,
+        "outcome": "explicit retry succeeded at revision 2"
+      }
+    },
+    {
+      "scene": "empty",
+      "target": "1107 · 空状态 · 目标",
+      "initialRecommendation": [
+        "在目标画框内按现有空状态风格生成搜索无结果的插画，不含文案和按钮"
+      ],
+      "initialModelMs": 1375,
+      "v1Recommendations": {
+        "revision": 1,
+        "status": "ready",
+        "scene": "vector-empty-state",
+        "options": [
+          {
+            "label": "突出问号主体",
+            "instruction": "把镜片内的问号弯钩与问号点在镜片中心区域略微放大（整体高度约占镜片内径的 70%），保持深青描边与 6 左右线宽，使无结果这一主体更醒目；放大镜镜片、手柄、橙红点缀圆与短线装饰的位置、配色、形状保持不变。",
+            "direction": "vector-emphasis"
+          },
+          {
+            "label": "手柄改双线",
+            "instruction": "把放大镜手柄改成与镜片同色的双线轮廓样式（保留浅绿 #C4E1D8 填充、深青 #123E4B 描边、6 左右线宽），使手柄与镜片描边粗细视觉一致、顶端与镜片下缘自然衔接；问号记号、点缀圆点与短线装饰保持不变。",
+            "direction": "vector-simplify"
+          }
+        ]
+      },
+      "selectedOption": {
+        "label": "突出问号主体",
+        "instruction": "把镜片内的问号弯钩与问号点在镜片中心区域略微放大（整体高度约占镜片内径的 70%），保持深青描边与 6 左右线宽，使无结果这一主体更醒目；放大镜镜片、手柄、橙红点缀圆与短线装饰的位置、配色、形状保持不变。",
+        "direction": "vector-emphasis"
+      },
+      "v2Result": "镜片、手柄、点缀圆与短线保持不变；镜内问号弯钩与问号点整体放大约1.5倍，总高约86（约占内径70%），水平居中于镜片，深青描边线宽6，问号点实心 r5。",
+      "v2ChangedPixelBounds": [
+        112,
+        91,
+        161,
+        165
+      ],
+      "checks": {
+        "v1Revision": true,
+        "v2Revision": true,
+        "restoredV1Revision": true,
+        "restoredV1Recommendations": true,
+        "restoredV1AllPixelChannels": true,
+        "restoredV0AllPixelChannels": true,
+        "restoredInitialSceneVersion": true,
+        "originalNodeFactsPreservedEveryCheckpoint": true,
+        "originalTargetEmpty": true
+      },
+      "rawEvidenceDirectory": "/Users/wanyiran/Library/Application Support/Tuotie/runtime/.local/figma-recommendations-live-1794033491236",
+      "images": {
+        "first": {
+          "path": "docs/evidence/figma-recommendations-live-2026-11-07/empty-first.png",
+          "sha256": "a1ae926a58d875a13acbe76de3464490b776f5b86948c1da43eb6af22630d002"
+        },
+        "second": {
+          "path": "docs/evidence/figma-recommendations-live-2026-11-07/empty-second.png",
+          "sha256": "f4c0f973ccf888626b48d3e777653373194ab2bad79b3680e871fc1aa10ec2fd"
+        }
+      }
+    }
+  ],
+  "recommendationQualityLimitations": [
+    "icon V1 weight suggestion includes inaccurate dimensions; V2 suggestions can repeat a similar direction; structural validity does not guarantee semantic quality",
+    "empty V1 handle-double-outline suggestion repeats a feature already visible in the committed result",
+    "empty V2 suggests shrinking the question mark just enlarged by the latest accepted request; latest instruction is present in conversation but the model violates the non-reversal requirement"
+  ],
+  "checks": {
+    "backendPassed": 269,
+    "backendSkipped": 10,
+    "clipboardMutatingSuiteExcluded": true,
+    "desktopPassed": 101,
+    "typescript": true,
+    "build": true,
+    "uiArtifacts": true
+  },
+  "restoration": {
+    "normalServiceHealth": true,
+    "phase": "idle",
+    "canUndo": false,
+    "dailySourceFiles": 34,
+    "dailySourcesHashMatchesBaseline": true,
+    "dailySourcesSha256": "5a589e651e4879f00c7949c3e7c36bdfeb796021154d152809abb4dc7ed99cf0",
+    "runtimeFiles": [
+      {
+        "path": "src/file-runner.ts",
+        "matchesSource": true
+      },
+      {
+        "path": "ui/desktop-live.js",
+        "matchesSource": true
+      }
+    ],
+    "qaExtraPluginMenuRemovedFromLocalManifest": true
+  }
+}

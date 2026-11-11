@@ -1,0 +1,46 @@
+{
+  "scope": "Developer checks on the real local desktop and Blender; not user acceptance.",
+  "runtime": {
+    "app": "~/Applications/妥帖.app",
+    "files": "~/Library/Application Support/Tuotie/runtime",
+    "startupHealth": true,
+    "desktopFolderDialogObserved": false,
+    "startupChecks": 2
+  },
+  "display": {
+    "problem": "Overlay stayed on an external display while Blender was on the built-in display. The first layer-0 Blender window was a tiny 66x20 helper.",
+    "fix": "Follow the largest-intersecting display of the first normal foreground-app window with width and height over 100. Keep the overlay fixed while dragging.",
+    "observedOverlayBounds": {
+      "x": 0,
+      "y": 33,
+      "width": 1512,
+      "height": 865
+    },
+    "existingComponentGeometryPreserved": true
+  },
+  "targetRestore": {
+    "problem": "Slow initial Blender connection caused clipboard fallback to replace the saved Blender target.",
+    "regressionTest": "a saved Blender target survives a slow startup connection",
+    "passed": true
+  },
+  "undo": {
+    "problem": "Assigning unchanged parent/world matrices during undo introduced transform rounding drift after dependency-graph evaluation.",
+    "fix": "Only restore parent/world matrices that changed; update the dependency graph before checking restoration.",
+    "realBlenderCheck": {
+      "checkedAt": "2026-10-28T03:35:40.962Z",
+      "added": [
+        "CopyIdentityCheck"
+      ],
+      "modified": [],
+      "originalUnchanged": true,
+      "commit": true,
+      "undoRestored": true,
+      "delayedUndoExact": true
+    }
+  },
+  "recordings": {
+    "status": "incomplete",
+    "detail": "First foreground recording exposed the delayed undo drift. Second recording was interrupted by the Mac locking before execution. Neither is a successful final full-flow video.",
+    "next": "Unlock, hold the display awake for the recording session, then record browser Copy, image thumbnail, real preview, apply, undo and delayed fingerprint readback."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-30T03:14:50.189Z",
+  "transport": "stdio MCP + native Figma plugin",
+  "connected": true,
+  "beforeCount": 138,
+  "afterCount": 138,
+  "canUndo": true,
+  "originalTopLevelRestored": true,
+  "previewFile": "figma-mcp-native-2026-10-30.png",
+  "scope": "真实 Figma 插件和工具链；非模型驱动 UI 全链路",
+  "chineseTextRenderChecked": true
+}

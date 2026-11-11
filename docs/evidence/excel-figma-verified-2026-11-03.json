@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-03",
+  "scope": "isolated synthetic fixtures; real configured model; live Excel Office.js and Figma Plugin API",
+  "automated": {
+    "backendPassed": 174,
+    "backendSkipped": 10,
+    "desktopPassed": 62,
+    "typescript": true,
+    "uiArtifactsCurrent": true,
+    "diffCheck": true
+  },
+  "excel": {
+    "run": "excel-revisions-1793680454495",
+    "host": "excel",
+    "revisions": 2,
+    "firstRestored": true,
+    "originalRestored": true,
+    "originalsPreserved": true,
+    "literalPreserved": true,
+    "physicalShortcut": false,
+    "realModel": true,
+    "realHost": true,
+    "outsideSelectionPreservedBothVersions": true,
+    "formulaResults": [
+      "240.00",
+      "450.00"
+    ],
+    "formulaLikeTextRemainedLiteral": true
+  },
+  "figma": {
+    "run": "figma-revisions-1793681881940",
+    "host": "figma",
+    "revisions": 2,
+    "firstRestored": true,
+    "originalRestored": true,
+    "originalsPreserved": true,
+    "physicalShortcut": false,
+    "realModel": true,
+    "realHost": true,
+    "candidatePixelsDeliveredToModel": true,
+    "latestCandidateReviewRequired": true,
+    "originalScaleReusedForRestoration": true,
+    "restoredRendering": {
+      "first": {
+        "sameSize": true,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0.0
+      },
+      "original": {
+        "sameSize": true,
+        "maxChannelDifference": 0,
+        "meanChannelDifference": 0.0
+      }
+    }
+  },
+  "boundaries": {
+    "physicalShortcutRetested": false,
+    "hostNativeUndoRetested": false,
+    "realLostMutationResponseInjected": false,
+    "crossRestartUndo": false,
+    "revisionLimit": 20,
+    "illustratorMigrated": false
+  },
+  "dataHandling": {
+    "userDocumentsUnchanged": true,
+    "testFixturesRestored": true,
+    "sourcesIsolatedFromDailyPack": true,
+    "rawPromptsImagesAndKeysExcluded": true
+  },
+  "runtime": {
+    "normalServiceRestored": true,
+    "health": true,
+    "phase": "idle",
+    "canUndo": false,
+    "relevantFilesMatchSource": true,
+    "installedExcelManifestMatches": true,
+    "nativeResigned": false,
+    "permissionsChanged": false
+  }
+}

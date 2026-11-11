@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-03",
+  "scope": "Fixed target and drafts, Word workflow, PowerPoint structured image/text revisions",
+  "userDecisions": {
+    "targetStaysAtInvocationPosition": true,
+    "oldWordResultPreservedAndTaskFinishedWithApproval": true
+  },
+  "automated": {
+    "typescript": "passed",
+    "backendPassed": 154,
+    "backendSkipped": 10,
+    "desktopPassed": 58,
+    "generatedUi": "current",
+    "whitespace": "passed"
+  },
+  "word": {
+    "fixture": "Independent synthetic unsaved document, titled 妥帖固定位置流程验收",
+    "physicalShortcut": "User confirmed twice; automation alone did not trigger Carbon",
+    "nativeUiGenerationAndQuickAdjustment": true,
+    "nativeUiStepwiseUndo": true,
+    "draftAndCapturedParagraphSurviveCaretChange": true,
+    "finalModelHostCheck": {
+      "revisions": 2,
+      "noRepeatedSurroundingContext": true,
+      "followingHeadingRemainsSeparateParagraph": true,
+      "firstVersionRestored": true,
+      "originalBodyRestored": true
+    },
+    "fixesFromTesting": [
+      "Candidate repeated document context",
+      "Plain text at a paragraph boundary joined the following heading",
+      "Prior task adjustment draft survived into a new task"
+    ]
+  },
+  "powerpoint": {
+    "fixture": "Independent synthetic 25-slide presentation",
+    "sources": "Isolated synthetic text and two generated fixture images",
+    "realConfiguredModelAndOfficeJs": true,
+    "firstVersion": "Rewrote selected title and replaced two pictures, preserved original first picture",
+    "secondVersion": "Rewrote title and used contain for the same two sources",
+    "stepwiseUndo": true,
+    "firstVersionPropertiesRestored": true,
+    "originalPropertiesAndFontsRestored": true,
+    "fontName": "PingFang SC",
+    "fontSizePt": 20,
+    "originalAndRestoredRender": {
+      "sameSize": true,
+      "meanAbsoluteChannelDifferenceOutOf255": 0.015030864197530865
+    },
+    "visualInspection": "Reviewed actual Office-rendered second version, with title font and fully visible picture inside ellipse",
+    "fixesFromTesting": [
+      "Chinese text could switch to a default font when no explicit East Asian font was present",
+      "Recreated picture IDs lost ellipse geometry in the next revision",
+      "Contain had used the ellipse bounding box and clipped image corners"
+    ]
+  },
+  "isolation": {
+    "originalUserDocumentsPreserved": true,
+    "testResultsUndone": true,
+    "onlyThisRunSyntheticActiveSourceArchived": true,
+    "normalServiceRestored": true,
+    "nativeAppResigned": false,
+    "permissionsChanged": false,
+    "gitCommitOrPush": false
+  },
+  "limits": [
+    "PowerPoint physical shortcut and Office native Command+Z were not verified this run",
+    "Cancellation, lost receipts, conflicts and failure preservation are covered by regression tests, not a new live network fault injection",
+    "PowerPoint text requires one uniform paragraph without links, fields or animation; Chinese needs an explicitly defined font",
+    "Picture masks are retained within the current revision chain, not recovered as source semantics after task end or restart",
+    "At most 20 in-memory revisions per task; no restart recovery",
+    "Unknown host write outcomes freeze rather than automatically retry or rollback",
+    "Restoration does not imply byte-identical Office files or stable recreated picture IDs",
+    "Excel multi-version migration remains pending"
+  ],
+  "reproduction": "scripts/office-revision-check.ts"
+}

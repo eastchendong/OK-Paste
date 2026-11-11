@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-04",
+  "extensionVersion": "0.1.2",
+  "reportedFailure": "图片地址没有返回图片内容",
+  "page": "https://www.roadtrafficsigns.com/",
+  "reproduction": {
+    "image": "https://images.roadtrafficsigns.com/img/dp/csd/stop-signs-with-posts.webp",
+    "httpStatus": 200,
+    "declaredContentType": "application/octet-stream",
+    "signature": "RIFF at offset 0, WEBP at offset 8",
+    "byteLength": 9898,
+    "rootCause": "Both the page reader and worker previously rejected responses without an image/* header."
+  },
+  "validation": {
+    "imageContextMenuTestsPassed": 14,
+    "typeScript": "passed",
+    "extensionBuild": "passed",
+    "actualCdnDownloadWithCurrentFunction": "passed",
+    "isolatedStore": {
+      "mime": "image/webp",
+      "byteLength": 9898,
+      "hasContent": true,
+      "previewPrefix": "data:image/webp;base64,"
+    },
+    "htmlAndUnknownBinaryStillRejected": true,
+    "sizeLimitBytes": 6000000,
+    "dailyClipboardChangedByValidation": false
+  },
+  "nativeBrowserVerification": {
+    "status": "passed_user_action_and_local_readback",
+    "userConfirmation": "添加成功，内容包出现图片",
+    "readback": {
+      "activeItemCount": 1,
+      "createdAt": "2026-11-04T11:14:22.363Z",
+      "captureMethod": "image-context-menu",
+      "sourceHost": "www.roadtrafficsigns.com",
+      "imageHost": "images.roadtrafficsigns.com",
+      "appName": "Google Chrome",
+      "mime": "image/webp",
+      "byteLength": 9660,
+      "hasContent": true,
+      "contentEndpointByteLength": 9660,
+      "webpSignatureVerified": true
+    },
+    "boundary": "User performed Chrome reload and capture; no automated native menu click or screenshot claimed. No downstream model or target-app workflow tested."
+  }
+}

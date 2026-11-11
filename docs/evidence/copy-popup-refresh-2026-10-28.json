@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "kind": "developer regression and actual native browser AX observation",
+  "before": [
+    "toolbar Copy",
+    "button Copy"
+  ],
+  "after": [
+    "toolbar 妥帖",
+    "button Magic Copy",
+    "button Start from here"
+  ],
+  "observedPage": "local Tuotie source page",
+  "capturePerformed": false,
+  "deploymentFixes": [
+    "rebuild browser bundle before runtime sync",
+    "replace installed frontend and detach prior listeners"
+  ],
+  "recommendationFixes": [
+    "compare focus context independently of object key ordering",
+    "keep native polling active during menus",
+    "stable native HTTP JSON ordering"
+  ],
+  "logicTests": 68,
+  "componentChecks": 17,
+  "nativeAXPermission": "not changed; generic cross-site native selection still requires existing macOS permission"
+}

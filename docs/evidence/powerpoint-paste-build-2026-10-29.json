@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "scope": "PowerPoint 图片接入：代码、本机编译与独立 PPTX 预览",
+  "checks": {
+    "typescript": "passed",
+    "nativeBuildAndInstall": "passed",
+    "fullPrototypeRegression": {"passed": 92, "skipped": 10},
+    "fullDesktopRegression": {"passed": 38},
+    "subsequentPowerPointAndBridgeChecks": {"passed": 8},
+    "subsequentPowerPointPopupCheck": "passed",
+    "certificate": "existing localhost certificate verified read-only; trust not changed",
+    "powerpointPageHTTPS": 200,
+    "nativeAccessibilityAfterRestart": true
+  },
+  "independentPreview": {
+    "fixture": "runtime/.local/powerpoint-check-LhurZM/妥帖-PowerPoint-测试.pptx",
+    "preview": "runtime/.local/powerpoint-previews/24b4312b-4377-4cca-8564-e2592ebe78fd/预览-图片替换.pptx",
+    "slideCount": 25,
+    "lastSlideAndNotesRead": true,
+    "unselectedFirstImageAndOtherSlideBytesPreserved": true,
+    "openedInRealPowerPointWithoutRepairPrompt": true,
+    "visualCheck": "01 保留；02 为 A；03 空位中放入 B；全稿仍 25 页",
+    "productionBundleTestImagesAdded": false
+  },
+  "liveOffice": {
+    "powerpointAddInSideloaded": false,
+    "authorization": "requested; awaiting user reply",
+    "captureVerified": false,
+    "modelRecommendationsVerified": false,
+    "liveApplyAndUndoVerified": false
+  },
+  "limits": "支持普通矩形／椭圆图片和空白头像形状；未实现去背、文字编辑、任意拖放、复杂组合或动画对象；多图 API 提交不是原子事务；普通图片撤回后的对象 ID 会改变。"
+}

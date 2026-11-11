@@ -1,0 +1,12 @@
+{
+  "width": 340,
+  "cardHeight": 60,
+  "cardRadius": 20,
+  "cardStep": 10,
+  "listGap": 6,
+  "thumbnailWidth": 44,
+  "thumbnailHeight": 36,
+  "visibleCards": 3,
+  "cardInset": 10,
+  "scrollFade": 32
+}

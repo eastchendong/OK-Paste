@@ -1,0 +1,290 @@
+{
+  "at": "2026-11-07T05:56:04.081Z",
+  "synthetic": true,
+  "hostWrites": false,
+  "imagesIncluded": false,
+  "model": "deepseek-flash",
+  "results": [
+    {
+      "kind": "word-live",
+      "repeat": 0,
+      "durationMs": 881,
+      "requests": 1,
+      "modelMs": 875,
+      "prepareMs": 2,
+      "valid": true,
+      "candidate": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "runs": [
+              {
+                "text": "签到岗由林同学、陈同学负责，上午九点到场；引导岗由王同学、李同学、周同学负责，需带学生证，八点五十到场。"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "input-live",
+      "repeat": 0,
+      "durationMs": 1284,
+      "requests": 1,
+      "modelMs": 1279,
+      "prepareMs": 5,
+      "valid": true,
+      "candidate": {
+        "text": "同学，活动周六9:00开始，8:50到东门集合，记得带学生证；如果下雨就改到图书馆一楼。",
+        "layout": "paragraph"
+      }
+    },
+    {
+      "kind": "excel-live",
+      "repeat": 0,
+      "durationMs": 910,
+      "requests": 1,
+      "modelMs": 873,
+      "prepareMs": 2,
+      "valid": true,
+      "candidate": {
+        "cells": [
+          [
+            "林同学",
+            "已报名",
+            "上午到场，带学生证。"
+          ],
+          [
+            "陈同学",
+            "已报名",
+            "下午参加。"
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "powerpoint-live",
+      "repeat": 0,
+      "durationMs": 836,
+      "requests": 1,
+      "modelMs": 834,
+      "prepareMs": 1,
+      "valid": true,
+      "candidate": {
+        "replacements": [
+          {
+            "shapeId": "left",
+            "imageId": "person-lin",
+            "fit": "contain"
+          },
+          {
+            "shapeId": "right",
+            "imageId": "person-chen",
+            "fit": "contain"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "word-live",
+      "repeat": 1,
+      "durationMs": 744,
+      "requests": 1,
+      "modelMs": 743,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "runs": [
+              {
+                "text": "签到岗由林同学、陈同学负责，上午九点到场；引导岗由王同学、李同学、周同学负责，带学生证，八点五十到场。"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "input-live",
+      "repeat": 1,
+      "durationMs": 1148,
+      "requests": 1,
+      "modelMs": 1148,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "text": "同学，活动周六9:00开始，8:50到东门集合，记得带学生证。如果下雨，改到图书馆一楼。",
+        "layout": "paragraph"
+      }
+    },
+    {
+      "kind": "excel-live",
+      "repeat": 1,
+      "durationMs": 788,
+      "requests": 1,
+      "modelMs": 787,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "cells": [
+          [
+            "林同学",
+            "已报名",
+            "上午到场，带学生证。"
+          ],
+          [
+            "陈同学",
+            "已报名",
+            "下午参加。"
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "powerpoint-live",
+      "repeat": 1,
+      "durationMs": 972,
+      "requests": 1,
+      "modelMs": 971,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "replacements": [
+          {
+            "shapeId": "left",
+            "imageId": "person-lin",
+            "fit": "contain"
+          },
+          {
+            "shapeId": "right",
+            "imageId": "person-chen",
+            "fit": "contain"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "word-live",
+      "repeat": 2,
+      "durationMs": 1022,
+      "requests": 1,
+      "modelMs": 1019,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "runs": [
+              {
+                "text": "签到岗由林同学、陈同学负责，上午九点到场；引导岗由王同学、李同学、周同学负责，携带学生证，八点五十到场。"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "input-live",
+      "repeat": 2,
+      "durationMs": 1098,
+      "requests": 1,
+      "modelMs": 1098,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "text": "同学，活动周六9:00开始，8:50到东门集合，记得带学生证；下雨则改到图书馆一楼。",
+        "layout": "paragraph"
+      }
+    },
+    {
+      "kind": "excel-live",
+      "repeat": 2,
+      "durationMs": 780,
+      "requests": 1,
+      "modelMs": 780,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "cells": [
+          [
+            "林同学",
+            "已报名",
+            "上午到场，带学生证"
+          ],
+          [
+            "陈同学",
+            "已报名",
+            "下午参加"
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "powerpoint-live",
+      "repeat": 2,
+      "durationMs": 874,
+      "requests": 1,
+      "modelMs": 874,
+      "prepareMs": 0,
+      "valid": true,
+      "candidate": {
+        "replacements": [
+          {
+            "shapeId": "left",
+            "imageId": "person-lin",
+            "fit": "contain"
+          },
+          {
+            "shapeId": "right",
+            "imageId": "person-chen",
+            "fit": "contain"
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "passedCandidates": 12,
+    "requestCount": 12,
+    "minMs": 744,
+    "maxMs": 1284,
+    "medianMs": 895.5,
+    "p80Ms": 1098
+  },
+  "checks": {
+    "backendPassed": 268,
+    "backendSkipped": 10,
+    "clipboardSuiteExcluded": true,
+    "desktopPassed": 90,
+    "typecheck": "passed",
+    "build": "passed",
+    "uiArtifacts": "current",
+    "diff": "passed"
+  },
+  "priorRuns": [
+    {
+      "run": "baseline",
+      "structuralPass": 12,
+      "manualIssue": "One Word candidate expanded one group-specific requirement to all participants."
+    },
+    {
+      "run": "round2",
+      "candidatePass": 11,
+      "clarifications": 1,
+      "manualIssue": "One unnecessary Excel header clarification."
+    }
+  ],
+  "nativeHostWritesRetested": false,
+  "runtimeVerification": {
+    "runtimeSwitched": true,
+    "hashesVerified": 4,
+    "phase": "idle",
+    "canUndo": false,
+    "newSession": true,
+    "hostWrites": false,
+    "runtimeFilesMatch": true
+  }
+}

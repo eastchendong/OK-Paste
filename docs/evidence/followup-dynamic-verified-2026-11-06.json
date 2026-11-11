@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-06",
+  "scope": "second-round writing recommendations",
+  "scenes": [
+    "document-fragment",
+    "message",
+    "task-brief"
+  ],
+  "checks": {
+    "backendPassed": 205,
+    "backendSkipped": 10,
+    "desktopPassed": 77,
+    "typescript": "passed",
+    "uiArtifacts": "current",
+    "build": "passed",
+    "diff": "passed"
+  },
+  "realModel": {
+    "syntheticOnly": true,
+    "results": [
+      {
+        "durationMs": 8111,
+        "scene": "document-fragment",
+        "options": [
+          {
+            "label": "安排分点列出",
+            "instruction": "把活动安排改为分点表述：时间地点一条，小林、小李、小王各自分工各一条，收尾核对物料一条，保留全部分工内容，不改动其他章节。",
+            "direction": "structure"
+          },
+          {
+            "label": "衔接上下文",
+            "instruction": "在段落开头加一句衔接语，如\"活动安排如下\"，与上文\"促进校园交流\"及后文\"三、报名方式\"自然衔接，保留原有分工事实。",
+            "direction": "cohesion"
+          }
+        ]
+      },
+      {
+        "durationMs": 5141,
+        "scene": "message",
+        "options": [
+          {
+            "label": "要点分行列出",
+            "instruction": "把时间地点、报名链接、需带物品（学生证和分享书）分行或分点列出，便于同学快速查看，保留原有口语开场和全部信息。",
+            "direction": "structure"
+          },
+          {
+            "label": "时间报名前置",
+            "instruction": "把时间地点和报名链接提到开头突出，结尾保留欢迎参加的收束，其余事实和链接不变。",
+            "direction": "emphasis"
+          },
+          {
+            "label": "精简开场铺垫",
+            "instruction": "删去\"有一些信息需要跟大家同步，请大家留意以下安排\"等铺垫句，直接进入通知内容，保留准备事项和报名链接。",
+            "direction": "length"
+          }
+        ]
+      },
+      {
+        "durationMs": 5933,
+        "scene": "task-brief",
+        "options": [
+          {
+            "label": "单列完成标准",
+            "instruction": "在任务末尾单独列出完成标准：入口位于活动介绍之后且首屏可见、点击沿用现有报名流程、移动端不遮挡正文、报名数据结构与后台接口不变；保留任务说明其余内容。",
+            "direction": "criteria"
+          },
+          {
+            "label": "标明颜色待确认",
+            "instruction": "将按钮颜色集中标注为待确认事项，明确不由执行方自行决定，其余范围与限制保持不变。",
+            "direction": "uncertainty"
+          }
+        ]
+      }
+    ]
+  },
+  "componentScreenshots": {
+    "provenance": "current components, synthetic target state, actual model suggestions; not native host writes",
+    "files": [
+      "followup-preview/document-fragment.png",
+      "followup-preview/message.png",
+      "followup-preview/task-brief.png"
+    ]
+  },
+  "nativeRevalidation": false,
+  "runtimeSwitched": true,
+  "existingTask": "User authorized finishing the disposable Word V2 task; document preserved, old undo chain released.",
+  "switchVerification": {
+    "combinedInitialAndFollowupTests": 28,
+    "typescript": "passed",
+    "nativeWindow": "AX confirmed the runtime/ui/components-preview.html window and idle collection UI",
+    "runtimeSyntheticTask": {
+      "synthetic": true,
+      "desktopOrClipboardWrites": false,
+      "phase": "done",
+      "revision": 1,
+      "delivery": "clipboard",
+      "scene": "message",
+      "options": [
+        "语气更活泼",
+        "要点分条列出",
+        "标明报名方式待定"
+      ],
+      "draftLength": 62
+    },
+    "realHostWriteRetested": false,
+    "finalStatus": {
+      "phase": "ready",
+      "targetKind": "focused-text",
+      "canUndo": false,
+      "note": "Foreground focus restored a new ready context; no old Word task or write in progress."
+    }
+  }
+}

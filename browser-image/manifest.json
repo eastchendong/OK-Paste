@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "妥帖 · 图片右键采集",
+  "version": "0.1.2",
+  "description": "右键网页图片，将图片和来源加入妥帖内容包。",
+  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "host_permissions": ["https://*/*", "http://*/*"],
+  "background": {"service_worker": "background.js"},
+  "icons": {"16": "icon16.png"},
+  "action": {"default_title": "妥帖图片采集", "default_icon": "icon16.png"}
+}

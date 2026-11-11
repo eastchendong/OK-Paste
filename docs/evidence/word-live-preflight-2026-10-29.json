@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "javascriptSyntax": "passed",
+  "manifestStructure": "passed",
+  "localHttps": {
+    "certificateValidation": "enabled, supplied CA only in test process",
+    "staticPages": "passed",
+    "missingResource": 404,
+    "postRejected": 404,
+    "listener": "127.0.0.1:47722",
+    "stoppedAfterTest": true
+  },
+  "systemCertificateTrustChanged": false,
+  "manifestInstalled": false,
+  "connectedDocumentSessions": 0,
+  "wordUi": "subscription/login gate, read-only option",
+  "liveWordApi": "not tested",
+  "liveEditing": "blocked on editable Word activation",
+  "pointMapping": "not tested"
+}

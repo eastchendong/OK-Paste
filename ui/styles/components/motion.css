@@ -1,0 +1,5 @@
+@keyframes rise { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@keyframes arrive { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
+@keyframes caret-blink { 50% { opacity:0; } }
+@media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+@media (max-width:1200px) { .app { padding-left:17px; padding-right:17px; } .workspace { grid-template-columns:315px minmax(0,1fr); gap:13px; } .doc-sheet { padding:42px; } .topbar { gap:12px; } .view-title { display:none; } .top-divider { display:none; } }

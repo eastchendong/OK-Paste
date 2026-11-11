@@ -1,0 +1,1238 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>妥帖组件预览</title>
+    <style>/* @tuotie:styles */</style>
+  </head>
+  <body class="catalog-mode">
+    <!-- Lucide interface icons, v1.61.0 (https://lucide.dev).
+    ISC License, Copyright (c) 2026 Lucide Icons and Contributors.
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+    Some Lucide icons are derived from Feather and also carry the MIT License.
+    Copyright (c) 2013-present Cole Bemis.
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE. -->
+    <svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute">
+      <defs><symbol id="icon-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+      <symbol id="icon-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+      <symbol id="icon-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></symbol>
+      <symbol id="icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="icon-square" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/></symbol>
+      <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M5 12h14"/></symbol>
+      <symbol id="icon-type-text" viewBox="0 0 24 24"><path d="M21 5H3"/><path d="M15 12H3"/><path d="M17 19H3"/></symbol>
+      <symbol id="icon-type-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></symbol>
+      <symbol id="icon-type-table" viewBox="0 0 24 24"><path d="M3 9h18"/><path d="M9 3v18"/><rect x="3" y="3" width="18" height="18" rx="2"/></symbol>
+      <symbol id="icon-type-video" viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+      <symbol id="icon-type-document" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+      <symbol id="icon-source-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+      <symbol id="icon-source-app" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></symbol>
+      <symbol id="icon-source-file" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+      <symbol id="icon-source-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="icon-sliders-horizontal" viewBox="0 0 24 24"><path d="M4 7h9"/><path d="M17 7h3"/><circle cx="15" cy="7" r="2"/><path d="M4 17h3"/><path d="M11 17h9"/><circle cx="9" cy="17" r="2"/></symbol>
+    </defs>
+    </svg>
+    <div class="wallpaper" aria-hidden="true"></div>
+    <aside class="catalog-sidebar" aria-label="组件目录">
+      <div class="sidebar-brand"><div class="brand-mark" aria-hidden="true">✳</div><div><strong>妥帖组件库</strong></div></div>
+      <nav class="catalog-nav" id="catalogNav" aria-label="组件与状态"></nav>
+      <div class="sidebar-footer">玻璃效果参考 <a href="https://github.com/rdev/liquid-glass-react" target="_blank" rel="noopener noreferrer">开源项目 ↗</a></div>
+    </aside>
+    <section class="catalog-view" id="catalogView" aria-label="组件预览">
+      <header class="catalog-head"><div><div class="catalog-path">组件 / <strong id="catalogPath">选区操作条</strong></div><h1 id="catalogTitle">选区操作条</h1><p id="catalogDescription"></p></div><button type="button" class="small-button" id="openFlow">进入完整流程 ↗</button></header>
+      <div class="catalog-layout">
+        <div class="preview-column"><div class="preview-toolbar"><strong id="previewStateLabel">状态预览</strong><span><i></i> 交互预览</span></div><div class="component-stage" id="componentStage" data-backdrop="desktop"><div class="preview-component" id="previewComponent"></div><div class="desktop-dock" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><p class="preview-note" id="previewNote"></p></div>
+        <aside class="control-panel" aria-label="外观设置"><h2>外观设置</h2><p class="control-subtitle">选择预览背景，检查组件的可读性。</p>
+          <label class="control-field"><span>背景</span><select id="controlBackdrop"><option value="desktop">桌面背景</option><option value="color">彩色背景</option><option value="light">浅色背景</option><option value="dark">深色背景</option></select></label>
+          <label class="control-field"><span>玻璃效果</span><select id="controlMode"><option value="standard">标准</option><option value="polar">柔和</option><option value="prominent">强调</option></select></label>
+          <details class="advanced-controls"><summary>更多设置</summary>
+            <label class="control-field"><span>折射位移 <output id="outDisplacement">70</output></span><input id="controlDisplacement" type="range" min="0" max="120" value="70" /></label>
+            <label class="control-field"><span>模糊量 <output id="outBlur">18px</output></span><input id="controlBlur" type="range" min="0" max="30" value="6" /></label>
+            <label class="control-field"><span>饱和度 <output id="outSaturation">140%</output></span><input id="controlSaturation" type="range" min="80" max="220" value="140" /></label>
+            <label class="control-field"><span>边缘色散 <output id="outAberration">2</output></span><input id="controlAberration" type="range" min="0" max="5" step="0.5" value="2" /></label>
+            <label class="control-field"><span>弹性 <output id="outElasticity">15%</output></span><input id="controlElasticity" type="range" min="0" max="0.5" step="0.05" value="0.15" /></label>
+            <label class="control-field"><span>圆角 <output id="outRadius">22px</output></span><input id="controlRadius" type="range" min="8" max="40" value="22" /></label>
+            <label class="control-field check-field">增强浅色背景对比 <input type="checkbox" id="controlOverLight" /></label>
+            <label class="control-field check-field">关闭动效 <input type="checkbox" id="controlMotion" /></label>
+            <button type="button" class="small-button" id="resetControls">恢复默认设置</button>
+            <p class="control-disclaimer">部分折射效果会随浏览器而变化。</p>
+          </details>
+        </aside>
+      </div>
+    </section>
+    <div class="app">
+      <header class="topbar glass">
+        <div class="brand"><div class="brand-mark" aria-hidden="true">✳</div><div><strong>妥帖</strong></div></div>
+        <div class="top-divider"></div>
+        <div class="view-title"><strong>完整流程</strong></div>
+        <div class="segmented" aria-label="演示顺序">
+          <button type="button" data-mode="source-first" class="active">先选素材</button>
+          <button type="button" data-mode="target-first">先选目标</button>
+        </div>
+        <details class="demo-settings" id="demoSettings"><summary>演示设置</summary><label><input type="checkbox" id="confidenceButton" />选定插入位置后直接生成</label></details>
+        <button type="button" class="small-button" id="resetButton">重置 ↺</button>
+      </header>
+
+      <main class="workspace">
+        <section class="pane source-pane" aria-label="素材来源">
+          <div class="pane-head"><h1 id="sourceHeading">素材</h1><p id="sourceInstruction">选择素材加入内容包。需要组合使用时，可在内容包中多选。</p></div>
+          <div class="source-list" id="sourceList"></div>
+        </section>
+
+        <section class="pane document-pane" aria-label="目标文档">
+          <div class="document-top"><div class="file-name"><span class="file-icon" aria-hidden="true">▤</span>行业观察（草稿）</div><div class="document-meta">未发布</div></div>
+          <div class="doc-wrap"><article class="doc-sheet">
+            <h2>行业观察与背景</h2>
+            <p>这是一份正在编辑的研究草稿。已有段落说明研究对象和观察范围，下一节将继续梳理行业背景。</p>
+            <h3>一、发展背景</h3>
+            <p>近年来，行业的供给方式和用户预期持续变化。撰写这一节时，需要结合资料来源和已有文段，保持整份文档的语气一致。</p>
+            <button type="button" class="target-slot" id="targetSlot" aria-label="选择发展背景下方作为插入位置">在此处插入</button>
+            <div id="generatedSlot" tabindex="-1"></div>
+            <div class="doc-bottom" aria-hidden="true"></div>
+          </article></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="selection-menu glass" id="selectionMenu" role="toolbar" aria-label="选区操作" hidden>
+      <button type="button" data-menu-action="add"><svg class="toolbar-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-plus"/></svg>加入内容包</button>
+      <span class="menu-rule" aria-hidden="true" hidden></span>
+      <button type="button" data-menu-action="target" hidden><svg class="toolbar-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-scan"/></svg>设为目标位置</button>
+    </div>
+
+    <aside class="dock" id="dock" aria-label="妥帖助手">
+      <div class="pet-anchor" id="dockPet" title="按住拖动可调整位置"><button type="button" class="dock-bot" id="dockBot" aria-label="折叠内容包"><span id="dockOrb"></span></button><span class="pet-status" id="petStatus" role="status" aria-live="polite"></span></div>
+      <div class="direction-actions glass" id="directionActions" role="group" aria-label="助手操作" hidden>
+        <button type="button" class="direction-action" id="directionBack" aria-label="返回内容选择"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-arrow-left"/></svg>返回</button>
+        <button type="button" class="direction-action" id="directionCollapse" aria-label="折叠推荐方向和内容包"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron-down"/></svg>折叠</button>
+      </div>
+      <section class="floating-panel" id="intentPanel" aria-label="生成方向" hidden></section>
+      <section class="floating-panel glass" id="taskPanel" aria-label="任务状态" hidden></section>
+      <div class="bundle-stack" id="bundleStack">
+        <div class="bundle glass" id="bundle">
+          <div class="bundle-header">
+            <div class="bundle-title"><strong>内容包</strong><span class="bundle-count" id="bundleCount">0</span></div>
+            <button type="button" class="round-action" id="collapseButton" aria-label="折叠内容包"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-chevron-down"/></svg></button>
+          </div>
+          <div class="bundle-body" id="bundleBody"></div>
+          <div class="target-footer" id="targetFooter" aria-label="目标插入位置" hidden></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="detail-backdrop" id="detailBackdrop" hidden>
+      <section class="detail-card glass" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+        <div class="detail-head"><h3 id="detailTitle"></h3><button type="button" class="round-action" id="closeDetail" aria-label="关闭详情">×</button></div>
+        <div class="detail-content" id="detailContent"></div>
+        <p class="detail-source" id="detailSource"></p>
+      </section>
+    </div>
+    <div class="toast glass" id="toast" role="status" hidden></div>
+
+    <script>
+      /* @tuotie:companion-asset-base */
+      /* @tuotie:companion-components */
+      /* @tuotie:companion-motion */
+      document.getElementById('dockOrb').outerHTML=companionMarkup({id:'dockOrb',className:'orb',pose:'idle'});
+      let companionRunSequence=0, previousCompanionPhase='', companionRunCancelled=false;
+      let previousCompanionItems=null,companionContentSequence=0,companionPendingNod='';
+      let companionRestoringItems=new Set();
+      function syncDockCompanion() {
+        const items=new Set(state.items);
+        if(previousCompanionItems&&[...items].some(id=>!previousCompanionItems.has(id)&&!companionRestoringItems.has(id))&&state.phase==='collect') {
+          companionPendingNod=`content:${++companionContentSequence}`;
+        }
+        previousCompanionItems=items;
+        for(const id of items)companionRestoringItems.delete(id);
+        if(state.phase==='generating'&&previousCompanionPhase!=='generating') {
+          companionRunSequence++;companionRunCancelled=false;companionPendingNod='';
+        }
+        const live=window.TuotieDesktopLive;
+        const resultPhase=live?.resultPhase?.();
+        const uncertain=live?.resultUncertain?.();
+        const error=live?.resultError?.();
+        const failed=uncertain||error||(resultPhase&&!['preview','done'].includes(resultPhase));
+        const explicitFailure=state.phase!=='generating'&&!uncertain&&error&&['error','done'].includes(resultPhase);
+        const pose=explicitFailure?'failure':state.phase==='generating'?'working':state.phase==='done'&&!failed?'success':
+          state.phase==='direction'&&(!resultPhase||resultPhase==='planning')?'thinking':
+          state.phase==='collect'&&companionPendingNod?'nod':'idle';
+        const nodKey=companionPendingNod;
+        window.TuotieCompanionMotion.setPose(document.getElementById('dockOrb'),pose,{
+          eventKey:pose==='nod'?nodKey:`${pose}:${companionRunSequence}${pose==='success'&&companionRunCancelled?':retained':''}${pose==='failure'?':'+error:''}`,
+          animate:pose!=='success'||(companionRunSequence>0&&!companionRunCancelled),
+          onComplete:pose==='nod'?()=>{if(companionPendingNod===nodKey){companionPendingNod='';syncDockCompanion();}}:undefined,
+        });
+        previousCompanionPhase=state.phase;
+      }
+      window.TuotieCompanionState=Object.freeze({refresh:syncDockCompanion,hydrateItems(ids){companionRestoringItems=new Set(ids);companionPendingNod='';},cancelRun(){companionRunCancelled=true;companionPendingNod='';syncDockCompanion();}});
+      const sources = [
+        { id: 'text', kind: 'text', title: '行业趋势摘录', type: '文字', origin: '研究资料页', sourceKind: 'web', url: 'demo-sources.html#research', detail: '过去五年，行业服务逐步从单一交付转向更紧密的协作。用户更关注结果与过程是否贴合自己的工作语境，而不只是得到一段通用内容。' },
+        { id: 'image', kind: 'image', title: '展览现场照片', type: '图片', origin: '本地相册', sourceKind: 'app', url: 'demo-sources.html#gallery', detail: '暖色调的展览现场照片，作为图片类素材的预览示例。' },
+        { id: 'table', kind: 'table', title: '季度观察数据', type: '表格', origin: '项目资料表', sourceKind: 'file', url: 'demo-sources.html#dataset', detail: '' },
+        { id: 'video', kind: 'video', title: '访谈片段', type: '视频', origin: '本地文件', sourceKind: 'file', url: '', detail: '视频素材的预览位置。' },
+      ];
+      const $ = (selector) => document.querySelector(selector);
+      const icon = (name, className = '') => `<svg class="ui-icon ${className}" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-${name}"/></svg>`;
+      /* @tuotie:content-components */
+      const {contentKind,contentLabel,contentTitle,contentText,contentPreview,escapeHtml,thumb,originMarkup,sourceMeta,bundlePreview,bundleCard} = createContentComponents({icon,document});
+      const toolbarIcon = name => `<svg class="toolbar-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#icon-${name}"/></svg>`;
+      const botSvg = (status = '') => companionMarkup({className:`orb ${status}`,pose:({generating:'working',done:'success',thinking:'thinking'})[status]||'idle'});
+      const microphoneSvg = '<svg class="microphone-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3m-3 0h6"/></svg>';
+      const demoBot = (status = '', interactive = false, label = '查看当前面板') => `<div class="pet-anchor" title="按住拖动可调整位置">${interactive ? `<button type="button" class="demo-bot" aria-label="${label}；拖动可调整位置">${botSvg(status)}</button>` : `<div class="demo-bot">${botSvg(status)}</div>`}</div>`;
+      function mentionTokenMarkup(part, demo = false) {
+        const target = part.kind === 'target';
+        const id = target ? (demo ? part.id || 'document' : state.target) : part.id;
+        const item = target ? sources.find(source => source.id === id) : sources.find(source => source.id === part.id);
+        if (!target && !item || target && !id) return '';
+        const label = target ? targetName(id) : item.kind === 'text' ? contentText(item) : item.title;
+        const chars = Array.from(label);
+        const shortLabel = chars.length > 7 ? chars.slice(0, 7).join('') + '…' : label;
+        const iconName = target ? 'scan' : `type-${contentKind(item.kind)}`;
+        const href = target ? `#${item ? `source-${item.id}` : 'targetSlot'}` : item.url || `#source-${item.id}`;
+        return `<span class="reference-tag mention-token ${target ? 'target-reference' : 'source-reference'}" data-mention-kind="${part.kind}" data-mention-id="${escapeHtml(id)}" contenteditable="false"><a class="mention-token-link" href="${escapeHtml(href)}" ${!target && item.url ? 'target="_blank" rel="noopener noreferrer"' : ''} data-mention-jump="true" aria-label="跳转到${target ? '目标位置' : '素材来源'}：${escapeHtml(label)}">${icon(iconName)}<span title="${escapeHtml(label)}">${escapeHtml(shortLabel)}</span></a><button type="button" class="mention-token-remove" data-mention-remove="true" aria-label="删除引用：${escapeHtml(label)}">${icon('x')}</button></span>`;
+      }
+      function draftMarkup(role, demo = false) {
+        return (state.drafts[role] || []).map(part => part.kind === 'text' ? escapeHtml(part.value).replace(/\n/g, '<br>') : mentionTokenMarkup(part, demo)).join('');
+      }
+      function mentionEditorMarkup(role, id, label, placeholder, initial = '') {
+        const demo = role.startsWith('demo-');
+        const demoContent = Array.isArray(initial) ? initial.map(part => typeof part === 'string' ? escapeHtml(part) : mentionTokenMarkup(part, true)).join('') : escapeHtml(initial);
+        const content = Object.hasOwn(state.drafts, role) ? draftMarkup(role, demo) : demo ? demoContent : '';
+        return `<div class="mention-editor" id="${id}" data-draft="${role}" data-placeholder="${escapeHtml(placeholder)}" role="textbox" aria-label="${escapeHtml(label)}" aria-multiline="true" aria-expanded="false" contenteditable="true">${content}</div>`;
+      }
+      /* @tuotie:task-components */
+
+      function syncWorkPrimary(input) {
+        const button = input?.closest('.work-composer')?.querySelector('.work-send');
+        if (button) button.hidden = !editorText(input).trim();
+      }
+      function updateProcessingClocks() {
+        const liveInput = $('#taskInput');
+        if (liveInput && state.phase === 'generating') {
+          const elapsed = state.processingElapsedMs + Date.now() - state.processingStartedAt;
+          liveInput.dataset.placeholder = window.TuotieDesktopLive?.processingHint?.(Math.floor(elapsed / 1000)) || `已处理 ${Math.floor(elapsed / 1000)} 秒`;
+        }
+        const demoInput = $('#demoWorkInput');
+        if (demoInput) demoInput.dataset.placeholder = `已处理 ${Math.floor((Date.now() - previewProcessingStartedAt) / 1000)} 秒`;
+      }
+      let previewProcessingStartedAt = Date.now();
+      const workingPreview = () => `<div class="demo-stack work-preview task-preview">${demoBot('generating', true, '展开工作输入框')}<div class="work-panel">${workComposer(true)}</div></div>`;
+      const state = {
+        mode: 'source-first', auto: false, items: [], activeItems: [], runItems: [], selected: new Set(), target: null,
+        phase: 'collect', collapsed: true, petCollapsed: false, followupOpen: false, atTarget: false, intent: 0,
+        generated: '', acceptedOutputs: [], history: [], pendingPrevious: '', pendingExtra:'', pendingAppliedLength:2, pendingAppliedTone:'same', extra: '', workInputs:[], length: 2, tone: 'same', appliedLength:2, appliedTone:'same', processingStartedAt:0, processingElapsedMs:0, drafts:{ intent:[], task:[], followup:[], 'demo-followup':[] },
+      };
+      let selection = null;
+      let dragging = [];
+      let generationTimer = null;
+      let generationVersion = 0;
+      let toastTimer = null;
+      let dockMoved = false;
+      let directionBackOpen = false;
+      let detailReturnFocus = null;
+      const previewOffsets = new Map();
+      let activeMention = null;
+
+      function editorParts(editor) {
+        if (!editor) return [];
+        const parts = [];
+        const addText = value => {
+          if (!value) return;
+          const last = parts[parts.length - 1];
+          if (last?.kind === 'text') last.value += value;
+          else parts.push({ kind:'text', value });
+        };
+        const visit = node => {
+          if (node.nodeType === Node.TEXT_NODE) { addText(node.textContent); return; }
+          if (node.nodeType !== Node.ELEMENT_NODE) return;
+          if (node.classList.contains('mention-token')) { parts.push({ kind:node.dataset.mentionKind, id:node.dataset.mentionId }); return; }
+          if (node.tagName === 'BR') { addText('\n'); return; }
+          if ((node.tagName === 'DIV' || node.tagName === 'P') && parts.length && !parts[parts.length - 1]?.value?.endsWith('\n')) addText('\n');
+          node.childNodes.forEach(visit);
+        };
+        editor.childNodes.forEach(visit);
+        return parts;
+      }
+      function editorText(editor) {
+        return editorParts(editor).map(part => part.kind === 'text' ? part.value : part.kind === 'target' ? `@${targetName(part.id)}` : `@${sources.find(item => item.id === part.id)?.title || ''}（素材 ID：${part.id}）`).join('');
+      }
+      function saveDraft(editor) {
+        const role = editor?.dataset.draft;
+        if (role && Object.hasOwn(state.drafts, role)) state.drafts[role] = editorParts(editor);
+      }
+      function clearEditor(editor) {
+        if (!editor) return;
+        editor.innerHTML = '';
+        saveDraft(editor);
+        syncWorkPrimary(editor);
+        syncAdjustmentSubmit(editor);
+      }
+      function setEditorParts(editor, parts) {
+        if (!editor) return;
+        const demo = editor.dataset.draft.startsWith('demo-');
+        editor.innerHTML = parts.map(part => part.kind === 'text' ? escapeHtml(part.value).replace(/\n/g, '<br>') : mentionTokenMarkup(part, demo)).join('');
+        saveDraft(editor);
+        editor.focus();
+        const range = document.createRange(); range.selectNodeContents(editor); range.collapse(false);
+        const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range);
+        syncAdjustmentSubmit(editor);
+      }
+      function removeDraftReferences(kind, id = null) {
+        for (const role of Object.keys(state.drafts)) state.drafts[role] = state.drafts[role].filter(part => !(part.kind === kind && (id === null || part.id === id)));
+      }
+      function closeMentionMenu() {
+        if (!activeMention) return;
+        const { editor, list } = activeMention;
+        list.querySelector('[data-mention-active]')?.removeAttribute('data-mention-active');
+        list.removeAttribute('data-mention-picking');
+        editor.setAttribute('aria-expanded', 'false');
+        activeMention = null;
+      }
+      const mentionRows = () => activeMention ? [...activeMention.list.querySelectorAll('[data-card],[data-demo-card]')] : [];
+      function openMentionMenu(editor, range) {
+        closeMentionMenu();
+        const demo = editor.dataset.draft.startsWith('demo-');
+        const list = demo ? editor.closest('.demo-stack,.asset-board') : $('#bundleBody');
+        if (!list) return;
+        if (!demo && state.items.length) {
+          state.collapsed = false;
+          window.TuotieCollection?.setExpanded(true);
+          renderBundle();
+        }
+        activeMention = { editor, list, node:range.startContainer, offset:range.startOffset, index:0 };
+        if (!mentionRows().length) { closeMentionMenu(); return; }
+        list.setAttribute('data-mention-picking', '');
+        editor.setAttribute('aria-expanded', 'true');
+        updateMentionHighlight();
+      }
+      function updateMentionHighlight() {
+        mentionRows().forEach((row,index) => row.toggleAttribute('data-mention-active', index === activeMention.index));
+      }
+      function mentionRow(target) {
+        const row = target.closest?.('[data-card],[data-demo-card]');
+        return row && activeMention?.list.contains(row) ? row : null;
+      }
+      function maybeOpenMention(editor) {
+        const selection = window.getSelection();
+        if (!selection?.rangeCount || !selection.isCollapsed || selection.anchorNode?.nodeType !== Node.TEXT_NODE) { closeMentionMenu(); return; }
+        const node = selection.anchorNode;
+        const offset = selection.anchorOffset;
+        if (node.textContent.slice(0, offset).endsWith('@')) {
+          const range = selection.getRangeAt(0).cloneRange();
+          range.setStart(node, offset - 1);
+          openMentionMenu(editor, range);
+        } else closeMentionMenu();
+      }
+      function insertMention(option) {
+        if (!activeMention) return;
+        const { editor, node, offset } = activeMention;
+        if (!editor.contains(node) || node.textContent[offset] !== '@') { closeMentionMenu(); return; }
+        const range = document.createRange();
+        range.setStart(node, offset); range.setEnd(node, offset + 1);
+        const demo = editor.dataset.draft.startsWith('demo-');
+        const markup = mentionTokenMarkup({ kind:'source', id:option.dataset.card || option.dataset.demoCard }, demo);
+        if (!markup) { closeMentionMenu(); return; }
+        range.deleteContents();
+        const token = range.createContextualFragment(markup).firstChild;
+        range.insertNode(token);
+        const space = document.createTextNode(' ');
+        token.after(space);
+        closeMentionMenu();
+        editor.focus();
+        const cursor = document.createRange();
+        cursor.setStart(space, 1); cursor.collapse(true);
+        const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(cursor);
+        saveDraft(editor); syncWorkPrimary(editor); syncAdjustmentSubmit(editor); syncPasteComposer();
+      }
+      function removeMentionToken(token) {
+        const editor = token.closest('.mention-editor');
+        if (!editor) return;
+        const next = token.nextSibling;
+        const parent = token.parentNode;
+        const index = [...parent.childNodes].indexOf(token);
+        if (next?.nodeType === Node.TEXT_NODE && next.textContent.startsWith(' ')) next.textContent = next.textContent.slice(1);
+        token.remove();
+        editor.focus();
+        const cursor = document.createRange(); cursor.setStart(parent, Math.min(index, parent.childNodes.length)); cursor.collapse(true);
+        const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(cursor);
+        saveDraft(editor); syncWorkPrimary(editor); syncAdjustmentSubmit(editor); syncPasteComposer();
+      }
+      document.addEventListener('input', event => {
+        const editor = event.target.closest?.('.mention-editor');
+        if (!editor || editor !== event.target) return;
+        if (!editor.textContent && !editor.querySelector('.mention-token')) editor.innerHTML = '';
+        saveDraft(editor); syncWorkPrimary(editor); syncAdjustmentSubmit(editor); syncPasteComposer(); maybeOpenMention(editor);
+      }, true);
+      document.addEventListener('pointerover', event => {
+        const row = mentionRow(event.target);
+        if (row) { activeMention.index = mentionRows().indexOf(row); updateMentionHighlight(); }
+      });
+      document.addEventListener('pointerdown', event => { if (mentionRow(event.target)) { event.preventDefault(); event.stopPropagation(); } }, true);
+      document.addEventListener('click', event => {
+        const option = mentionRow(event.target);
+        if (option) { event.preventDefault(); event.stopPropagation(); insertMention(option); return; }
+        const remove = event.target.closest?.('[data-mention-remove]');
+        if (remove) { event.preventDefault(); event.stopPropagation(); removeMentionToken(remove.closest('.mention-token')); return; }
+        const link = event.target.closest?.('[data-mention-jump]');
+        if (link) {
+          const token = link.closest('.mention-token');
+          if (token.dataset.mentionKind === 'target') {
+            event.preventDefault(); event.stopPropagation();
+            if (document.body.classList.contains('catalog-mode')) { showFlow('target-first'); setTarget('document'); }
+            const destination = token.dataset.mentionId === 'document' ? $('#targetSlot') : document.getElementById(`source-${token.dataset.mentionId}`);
+            destination?.scrollIntoView?.({ block:'center', behavior:'smooth' }); destination?.focus({ preventScroll:true });
+          } else if (!sources.find(item => item.id === token.dataset.mentionId)?.url) {
+            event.preventDefault(); event.stopPropagation(); showDetail(token.dataset.mentionId, link);
+          } else event.stopPropagation();
+          return;
+        }
+        closeMentionMenu();
+      }, true);
+      document.addEventListener('keydown', event => {
+        const editor = event.target.closest?.('.mention-editor');
+        if (!editor) return;
+        if (activeMention?.editor === editor) {
+          if (event.isComposing) return;
+          const options = mentionRows();
+          if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+            event.preventDefault(); event.stopPropagation();
+            if (options.length) activeMention.index = (activeMention.index + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
+            updateMentionHighlight(); options[activeMention.index]?.scrollIntoView?.({block:'nearest'}); return;
+          }
+          if (event.key === 'Enter') { event.preventDefault(); event.stopPropagation(); if (options.length) insertMention(options[activeMention.index]); else closeMentionMenu(); return; }
+          if (event.key === 'Escape') { event.preventDefault(); event.stopImmediatePropagation(); closeMentionMenu(); return; }
+          if (['ArrowLeft','ArrowRight','Home','End','Tab'].includes(event.key)) closeMentionMenu();
+        }
+        if (event.key === 'Backspace') {
+          const selection = window.getSelection();
+          if (!selection?.isCollapsed || !selection.rangeCount) return;
+          const node = selection.anchorNode;
+          const offset = selection.anchorOffset;
+          const previous = node === editor ? editor.childNodes[offset - 1] : node?.nodeType === Node.TEXT_NODE && (offset === 0 || offset === 1 && node.textContent.startsWith(' ')) ? node.previousSibling : null;
+          if (previous?.nodeType === Node.ELEMENT_NODE && previous.classList.contains('mention-token')) { event.preventDefault(); event.stopPropagation(); removeMentionToken(previous); }
+        }
+      }, true);
+      document.addEventListener('paste', event => {
+        const editor = event.target.closest?.('.mention-editor');
+        if (!editor || !event.clipboardData) return;
+        event.preventDefault();
+        const selection = window.getSelection();
+        if (!selection?.rangeCount) return;
+        const range = selection.getRangeAt(0); range.deleteContents();
+        const node = document.createTextNode(event.clipboardData.getData('text/plain'));
+        range.insertNode(node); range.setStartAfter(node); range.collapse(true);
+        selection.removeAllRanges(); selection.addRange(range);
+        saveDraft(editor); syncWorkPrimary(editor); syncAdjustmentSubmit(editor); syncPasteComposer(); maybeOpenMention(editor);
+      }, true);
+
+      function dragBounds(element, bounds, fixed) {
+        const rect = element.getBoundingClientRect();
+        const panel = element.querySelector('#taskPanel:not([hidden]), .work-panel');
+        const height = Math.max(rect.bottom, panel?.getBoundingClientRect().bottom || rect.bottom) - rect.top;
+        const padding = 12;
+        const limit = (value, minimum, maximum) => Math.min(Math.max(value, minimum), Math.max(minimum, maximum));
+        const x = limit(rect.left, bounds.left + padding, bounds.right - rect.width - padding);
+        const y = limit(rect.top, bounds.top + padding, bounds.bottom - height - padding);
+        if (fixed) {
+          element.style.left = `${x}px`;
+          element.style.top = `${y}px`;
+          element.style.bottom = 'auto';
+        } else {
+          element.style.left = `${(parseFloat(element.style.left) || 0) + x - rect.left}px`;
+          element.style.top = `${(parseFloat(element.style.top) || 0) + y - rect.top}px`;
+        }
+      }
+      function enableDragging(root, resolve) {
+        let suppressClick = false;
+        root.addEventListener('click', event => {
+          if (!suppressClick) return;
+          event.preventDefault(); event.stopImmediatePropagation();
+          suppressClick = false;
+        }, true);
+        root.addEventListener('pointerdown', event => {
+          if (!event.isPrimary || event.button !== 0) return;
+          const target = resolve(event);
+          if (!target) return;
+          const { element, handle, bounds, fixed, onEnd } = target;
+          const start = element.getBoundingClientRect();
+          const panel = element.querySelector('#taskPanel:not([hidden]), .work-panel');
+          const height = Math.max(start.bottom, panel?.getBoundingClientRect().bottom || start.bottom) - start.top;
+          const initialLeft = parseFloat(element.style.left) || 0;
+          const initialTop = parseFloat(element.style.top) || 0;
+          let moved = false;
+          const pointerId = event.pointerId;
+          handle.setPointerCapture(pointerId);
+          const move = next => {
+            if (next.pointerId !== pointerId) return;
+            const dx = next.clientX - event.clientX;
+            const dy = next.clientY - event.clientY;
+            if (!moved && Math.hypot(dx, dy) < 5) return;
+            if (!moved) { moved = true; element.classList.add('is-dragging'); }
+            const area = bounds();
+            const limit = (value, minimum, maximum) => Math.min(Math.max(value, minimum), Math.max(minimum, maximum));
+            const x = limit(start.left + dx, area.left + 12, area.right - start.width - 12);
+            const y = limit(start.top + dy, area.top + 12, area.bottom - height - 12);
+            if (fixed) {
+              element.style.left = `${x}px`;
+              element.style.top = `${y}px`;
+              element.style.bottom = 'auto';
+            } else {
+              element.style.left = `${initialLeft + x - start.left}px`;
+              element.style.top = `${initialTop + y - start.top}px`;
+            }
+            next.preventDefault();
+          };
+          const finish = next => {
+            if (next.pointerId !== pointerId) return;
+            handle.removeEventListener('pointermove', move);
+            handle.removeEventListener('pointerup', finish);
+            handle.removeEventListener('pointercancel', finish);
+            if (handle.hasPointerCapture(pointerId)) handle.releasePointerCapture(pointerId);
+            if (moved) {
+              element.classList.remove('is-dragging');
+              onEnd?.();
+              suppressClick = true;
+              setTimeout(() => { suppressClick = false; }, 0);
+            }
+          };
+          handle.addEventListener('pointermove', move);
+          handle.addEventListener('pointerup', finish);
+          handle.addEventListener('pointercancel', finish);
+        });
+      }
+      function viewportBounds() { return { left:0, top:0, right:innerWidth, bottom:innerHeight }; }
+      function clampDock() { if (dockMoved) dragBounds($('#dock'), viewportBounds(), true); }
+
+      function targetName(targetId) {
+        return sources.find(source => source.id === targetId)?.title || '发展背景下方';
+      }
+      function targetFooterBody(targetId, demo = false) {
+        const focus = !demo && window.TuotieDesktopLive?.focusMarkup?.();
+        if (focus) return focus;
+        const item = sources.find(source => source.id === targetId);
+        const name = targetName(targetId);
+        const anchor = item ? `source-${item.id}` : !demo && state.generated ? 'generatedSlot' : 'targetSlot';
+        return `<span class="target-tag"><a class="target-tag-link" href="#${anchor}" aria-label="跳转到目标位置：${escapeHtml(name)}" title="${escapeHtml(name)}" ${demo ? 'data-demo-jump="true"' : 'data-jump-target="true"'}>${icon('scan')}<span class="target-tag-name">${escapeHtml(name)}</span></a><button type="button" class="target-remove" ${demo ? 'data-demo-remove-target="true"' : 'data-remove-target="true"'} aria-label="清除目标插入位置：${escapeHtml(name)}">${icon('x')}</button></span>`;
+      }
+      function showToast(message) {
+        const el = $('#toast'); el.textContent = message; el.hidden = false; el.classList.add('show');
+        clearTimeout(toastTimer); toastTimer = setTimeout(() => { el.hidden = true; el.classList.remove('show'); }, 2600);
+      }
+      function hideMenu() { $('#selectionMenu').hidden = true; selection = null; }
+      function showMenu(kind, id, element) {
+        selection = { kind, id };
+        const rect = element.getBoundingClientRect();
+        const menu = $('#selectionMenu'); menu.hidden = false;
+        menu.style.left = `${Math.max(12, Math.min(rect.left + 8, window.innerWidth - menu.offsetWidth - 12))}px`;
+        menu.style.top = `${rect.top > menu.offsetHeight + 18 ? rect.top - menu.offsetHeight - 7 : rect.bottom + 7}px`;
+      }
+      function reset(mode = state.mode) {
+        clearTimeout(generationTimer); generationVersion += 1; hideMenu();
+        directionBackOpen = false;
+        $('#demoSettings').open = false;
+        dockMoved = false;
+        $('#dock').style.removeProperty('left'); $('#dock').style.removeProperty('top'); $('#dock').style.removeProperty('bottom');
+        Object.assign(state, { mode, auto: false, items: [], activeItems: [], runItems: [], selected: new Set(), target: null,
+          phase: 'collect', collapsed: true, petCollapsed: false, followupOpen: false, atTarget: false, intent: 0, generated: '', acceptedOutputs: [],
+          history: [], pendingPrevious: '', pendingExtra:'', pendingAppliedLength:2, pendingAppliedTone:'same', extra: '', workInputs:[], length: 2, tone: 'same', appliedLength:2, appliedTone:'same', processingStartedAt:0, processingElapsedMs:0, drafts:{ intent:[], task:[], followup:[], 'demo-followup':[] } });
+        render();
+      }
+      function addSource(id) {
+        if (!state.items.includes(id)) state.items.push(id);
+        if (state.target) state.activeItems = state.selected.size ? [...state.selected] : [...state.items];
+        state.collapsed = false;
+        if (state.target && state.mode === 'target-first') {
+          state.phase = 'direction'; state.atTarget = false;
+        }
+        hideMenu(); render(); showToast('已加入内容包');
+      }
+      function setTarget(id, nextSelection = null) {
+        hideMenu();
+        if (['generating','done'].includes(state.phase)) { showToast('请先完成当前修改'); return false; }
+        if (state.target === id && !nextSelection) return true;
+        if (state.target && state.target !== id && !window.confirm(`已有目标位置，是否替换？\n当前：${targetName(state.target)}\n新位置：${targetName(id)}`)) return false;
+        if (nextSelection) state.selected = nextSelection;
+        state.target = id;
+        state.activeItems = state.selected.size ? [...state.selected] : [...state.items];
+        if (state.mode === 'source-first' && state.items.length) {
+          state.atTarget = false; state.collapsed = false;
+          if (state.auto) { startGeneration(); return true; }
+          state.phase = 'direction';
+        } else {
+          state.atTarget = false; state.collapsed = false;
+          state.phase = state.items.length ? 'direction' : 'collect';
+        }
+        render(); showToast(id === 'document' ? '已选插入位置' : '已将这项内容设为目标');
+        return true;
+      }
+      function clearTarget() {
+        state.target = null;
+        removeDraftReferences('target');
+        state.activeItems = [];
+        state.atTarget = false;
+        state.collapsed = state.items.length === 0;
+        if (state.phase === 'direction') state.phase = 'collect';
+        render(); $('#collapseButton').focus(); showToast('已清除目标插入位置');
+      }
+      function returnToSelection() {
+        if (state.phase !== 'direction') return;
+        directionBackOpen = false;
+        if (state.mode === 'source-first') { state.target = null; removeDraftReferences('target'); }
+        state.phase = 'collect'; state.atTarget = false; state.collapsed = false;
+        state.activeItems = state.selected.size ? [...state.selected] : [...state.items];
+        $('#dock').classList.remove('direction-collapsed', 'controls-open');
+        render();
+        ($('#bundleBody [data-select]') || $('#collapseButton')).focus({ preventScroll:true });
+        showToast('已返回素材选择');
+      }
+      function syncDirectionBack() {
+        const open = state.phase === 'direction' && !state.collapsed && directionBackOpen;
+        $('#directionActions').hidden = !open;
+        $('#dockBot').setAttribute('aria-expanded', String(!state.collapsed && !state.petCollapsed));
+        if (state.phase === 'direction') {
+          const label = state.collapsed || state.petCollapsed ? '展开推荐方向和内容包' : '收起推荐方向和内容包';
+          $('#dockBot').setAttribute('aria-label', label);
+        }
+      }
+      function closeDirectionBack() {
+        if (!directionBackOpen) return;
+        directionBackOpen = false;
+        syncDirectionBack();
+      }
+      function setDemoDirectionBack(stack, open) {
+        const actions = stack?.querySelector('[data-demo-direction-actions]');
+        if (!actions) return;
+        actions.hidden = !open;
+        stack.querySelectorAll('.demo-bot').forEach(button => {
+          button.setAttribute('aria-expanded', String(open));
+          const label = stack.classList.contains('demo-direction-collapsed') ? '展开推荐方向和内容包' : '收起推荐方向和内容包';
+          button.setAttribute('aria-label', `${label}；拖动可调整位置`);
+        });
+      }
+      function sourceReference(label, kind = 'text') {
+        const type = ['text','image','table','video','document'].includes(kind) ? kind : 'document';
+        return `<span class="reference-tag source-reference">${icon(`type-${type}`)}<span>${escapeHtml(label)}</span></span>`;
+      }
+      function targetReference(label) { return `<span class="reference-tag target-reference">${icon('scan')}<span>${escapeHtml(label)}</span></span>`; }
+      function directionOptions(sourceTags, targetTag, demo = false) {
+        if (!demo) {
+          const live = window.TuotieDesktopLive;
+          const texts = live?.directionTexts?.() || [];
+          if (!texts.length) {
+            const hint = live?.directionHint?.() || '正在根据图片和场景生成推荐…';
+            return `<div class="direction-list" aria-label="推荐生成方向"><p class="direction-status">${escapeHtml(hint)}</p>${live?.retryMarkup?.() || ''}</div>`;
+          }
+          return `<div class="direction-list" aria-label="推荐生成方向">${texts.map((text, index) => `<button type="button" class="direction-option" data-intent="${index}">${escapeHtml(text)}</button>`).join('')}</div>`;
+        }
+        return `<div class="direction-list" aria-label="推荐生成方向">
+          <button type="button" class="direction-option demo-glass" data-demo-intent="0">参考 ${sourceTags}，为 ${targetTag} 补充行业背景。</button>
+          <button type="button" class="direction-option demo-glass" data-demo-intent="1">参考 ${sourceTags}，将 ${targetTag} 整理为简短要点。</button>
+          <button type="button" class="direction-option demo-glass" data-demo-intent="2">参考 ${sourceTags}，沿用 ${targetTag} 的语气与结构，补充一段简要说明。</button>
+        </div>`;
+      }
+      function chooseIntent(index) { state.intent = index; startGeneration(); }
+      function resultText() {
+        const sourceNames = state.runItems.map(id => sources.find(item => item.id === id)?.title).filter(Boolean).join('、');
+        if (state.intent === 1 && !state.pendingPrevious) return `根据${sourceNames}，可从三个方面梳理行业变化：服务方式更重视协作，用户期待内容贴合实际工作场景，具体结论仍需核对资料。`;
+        const short = `结合${sourceNames}，行业服务正从单一交付走向更贴近具体工作场景的协作。`;
+        const full = `${short}已有草稿关注供给和用户预期的变化，这里补充了资料提供的观察方向，并保留后续核对的空间。`;
+        const detailed = `${full}下一步可对资料中的具体事实逐项核对，再决定最终表述。`;
+        const requestedShort = /简短|简洁|缩短/.test(state.extra);
+        const text = requestedShort ? short : [short, full, detailed][state.length - 1];
+        return `${text}${state.tone === 'formal' || /书面|正式/.test(state.extra) ? '相关变化仍需结合具体资料审慎判断。' : ''}`;
+      }
+      function startGeneration(customText = '') {
+        const adjusting = state.phase === 'done' && Boolean(state.generated);
+        state.activeItems = adjusting ? [...state.runItems] : state.selected.size ? [...state.selected] : [...state.items];
+        if (!state.target || (!state.activeItems.length && !(window.TuotieOfficePaste?.host === 'input' && customText.trim()))) { showToast('请先加入素材并选择目标'); return; }
+        state.runItems = [...state.activeItems];
+        clearTimeout(generationTimer);
+        const runVersion = ++generationVersion;
+        if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+        $('#dock').classList.remove('controls-open');
+        state.pendingExtra = state.extra;
+        state.pendingAppliedLength = state.appliedLength; state.pendingAppliedTone = state.appliedTone;
+        state.extra = customText.trim(); state.pendingPrevious = state.generated;
+        state.workInputs = [];
+        state.phase = 'generating'; state.collapsed = true; state.petCollapsed = false; state.atTarget = true;
+        state.processingElapsedMs = 0; state.processingStartedAt = Date.now();
+        render();
+        generationTimer = setTimeout(() => { if (runVersion === generationVersion) finishGeneration(); }, 7000);
+      }
+      function finishGeneration() {
+        if (state.phase !== 'generating') return;
+        clearTimeout(generationTimer); generationTimer = null;
+        state.processingElapsedMs += Date.now() - state.processingStartedAt;
+        state.processingStartedAt = 0;
+        state.history.push({ text:state.pendingPrevious, length:state.pendingAppliedLength, tone:state.pendingAppliedTone, extra:state.pendingExtra });
+        state.generated = resultText();
+        state.appliedLength = state.length; state.appliedTone = state.tone;
+        state.pendingExtra = '';
+        state.drafts.followup = [...state.drafts.task]; state.drafts.task = []; state.workInputs = [];
+        state.phase = 'done'; state.followupOpen = Boolean(window.TuotieOfficePaste?.open); state.collapsed = !window.TuotieOfficePaste?.open; state.petCollapsed = false; state.atTarget = false;
+        render(); showToast('已生成内容，可保留或调整');
+      }
+      function stopGeneration() {
+        if (state.phase !== 'generating') return;
+        companionRunCancelled=true;
+        clearTimeout(generationTimer); generationTimer = null; generationVersion += 1;
+        const returnToResult = Boolean(state.pendingPrevious);
+        const unfinished = [...state.workInputs, ...state.drafts.task];
+        if (unfinished.length) {
+          const role = returnToResult ? 'followup' : 'intent';
+          if (state.drafts[role].length) state.drafts[role].push({ kind:'text', value:'\n' });
+          state.drafts[role].push(...unfinished);
+        }
+        state.drafts.task = []; state.workInputs = [];
+        state.extra = state.pendingExtra; state.pendingExtra = '';
+        state.pendingPrevious = '';
+        state.processingStartedAt = 0; state.processingElapsedMs = 0;
+        state.phase = returnToResult ? 'done' : 'direction';
+        state.atTarget = false; state.collapsed = returnToResult;
+        render(); showToast('已停止生成');
+      }
+      function undo() {
+        if (!state.history.length) return;
+        companionRunCancelled=true;
+        const previous = state.history.pop();
+        state.generated = previous.text;
+        state.length = previous.length; state.appliedLength = previous.length;
+        state.tone = previous.tone; state.appliedTone = previous.tone;
+        state.extra = previous.extra;
+        state.phase = state.generated ? 'done' : 'direction';
+        state.atTarget = false; state.collapsed = state.phase !== 'direction';
+        render(); showToast('已撤回最近一次编辑');
+      }
+      function acceptGeneration() {
+        if (state.phase !== 'done' || !state.target || !state.generated) return;
+        state.acceptedOutputs.push({ target:state.target, text:state.generated });
+        const used = new Set(state.runItems);
+        state.items = state.items.filter(id => !used.has(id));
+        state.activeItems = [];
+        state.runItems = [];
+        state.selected.clear();
+        state.target = null;
+        state.generated = '';
+        state.history = [];
+        state.pendingPrevious = '';
+        state.pendingExtra = '';
+        state.extra = '';
+        state.workInputs = [];
+        state.drafts = { intent:[], task:[], followup:[], 'demo-followup':[] };
+        state.length = 2; state.tone = 'same'; state.appliedLength = 2; state.appliedTone = 'same';
+        state.phase = 'collect';
+        state.collapsed = state.items.length === 0;
+        state.atTarget = false;
+        render(); showToast('已保留修改');
+      }
+      function renderSources() {
+        $('#sourceList').innerHTML = sources.map(item => {
+          const outputs = state.acceptedOutputs.filter(entry => entry.target === item.id).map(entry => entry.text);
+          if (state.target === item.id && state.generated) outputs.push(state.generated);
+          const output = outputs.map(text => `<div class="source-output">${escapeHtml(text.slice(0, 40))}…</div>`).join('');
+          return `<div class="source-row" data-source="${item.id}">
+            ${thumb(item.kind)}<button type="button" class="source-row-select" id="source-${item.id}" aria-label="打开${escapeHtml(item.title)}的操作菜单"><strong>${escapeHtml(item.title)}</strong>${icon('chevron-right','source-arrow')}</button>
+            <div class="source-row-meta">${sourceMeta(item)}</div>${output}</div>`;
+        }).join('');
+      }
+      function renderTarget() {
+        const slot = $('#targetSlot');
+        slot.classList.toggle('has-content', state.target === 'document' && Boolean(state.generated));
+        slot.classList.toggle('selected', state.target === 'document');
+        slot.textContent = state.target === 'document' ? '已选为插入位置' : '在此处插入';
+        slot.setAttribute('aria-label', state.target === 'document' ? '已选发展背景下方为插入位置' : '选择发展背景下方作为插入位置');
+        const outputs = state.acceptedOutputs.filter(entry => entry.target === 'document').map(entry => entry.text);
+        if (state.target === 'document' && state.generated) outputs.push(state.generated);
+        $('#generatedSlot').innerHTML = outputs.map(text => `<div class="generated"><p>${escapeHtml(text)}</p></div>`).join('');
+      }
+      function renderBundle() {
+        const count = state.items.length;
+        if(!count&&window.TuotieOfficePaste?.host!=='input'&&!['generating','done'].includes(state.phase)){state.collapsed=true;if(state.phase==='direction')state.phase='collect';}
+        const assistantState = state.phase === 'generating' ? 'working' : state.phase === 'done' ? 'complete' : count ? 'ready' : 'idle';
+        $('#dock').dataset.assistantState = assistantState;
+        $('#petStatus').textContent = ({idle:'随时待命', ready:`${count} 项内容，等你粘贴`, working:'正在帮你处理', complete:'处理好了'})[assistantState];
+        $('#dock').setAttribute('aria-label', `妥帖助手 · ${{idle:'空闲',ready:'待粘贴',working:'处理中',complete:'等待确认'}[assistantState]}`);
+        $('#bundleCount').textContent = String(count);
+        const cards = [];
+        for (const id of state.items) {
+          const item = sources.find(s => s.id === id);
+          if (item) cards.push(bundleCard(item, state.selected.has(id)));
+        }
+        $('#bundleBody').innerHTML = cards.length ? cards.join('') : '<div class="bundle-empty">尚未添加内容</div>';
+        const hasFocus = Boolean(window.TuotieDesktopLive?.focusLabel?.());
+        $('#targetFooter').hidden = !state.target && !hasFocus;
+        $('#targetFooter').innerHTML = state.target || hasFocus ? targetFooterBody(state.target) : '';
+        $('#dock').classList.toggle('at-target', state.atTarget);
+        $('#dock').classList.toggle('is-working', state.phase === 'generating');
+        $('#dock').classList.toggle('is-direction', state.phase === 'direction');
+        const showCollapsed = state.collapsed || state.petCollapsed;
+        const peekBundle = false;
+        $('#dock').classList.toggle('pet-collapsed', state.petCollapsed);
+        $('#dock').classList.toggle('bundle-collapsed', peekBundle);
+        $('#dock').classList.toggle('direction-collapsed', state.phase === 'direction' && showCollapsed);
+        if (state.phase !== 'generating' && !peekBundle && state.phase !== 'direction') $('#dock').classList.remove('controls-open');
+        $('#bundleStack').hidden = showCollapsed && !peekBundle;
+        const folded = state.petCollapsed || (['collect','direction'].includes(state.phase) && state.collapsed);
+        const petLabel = state.phase === 'direction' ? folded ? '展开推荐方向和内容包' : '收起推荐方向和内容包' : folded ? '展开内容' : '收起内容';
+        $('#dockBot').setAttribute('aria-label', petLabel);
+        if (state.phase === 'direction') syncDirectionBack();
+        const orb = $('#dockOrb');
+        for (const status of ['thinking','generating','done']) orb.classList.toggle(status, (state.phase === 'direction' ? 'thinking' : state.phase) === status);
+        syncDockCompanion();
+      }
+      function renderIntent() {
+        const panel = $('#intentPanel');
+        panel.hidden = state.phase !== 'direction' || (!state.items.length && window.TuotieOfficePaste?.host !== 'input');
+        if (panel.hidden) directionBackOpen = false;
+        syncDirectionBack();
+        if (panel.hidden) return;
+        if(window.TuotieOfficePaste?.open){panel.innerHTML=pasteComposerMarkup();syncPasteComposer();return;}
+        const sourceTags = state.activeItems.map(id => sources.find(item => item.id === id)).filter(Boolean).map(item => sourceReference(item.title, item.kind)).join('、');
+        const targetLabel = state.target === 'document' ? '发展背景' : sources.find(item => item.id === state.target)?.title || '目标内容';
+        panel.innerHTML = `${directionOptions(sourceTags, targetReference(targetLabel))}
+          <div class="composer direction-composer">${mentionEditorMarkup('intent', 'intentInput', '自定义生成方向', '输入要求，@ 引用内容')}<button type="button" class="icon-button send" data-start="true" title="发送自定义方向并开始生成" aria-label="发送自定义方向并开始生成">${icon('arrow-up')}</button></div>`;
+      }
+      function renderTask() {
+        const panel = $('#taskPanel');
+        panel.hidden = !['generating', 'done'].includes(state.phase) || state.petCollapsed;
+        if (panel.hidden) return;
+        const previous=panel.querySelector('.mention-editor');
+        const focused=previous?.contains(document.activeElement);
+        const retainEditor=()=>{
+          const next=previous&&panel.querySelector('#'+previous.id);
+          if(next){next.replaceWith(previous);if(focused)previous.focus({preventScroll:true});}
+        };
+        panel.classList.toggle('task-complete', state.phase === 'done');
+        if (state.phase === 'generating') {
+          panel.innerHTML = workComposer(false);
+          retainEditor();
+          updateProcessingClocks();
+          syncWorkPrimary($('#taskInput'));
+          return;
+        }
+        panel.innerHTML = `${completionHeader()}${window.TuotieDesktopLive?.resultMarkup?.() || ''}${(state.followupOpen || window.TuotieOfficePaste?.open) && window.TuotieDesktopLive?.canAdjust?.() !== false ? adjustmentMarkup(false) : ''}`;
+        retainEditor();
+        syncAdjustmentSubmit($('#followupInput'));
+      }
+      function render() {
+        document.querySelectorAll('[data-mode]').forEach(button => button.classList.toggle('active', button.dataset.mode === state.mode));
+        $('#demoSettings').hidden = state.mode !== 'source-first';
+        $('#confidenceButton').checked = state.auto;
+        $('#sourceHeading').textContent = '素材';
+        $('#sourceInstruction').textContent = state.mode === 'target-first'
+          ? '先在右侧文档选择插入位置，再添加需要参考的素材。'
+          : '选择素材加入内容包。需要组合使用时，可在内容包中多选。';
+        renderSources(); renderTarget(); renderBundle(); renderIntent(); renderTask();
+        if (activeMention) {
+          if (!activeMention.editor.isConnected || activeMention.editor.closest('[hidden]') || !mentionRows().length) closeMentionMenu();
+          else { activeMention.index = Math.min(activeMention.index, mentionRows().length - 1); updateMentionHighlight(); }
+        }
+        clampDock();
+      }
+      function showDetail(id, trigger = document.activeElement) {
+        const item = sources.find(s => s.id === id); if (!item) return;
+        detailReturnFocus = trigger;
+        $('#detailTitle').textContent = item.title;
+        $('#detailContent').innerHTML = item.kind === 'table' && item.clipboard
+          ? `<p style="white-space:pre-wrap">${escapeHtml(contentText(item))}</p>`
+          : item.kind === 'table'
+          ? '<table><thead><tr><th>季度</th><th>观察量</th><th>变化</th></tr></thead><tbody><tr><td>Q1</td><td>1,280</td><td>—</td></tr><tr><td>Q2</td><td>1,450</td><td>+13%</td></tr><tr><td>Q3</td><td>1,610</td><td>+11%</td></tr></tbody></table>'
+          : item.kind === 'image' && item.preview ? `<img class="picture" alt="${escapeHtml(item.title)}" src="${escapeHtml(item.preview)}">`
+          : item.kind === 'image' ? `<div class="picture" role="img" aria-label="${escapeHtml(item.detail)}"></div>`
+          : `<p>${escapeHtml(item.detail)}</p>`;
+        $('#detailSource').innerHTML = `来源：${originMarkup(item)}`;
+        $('#detailBackdrop').hidden = false; $('#closeDetail').focus();
+      }
+      function closeDetail() {
+        $('#detailBackdrop').hidden = true;
+        if (detailReturnFocus?.isConnected) detailReturnFocus.focus();
+        detailReturnFocus = null;
+      }
+
+      $('#sourceList').addEventListener('click', event => {
+        if (event.target.closest('.origin-link')) return;
+        const row = event.target.closest('[data-source]'); if (row) showMenu('source', row.dataset.source, row);
+      });
+      $('#targetSlot').addEventListener('click', () => { if (state.target !== 'document') setTarget('document'); });
+      $('#selectionMenu').addEventListener('click', event => {
+        const action = event.target.closest('[data-menu-action]')?.dataset.menuAction;
+        if (!action || !selection) return;
+        if (action === 'add') {
+          if (selection.kind === 'source') addSource(selection.id);
+          else { addSource('text'); showToast('已把当前文段加入内容包（演示素材）'); }
+        } else setTarget(selection.id);
+      });
+      $('#bundleBody').addEventListener('click', event => {
+        if (event.target.closest('.origin-link')) return;
+        const detail = event.target.closest('[data-detail]'); if (detail) { showDetail(detail.dataset.detail, detail); return; }
+        const remove = event.target.closest('[data-remove]');
+        if (remove) { state.items = state.items.filter(id => id !== remove.dataset.remove); removeDraftReferences('source', remove.dataset.remove); state.selected.delete(remove.dataset.remove); state.activeItems = state.selected.size ? [...state.selected] : [...state.items]; if (!state.items.length && state.phase === 'direction' && window.TuotieOfficePaste?.host !== 'input') state.phase = 'collect'; if (!state.items.length && !state.target) state.collapsed = true; render(); return; }
+        const card = event.target.closest('[data-card]'); if (!card) return;
+        const id = card.dataset.card; state.selected.has(id) ? state.selected.delete(id) : state.selected.add(id);
+        state.activeItems = state.selected.size ? [...state.selected] : [...state.items];
+        const selected = state.selected.has(id);
+        card.classList.toggle('selected', selected);
+        const selectButton = card.querySelector('[data-select]');
+        selectButton.setAttribute('aria-pressed', String(selected));
+        selectButton.setAttribute('aria-label', `${selected ? '取消选择' : '选择'}${sources.find(item => item.id === id)?.title || '素材'}`);
+        if (state.phase === 'direction') renderIntent();
+      });
+      $('#bundleBody').addEventListener('dragstart', event => {
+        if (event.target.closest('.origin-link,.thumb-button,.bundle-card-actions button')) { event.preventDefault(); return; }
+        const card = event.target.closest('[data-card]'); if (!card) return;
+        dragging = state.selected.has(card.dataset.card) ? [...state.selected] : [card.dataset.card];
+        event.dataTransfer.effectAllowed = 'copy'; event.dataTransfer.setData('text/plain', dragging.join(','));
+      });
+      $('#bundleBody').addEventListener('dragend', () => { dragging = []; });
+      $('#targetFooter').addEventListener('click', event => {
+        if (event.target.closest('[data-remove-target]')) { clearTarget(); return; }
+        const jump = event.target.closest('[data-jump-target]');
+        if (!jump) return;
+        const destination = document.getElementById(jump.getAttribute('href').slice(1));
+        if (destination) destination.focus({ preventScroll:true });
+      });
+      $('#targetSlot').addEventListener('dragover', event => { if (!dragging.length) return; event.preventDefault(); event.dataTransfer.dropEffect = 'copy'; });
+      $('#targetSlot').addEventListener('drop', event => {
+        event.preventDefault();
+        if (!dragging.length) return;
+        const selected = new Set(dragging);
+        dragging = [];
+        setTarget('document', selected);
+      });
+      $('#intentPanel').addEventListener('click', event => {
+        const option = event.target.closest('[data-intent]'); if (option) { chooseIntent(Number(option.dataset.intent)); return; }
+        if (event.target.closest('[data-voice]')) { showToast('语音输入暂不可用'); return; }
+        if (event.target.closest('[data-start]')) submitCustomDirection();
+      });
+      $('#directionBack').addEventListener('click', returnToSelection);
+      function submitCustomDirection() {
+        const draft = editorText($('#intentInput')).trim();
+        const value = draft || (window.TuotieOfficePaste?.open ? window.TuotieDesktopLive?.defaultRecommendation?.() || '' : '');
+        if(window.TuotieOfficePaste?.open&&!window.TuotieDesktopLive?.canSendPaste?.(Boolean(draft)))return;
+        if (!value) { showToast('请先输入生成方向'); return; }
+        state.intent = 3; startGeneration(value);
+      }
+      function sendWorkSupplement(input) {
+        const value = editorText(input).trim();
+        if (!value) return;
+        if (state.workInputs.length) state.workInputs.push({ kind:'text', value:'\n' });
+        state.workInputs.push(...editorParts(input));
+        state.extra = [state.extra, value].filter(Boolean).join('\n');
+        clearEditor(input);
+        showToast('已记录补充要求，将用于本次生成');
+      }
+      function submitAdjustment() {
+        const input = $('#followupInput');
+        const value = editorText(input).trim();
+        if (!value) return;
+        startGeneration(value);
+      }
+      $('#intentPanel').addEventListener('keydown', event => { if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.target.matches('.mention-editor')) { event.preventDefault(); submitCustomDirection(); } });
+      $('#taskPanel').addEventListener('click', event => {
+        if (event.target.closest('[data-followup]')) { state.followupOpen = !state.followupOpen; renderTask(); if(state.followupOpen) $('#followupInput')?.focus({preventScroll:true}); return; }
+        if (event.target.closest('[data-voice]')) { showToast('语音输入暂不可用'); return; }
+        if (event.target.closest('[data-accept]')) { acceptGeneration(); return; }
+        if (event.target.closest('[data-work-send]')) { sendWorkSupplement($('#taskInput')); return; }
+        if (event.target.closest('[data-stop]')) { stopGeneration(); return; }
+        if (event.target.closest('[data-undo]')) { undo(); return; }
+        const suggestion = event.target.closest('[data-adjust-option]');
+        if (suggestion) { applyQuickAdjustment(Number(suggestion.dataset.adjustOption)); return; }
+        if (event.target.closest('[data-adjust-submit]')) submitAdjustment();
+      });
+      $('#taskPanel').addEventListener('keydown', event => { if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.target.matches('.mention-editor')) { event.preventDefault(); if (state.phase === 'done') submitAdjustment(); else if (state.phase === 'generating') sendWorkSupplement(event.target); } });
+
+      const toggleDockBundle = () => {
+        const folded = state.petCollapsed || (['collect','direction'].includes(state.phase) && state.collapsed);
+        state.petCollapsed = !folded; state.collapsed = !folded; directionBackOpen = false;
+        if (state.petCollapsed && document.activeElement instanceof HTMLElement) document.activeElement.blur();
+        render();
+      };
+      $('#dockBot').addEventListener('click', toggleDockBundle);
+      $('#dockPet').addEventListener('pointerenter', () => { if (state.phase === 'generating' || $('#dock').classList.contains('bundle-collapsed')) $('#dock').classList.add('controls-open'); });
+      $('#collapseButton').addEventListener('click', () => { state.collapsed = true; if (document.activeElement instanceof HTMLElement) document.activeElement.blur(); renderBundle(); });
+      $('#directionCollapse').addEventListener('click', () => { state.collapsed = true; directionBackOpen = false; if (document.activeElement instanceof HTMLElement) document.activeElement.blur(); renderBundle(); });
+      $('#dock').addEventListener('pointerleave', () => { if ($('#dock').classList.contains('is-dragging')) return; $('#dock').classList.remove('controls-open'); });
+      enableDragging($('#dock'), event => {
+        const hit = event.target.closest('#dockPet, #bundle .bundle-header, #intentPanel .direction-option, #taskPanel .completion-header');
+        if (!hit || ((hit.classList.contains('bundle-header') || hit.classList.contains('completion-header')) && event.target.closest('button'))) return null;
+        const handle = event.target.closest('button') || hit;
+        const panel = hit.closest('#officePastePanel');
+        if (panel) return hit.id === 'dockPet' ? { element:panel, handle, bounds:viewportBounds, fixed:true } : null;
+        return { element:$('#dock'), handle, bounds:viewportBounds, fixed:true, onEnd:() => { dockMoved = true; clampDock(); } };
+      });
+      $('#closeDetail').addEventListener('click', closeDetail);
+      $('#detailBackdrop').addEventListener('click', event => { if (event.target.id === 'detailBackdrop') closeDetail(); });
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') { if (!$('#detailBackdrop').hidden) closeDetail(); hideMenu(); closeDirectionBack(); setDemoDirectionBack($('#previewComponent .demo-direction-stack'), false); } });
+      document.addEventListener('click', event => {
+        if (!event.target.closest('#selectionMenu, [data-source], #targetSlot')) hideMenu();
+        if (!event.target.closest('#dockPet, #directionActions')) closeDirectionBack();
+        if (!event.target.closest('.demo-direction-stack .pet-anchor, [data-demo-direction-actions]')) {
+          setDemoDirectionBack($('#previewComponent .demo-direction-stack'), false);
+        }
+      });
+      document.querySelectorAll('[data-mode]').forEach(button => button.addEventListener('click', () => reset(button.dataset.mode)));
+      $('#confidenceButton').addEventListener('change', event => { state.auto = event.target.checked; showToast(state.auto ? '选定插入位置后将直接生成' : '选定插入位置后将显示方向建议'); });
+      $('#resetButton').addEventListener('click', () => reset());
+
+      const catalogGroups = [
+        { id:'selection', number:'01', title:'选区操作条', summary:'选中文字后，可将其加入内容包。', states:[['source','选中素材','操作条出现在所选内容附近。'],['disabled','不可操作','当前内容不可使用时，操作保持禁用。']] },
+        { id:'bundle', number:'02', title:'内容包', summary:'有素材时默认展开，目标标签固定在底部。', states:[['empty','空内容包','没有素材和目标时默认最小化。'],['mixed','混合素材','点击素材头像可查看详情。'],['selected','多项选中','可将多项素材一起拖入文档。'],['collapsed','收起内容包','点击折叠按钮后可通过助手重新展开。'],['target','目标插入位置','目标标签固定在内容包底部。']] },
+        { id:'direction', number:'03', title:'生成方向', summary:'根据素材与插入位置选择写作方向。', states:[['multiple','推荐方向','选择建议后开始生成。'],['custom','自定义方向','输入要求后开始生成。'],['collapsed','收起建议与内容包','点击折叠后两块一起收起，点击助手可一起展开。'],['auto','确认方向开始工作','确认方向后开始写入文档。']] },
+        { id:'assistant', number:'04', title:'助手与任务', summary:'查看生成进度并继续调整内容。', states:[['idle','待命','等待选择素材或插入位置。'],['generating','生成中','可补充要求或停止生成。'],['done','生成完成','可撤回、保留或继续调整。'],['adjustment','继续调整','用固定快捷选项或输入要求调整本次结果。']] },
+        { id:'assets', title:'图标与标签', summary:'统一查看内容类型、来源和文中标签的用法。', states:[['types','内容类型头像','头像按加入内容包的内容类型区分，使用同一底色。'],['origins','来源图标','来源图标表示网站、应用或文件；可打开时，名称是链接。'],['tags','文中标签','标签沿用内容类型图标，不为图标另加底色。'],['mentions','输入引用','输入 @ 后可直接选择下方素材。']] },
+      ];
+      let catalogSelection = { group:'selection', variant:'source' };
+      let previewGenerationOrigin = 'direction';
+
+      function renderCatalogNav() {
+        const groups = catalogGroups.filter(group => group.number).map(group => `<div class="nav-group"><div class="nav-group-label"><b>${group.number}</b>${group.title}</div>${group.states.map(([id,label]) => `<button type="button" class="nav-item ${document.body.classList.contains('catalog-mode') && catalogSelection.group === group.id && catalogSelection.variant === id ? 'active' : ''}" data-catalog-group="${group.id}" data-catalog-variant="${id}">${label}</button>`).join('')}</div>`).join('');
+        const assets = catalogGroups.find(group => group.id === 'assets').states.map(([id,label]) => `<button type="button" class="nav-item asset-item ${document.body.classList.contains('catalog-mode') && catalogSelection.group === 'assets' && catalogSelection.variant === id ? 'active' : ''}" data-catalog-group="assets" data-catalog-variant="${id}">${label}</button>`).join('');
+        $('#catalogNav').innerHTML = `<div class="nav-section"><div class="nav-section-title">图标与标签</div>${assets}</div><div class="nav-section"><div class="nav-section-title">组件状态</div>${groups}</div><div class="nav-section"><div class="nav-section-title">完整流程</div><button type="button" class="nav-item flow-item ${document.body.classList.contains('flow-mode') && state.mode === 'source-first' ? 'active' : ''}" data-flow="source-first">↗　先选素材</button><button type="button" class="nav-item flow-item ${document.body.classList.contains('flow-mode') && state.mode === 'target-first' ? 'active' : ''}" data-flow="target-first">↗　先选目标</button></div>`;
+      }
+      function demoBundleCard(item, selected = false) {
+        return bundleCard(item, selected, true);
+      }
+      function catalogMarkup(group, variant) {
+        if (group === 'selection') {
+          const disabled = variant === 'disabled' ? 'disabled' : '';
+          return `<div class="demo-context">撰写这一节时，需要结合 <mark>行业资料中的观察</mark> 与已有内容，保持文档语气一致。</div><div class="demo-toolbar demo-glass" role="toolbar" aria-label="选区操作"><button type="button" ${disabled}>${toolbarIcon('plus')}加入内容包</button><button type="button" hidden ${disabled}>${toolbarIcon('scan')}设为目标位置</button></div>`;
+        }
+        if (group === 'bundle') {
+          const items = variant === 'empty' ? '' : variant === 'target'
+            ? demoBundleCard(sources[0])
+            : sources.map((item,index) => demoBundleCard(item, variant === 'selected' && index < 2)).join('');
+          const count = variant === 'empty' ? 0 : variant === 'target' ? 1 : sources.length;
+          const minimized = variant === 'empty' || variant === 'collapsed';
+          return `<div class="demo-stack ${minimized ? 'demo-collapsed' : ''}">${demoBot('', minimized, '展开内容包')}<div class="demo-bundle demo-glass"><div class="demo-bundle-top"><span class="bundle-title"><strong>内容包</strong><span class="bundle-count">${count}</span></span><span class="demo-chevron" aria-hidden="true">${icon('chevron-down')}</span></div>${items || '<div class="demo-empty">尚未添加内容</div>'}${variant === 'target' ? `<div class="target-footer demo-target-footer" aria-label="目标插入位置">${targetFooterBody('document', true)}</div>` : ''}</div></div>`;
+        }
+        if (group === 'assets') {
+          if (variant === 'mentions') return `<div class="asset-board"><h2>输入引用</h2><p>输入 @ 后，点选下方素材即可引用。点击标签可跳转，悬浮标签可移除引用。</p><div class="composer direction-composer demo-glass mention-demo-composer">${mentionEditorMarkup('demo-mentions', 'demoMentionInput', '引用内容示意', '输入 @ 引用内容', ['参考 ', { kind:'source', id:'text' }, '，请补充说明。'])}</div>${bundleCard(sources[0], false, true)}</div>`;
+          if (variant === 'types') {
+            const typeItems = [['text','文字','选中的文段'],['image','图片','图片素材'],['table','表格','表格数据'],['video','视频','视频片段'],['document','文档','整份文件']];
+            return `<div class="asset-board"><h2>内容类型头像</h2><p>图标表示加入内容包的内容；所有类型使用同一种纯色底。</p><div class="asset-grid">${typeItems.map(([kind,label,note]) => `<div class="asset-cell">${thumb(kind)}<span><strong>${label}</strong><small>${note}</small></span></div>`).join('')}</div></div>`;
+          }
+          if (variant === 'origins') {
+            const examples = [[sources[0],'网页，无专属图标'],[sources[1],'应用，无专属图标'],[sources[2],'本地文件'],[{ origin:'共享链接', sourceKind:'unknown', url:'demo-sources.html#shared' },'来源类别未知'],[sources[3],'暂时无法打开']];
+            return `<div class="asset-board"><h2>来源图标</h2><p>有专属图标时使用网站或应用的单色标志；没有时使用对应的通用图标。可打开的来源名称显示为链接。</p><div class="asset-origin-list">${examples.map(([item,note]) => `<div class="asset-origin-row">${originMarkup(item)}<span>${note}</span></div>`).join('')}</div></div>`;
+          }
+          const tagExamples = [[sourceReference('行业趋势摘录','text'),'文字'],[sourceReference('展览现场照片','image'),'图片'],[sourceReference('季度观察数据','table'),'表格'],[sourceReference('访谈片段','video'),'视频'],[sourceReference('整份资料','document'),'文档']];
+          return `<div class="asset-board"><h2>文中标签</h2><p>标签本身不另设点击操作。图标沿用内容类型头像的线条图形，不加第二层底色。</p><div class="asset-tag-list">${tagExamples.map(([tag,label]) => `<p>参考 ${tag} 补充内容 <span class="content-type">${label}</span></p>`).join('')}<p>在 ${targetReference('发展背景')} 下方插入内容 <span class="content-type">插入位置</span></p></div></div>`;
+        }
+        if (group === 'direction') {
+          if (variant === 'auto') return workingPreview();
+          return `<div class="demo-stack demo-direction-stack ${variant === 'collapsed' ? 'demo-direction-collapsed' : ''}">${demoBot('thinking', true, variant === 'collapsed' ? '展开推荐方向和内容包' : '显示返回和折叠操作')}<div class="direction-actions glass" data-demo-direction-actions="true" role="group" aria-label="助手操作" hidden><button type="button" class="direction-action" data-demo-back-direction="true" aria-label="返回内容选择">${icon('arrow-left')}返回</button><button type="button" class="direction-action" data-demo-collapse-direction="true" aria-label="折叠推荐方向和内容包">${icon('chevron-down')}折叠</button></div><div class="demo-intent">${directionOptions(sourceReference('行业趋势摘录'), targetReference('发展背景'), true)}<div class="composer direction-composer demo-glass">${mentionEditorMarkup('demo-intent', 'demoIntentInput', '自定义生成方向示意', '输入要求，@ 引用内容', variant === 'custom' ? '写成更易读的短段落' : '')}<button type="button" class="icon-button" data-demo-voice="true" aria-label="语音输入暂不可用" title="语音输入暂不可用" disabled>${microphoneSvg}</button><button type="button" class="icon-button send" data-demo-start="true" aria-label="发送自定义方向并开始生成">${icon('arrow-up')}</button></div></div><div class="demo-bundle demo-glass demo-direction-bundle"><div class="demo-bundle-top"><span class="bundle-title"><strong>内容包</strong><span class="bundle-count">1</span></span><span class="demo-chevron" aria-hidden="true">${icon('chevron-down')}</span></div>${bundleCard(sources[0], false, true)}<div class="target-footer demo-target-footer" aria-label="目标插入位置">${targetFooterBody('document', true)}</div></div></div>`;
+        }
+        if (group === 'assistant') {
+          if (variant === 'idle') return `<div class="demo-avatar">${demoBot()}</div>`;
+          if (variant === 'generating') return workingPreview();
+          return `<div class="demo-stack task-preview">${demoBot('done')}<div class="demo-task task-complete">${completionHeader(true)}${variant === 'adjustment' ? adjustmentMarkup(true) : ''}</div>${variant === 'adjustment' ? bundleCard(sources[0], false, true) : ''}</div>`;
+        }
+        return '';
+      }
+      function renderCatalog() {
+        closeMentionMenu();
+        const group = catalogGroups.find(item => item.id === catalogSelection.group);
+        const variant = group.states.find(item => item[0] === catalogSelection.variant);
+        $('#catalogPath').textContent = group.title;
+        $('#catalogTitle').textContent = `${group.title}：${variant[1]}`;
+        $('#catalogDescription').textContent = group.summary;
+        $('#previewStateLabel').textContent = variant[1];
+        const quietPreview = (group.id === 'direction' && variant[0] === 'auto') || (group.id === 'assistant' && ['generating','done','adjustment'].includes(variant[0]));
+        $('#previewNote').hidden = quietPreview;
+        $('#previewNote').textContent = quietPreview ? '' : variant[2];
+        $('#previewComponent').querySelectorAll('.companion-character').forEach(root=>window.TuotieCompanionMotion.dispose(root));
+        $('#previewComponent').innerHTML = catalogMarkup(group.id, variant[0]);
+        $('#previewComponent').querySelectorAll('.companion-character').forEach(root=>{
+          window.TuotieCompanionMotion.setPose(root,root.dataset.companionPose,{eventKey:`catalog:${group.id}:${variant[0]}`});
+          if($('#controlMotion').checked)window.TuotieCompanionMotion.pause(root);
+        });
+        updateProcessingClocks();
+        syncWorkPrimary($('#demoWorkInput'));
+        syncAdjustmentSubmit($('#demoFollowupInput'));
+        if (group.id === 'selection') positionSelectionPreview();
+        const stack = $('#previewComponent .demo-stack');
+        if (stack?.classList.contains('demo-direction-stack')) setDemoDirectionBack(stack, false);
+        const offset = previewOffsets.get(group.id);
+        if (stack && offset) {
+          stack.style.left = `${offset.left}px`; stack.style.top = `${offset.top}px`;
+          dragBounds(stack, $('#componentStage').getBoundingClientRect(), false);
+          previewOffsets.set(group.id, { left:parseFloat(stack.style.left), top:parseFloat(stack.style.top) });
+        }
+        const revealPreview = $('#previewComponent .work-preview, #previewComponent .demo-collapsed');
+        if (revealPreview) {
+          revealPreview.querySelector('.pet-anchor').addEventListener('pointerenter', () => revealPreview.classList.add('controls-open'));
+          revealPreview.addEventListener('pointerleave', () => { if (revealPreview.classList.contains('is-dragging')) return; if (revealPreview.querySelector('.pet-anchor').contains(document.activeElement)) document.activeElement.blur(); revealPreview.classList.remove('controls-open'); setDemoDirectionBack(revealPreview, false); });
+        }
+        $('#previewComponent').classList.toggle('no-motion', $('#controlMotion').checked);
+      }
+      function positionSelectionPreview() {
+        const preview = $('#previewComponent');
+        const selection = preview.querySelector('.demo-context mark');
+        const toolbar = preview.querySelector('.demo-toolbar');
+        if (!selection || !toolbar) return;
+        const selectedRect = selection.getBoundingClientRect();
+        const previewRect = preview.getBoundingClientRect();
+        const left = Math.max(8, Math.min(selectedRect.left - previewRect.left - 4, preview.clientWidth - toolbar.offsetWidth - 8));
+        toolbar.style.left = `${left}px`;
+        toolbar.style.top = `${selectedRect.top - previewRect.top - toolbar.offsetHeight - 7}px`;
+      }
+      function selectCatalog(group, variant, options = {}) {
+        if (catalogSelection.group === 'assistant' && catalogSelection.variant === 'generating' && group === 'assistant' && ['done','adjustment'].includes(variant) && !options.stopped) {
+          state.drafts['demo-followup'] = [];
+        }
+        if ((group === 'assistant' && variant === 'generating') || (group === 'direction' && variant === 'auto')) previewProcessingStartedAt = Date.now();
+        catalogSelection = { group, variant };
+        document.body.classList.remove('flow-mode'); document.body.classList.add('catalog-mode');
+        hideMenu(); renderCatalogNav(); renderCatalog();
+      }
+      function showFlow(mode) {
+        document.body.classList.remove('catalog-mode'); document.body.classList.add('flow-mode');
+        reset(mode); renderCatalogNav();
+      }
+      function updateCatalogControls() {
+        const stage = $('#componentStage');
+        const displacement = Number($('#controlDisplacement').value);
+        const blur = Number($('#controlBlur').value);
+        const saturation = Number($('#controlSaturation').value);
+        const aberration = Number($('#controlAberration').value);
+        const elasticity = Number($('#controlElasticity').value);
+        const radius = Number($('#controlRadius').value);
+        stage.style.setProperty('--g-blur', `${6 + blur * 2}px`);
+        stage.style.setProperty('--g-saturation', `${saturation}%`);
+        stage.style.setProperty('--g-elasticity', elasticity);
+        stage.style.setProperty('--g-radius', `${radius}px`);
+        stage.style.setProperty('--g-shift', `${((displacement - 70) / 8).toFixed(1)}px`);
+        stage.style.setProperty('--g-highlight', String(Math.min(.85, .25 + aberration * .1)));
+        stage.style.setProperty('--g-chroma', `${(aberration * .45).toFixed(1)}px 0 0 var(--orange-a5)`);
+        stage.style.setProperty('--g-angle', `${145 + (displacement - 70) * .35}deg`);
+        stage.dataset.mode = $('#controlMode').value;
+        stage.dataset.backdrop = $('#controlBackdrop').value;
+        stage.dataset.overLight = String($('#controlOverLight').checked);
+        $('#outDisplacement').textContent = displacement;
+        $('#outBlur').textContent = `${6 + blur * 2}px`;
+        $('#outSaturation').textContent = `${saturation}%`;
+        $('#outAberration').textContent = aberration;
+        $('#outElasticity').textContent = `${Math.round(elasticity * 100)}%`;
+        $('#outRadius').textContent = `${radius}px`;
+        $('#previewComponent').classList.toggle('no-motion', $('#controlMotion').checked);
+        $('#previewComponent').querySelectorAll('.companion-character').forEach(root=>{
+          window.TuotieCompanionMotion[$('#controlMotion').checked?'pause':'resume'](root);
+        });
+      }
+      $('#catalogNav').addEventListener('click', event => {
+        const flow = event.target.closest('[data-flow]'); if (flow) { showFlow(flow.dataset.flow); return; }
+        const item = event.target.closest('[data-catalog-group]');
+        if (item) { if (item.dataset.catalogVariant === 'generating' || item.dataset.catalogVariant === 'auto') previewGenerationOrigin = 'direction'; selectCatalog(item.dataset.catalogGroup, item.dataset.catalogVariant); }
+      });
+      enableDragging($('#previewComponent'), event => {
+        const hit = event.target.closest('.demo-stack .pet-anchor, .demo-stack .demo-bundle-top, .demo-stack .direction-option, .demo-stack .demo-task h3');
+        const stack = hit?.closest('.demo-stack');
+        if (!stack) return null;
+        const handle = event.target.closest('button') || hit;
+        return { element:stack, handle, bounds:() => $('#componentStage').getBoundingClientRect(), fixed:false,
+          onEnd:() => { dragBounds(stack, $('#componentStage').getBoundingClientRect(), false); previewOffsets.set(catalogSelection.group, { left:parseFloat(stack.style.left), top:parseFloat(stack.style.top) }); } };
+      });
+      $('#previewComponent').addEventListener('click', event => {
+        if (event.target.closest('.origin-link')) return;
+        const directionBot = event.target.closest('.demo-direction-stack .demo-bot');
+        if (directionBot) {
+          const stack = directionBot.closest('.demo-direction-stack');
+          stack.classList.toggle('demo-direction-collapsed');
+          setDemoDirectionBack(stack, false);
+          return;
+        }
+        if (event.target.closest('[data-demo-back-direction]')) { selectCatalog('bundle', 'selected'); return; }
+        if (event.target.closest('[data-demo-collapse-direction]')) { const stack = event.target.closest('.demo-direction-stack'); stack.classList.add('demo-direction-collapsed'); setDemoDirectionBack(stack, false); return; }
+        const detail = event.target.closest('[data-demo-detail]');
+        if (detail) { showDetail(detail.dataset.demoDetail, detail); return; }
+        const removeCard = event.target.closest('[data-demo-remove]');
+        if (removeCard) {
+          removeCard.closest('.demo-bundle-card')?.remove();
+          const bundle = $('#previewComponent .demo-bundle');
+          const count = bundle?.querySelectorAll('.demo-bundle-card').length || 0;
+          if (bundle) { bundle.querySelector('.bundle-count').textContent = String(count); if (!count) bundle.querySelector('.demo-bundle-top').insertAdjacentHTML('afterend', '<div class="demo-empty">尚未添加内容</div>'); }
+          return;
+        }
+        const selectCard = event.target.closest('[data-demo-card]');
+        if (selectCard) {
+          const selected = selectCard.classList.toggle('selected');
+          const selectButton = selectCard.querySelector('[data-demo-select]');
+          selectButton.setAttribute('aria-pressed', String(selected));
+          selectButton.setAttribute('aria-label', `${selected ? '取消选择' : '选择'}${sources.find(item => item.id === selectCard.dataset.demoCard)?.title || '素材'}`);
+          return;
+        }
+        if (event.target.closest('[data-demo-accept]')) { state.drafts['demo-followup'] = []; selectCatalog('bundle', 'empty'); return; }
+        if (event.target.closest('[data-demo-undo]')) { selectCatalog('direction', 'multiple'); return; }
+        if (event.target.closest('[data-demo-remove-target]')) { event.target.closest('.target-footer')?.remove(); return; }
+        if (event.target.closest('[data-demo-jump]')) {
+          event.preventDefault(); showFlow('target-first'); setTarget('document'); $('#targetSlot').focus(); return;
+        }
+        if (event.target.closest('[data-demo-intent]')) { previewGenerationOrigin = 'direction'; selectCatalog('assistant', 'generating'); return; }
+        if (event.target.closest('[data-demo-start]')) {
+          const value = editorText($('#demoIntentInput')).trim();
+          if (value) { previewGenerationOrigin = 'direction'; selectCatalog('assistant', 'generating'); } else showToast('请先输入生成方向');
+          return;
+        }
+        if (event.target.closest('[data-demo-work-send]')) { const input = $('#demoWorkInput'); if (editorText(input).trim()) { clearEditor(input); showToast('已记录补充要求'); } return; }
+        if (event.target.closest('[data-demo-followup]')) { selectCatalog('assistant', 'adjustment', {preserveAdjustment:true}); $('#demoFollowupInput')?.focus({preventScroll:true}); return; }
+        if (event.target.closest('[data-demo-stop]')) { selectCatalog(previewGenerationOrigin === 'done' ? 'assistant' : 'direction', previewGenerationOrigin === 'done' ? 'done' : 'multiple', { stopped:true }); return; }
+        const suggestion = event.target.closest('[data-adjust-option]');
+        if (suggestion) { applyQuickAdjustment(Number(suggestion.dataset.adjustOption), true); return; }
+        if (event.target.closest('[data-adjust-submit]')) { if (editorText($('#demoFollowupInput')).trim()) { previewGenerationOrigin = 'done'; selectCatalog('assistant', 'generating'); } return; }
+        if (event.target.closest('[data-demo-voice]')) { showToast('语音输入暂不可用'); return; }
+      });
+      $('#previewComponent').addEventListener('keydown', event => {
+        if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.target.id === 'demoIntentInput') {
+          event.preventDefault();
+          const value = editorText(event.target).trim();
+          if (value) { previewGenerationOrigin = 'direction'; selectCatalog('assistant', 'generating'); } else showToast('请先输入生成方向');
+        } else if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.target.id === 'demoWorkInput' && editorText(event.target).trim()) {
+          event.preventDefault();
+          clearEditor(event.target); showToast('已记录补充要求');
+        } else if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.target.id === 'demoFollowupInput') {
+          event.preventDefault(); if (editorText(event.target).trim()) { previewGenerationOrigin = 'done'; selectCatalog('assistant', 'generating'); }
+        }
+      });
+
+      $('#openFlow').addEventListener('click', () => showFlow(catalogSelection.variant === 'target' ? 'target-first' : 'source-first'));
+      window.addEventListener('resize', () => { if (document.body.classList.contains('catalog-mode') && catalogSelection.group === 'selection') positionSelectionPreview(); });
+      document.querySelectorAll('.control-panel input,.control-panel select').forEach(input => input.addEventListener('input', updateCatalogControls));
+      $('#resetControls').addEventListener('click', () => {
+        const values = { controlDisplacement:'70', controlBlur:'6', controlSaturation:'140', controlAberration:'2', controlElasticity:'0.15', controlRadius:'22', controlMode:'standard', controlBackdrop:'desktop' };
+        for (const [id,value] of Object.entries(values)) $(`#${id}`).value = value;
+        $('#controlOverLight').checked = false; $('#controlMotion').checked = false; updateCatalogControls();
+      });
+      render();
+      renderCatalogNav(); renderCatalog(); updateCatalogControls();
+      setInterval(updateProcessingClocks, 1000);
+    </script>
+  </body>
+</html>

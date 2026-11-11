@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+  <Id>45312ade-552c-4720-bb1a-d756be24fdb6</Id>
+  <Version>0.1.0.0</Version>
+  <ProviderName>妥帖开发测试</ProviderName>
+  <DefaultLocale>zh-CN</DefaultLocale>
+  <DisplayName DefaultValue="妥帖 Word 接口测试"/>
+  <Description DefaultValue="仅验证专用测试文稿的实时读取、定位和局部修改。"/>
+  <Hosts><Host Name="Document"/></Hosts>
+  <Requirements><Sets DefaultMinVersion="1.1"><Set Name="WordApi"/></Sets></Requirements>
+  <DefaultSettings><SourceLocation DefaultValue="https://localhost:47722/word-probe.html"/></DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

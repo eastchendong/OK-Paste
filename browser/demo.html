@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>妥帖 Copy 演示</title>
+    <link rel="stylesheet" href="/component-library.css">
+    <style>
+      body { margin: 0; padding: 32px 20px 80px; background: var(--slate-3); color: var(--slate-12); font: 14px/1.8 "PingFang SC", "PingFang TC", sans-serif; }
+      main { max-width: 720px; margin: auto; }
+      article { margin: 0 0 16px; }
+      h1 { margin: 0 0 8px; font-size: 24px; }
+      p { margin: 0 0 12px; }
+      img, video { display: block; width: 240px; height: 140px; object-fit: cover; background: #d9e2ec; border-radius: 8px; }
+      #note { padding: 10px 12px; border: 0.5px dashed var(--slate-6); border-radius: 12px; }
+      #stored { margin-top: 20px; }
+      li { margin: 8px 0; word-break: break-all; }
+      button { font: inherit; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>浏览器复制</h1>
+      <p>选中文字后点「加入内容包」，或按 Alt+C 复制当前选区。「设为目标位置」标记之后参考要修改的位置。</p>
+      <article class="detail-content">
+        <p id="paragraph">把这段话选中，点「加入内容包」，它会写入本机剪贴板。</p>
+        <img id="picture" alt="红苹果参考照片" src="/reference.jpg" width="240" height="140">
+        <video id="clip" src="/sample.webm" title="示例视频" width="240" height="140"></video>
+        <p id="note" data-okpaste-type="note">一条以后才会出现的类型</p>
+      </article>
+      <section id="stored" aria-label="已保存的剪贴板">
+        <h2>已保存的剪贴板</h2>
+        <p>这一栏每次从本机剪贴板重新读取，不记住弹层里的临时状态。</p>
+        <button class="small-button" id="reload" type="button">重新读取</button>
+        <p id="count"></p>
+        <ol id="items"></ol>
+      </section>
+    </main>
+    <script src="/content.js"></script>
+    <script src="/demo-reader.js"></script>
+  </body>
+</html>

@@ -1,0 +1,649 @@
+{
+  "scope": "Developer integration checks: real Volcengine Agent Plan + saved Office file adapters. Synthetic fixtures, not user acceptance or new research findings.",
+  "nativeForegroundAcceptance": "pending; Mac locked; actual app picker, Office window refresh, live selection and full-flow video not verified",
+  "reproduce": [
+    "pnpm run setup:office",
+    "pnpm check:office",
+    "pnpm exec tsx scripts/office-context-plans-check.ts",
+    "node scripts/render-office-check.mjs"
+  ],
+  "sameSourceDifferentContexts": {
+    "checkedAt": "2026-10-27T17:33:35.358Z",
+    "source": "the same synthetic text note in all three cases",
+    "scope": "real Agent Plan plus actual saved file context; no file modifications",
+    "results": [
+      {
+        "extension": "docx",
+        "kind": "document",
+        "plan": {
+          "title": "将研究进度与样本局限补充到 research.docx",
+          "summary": "目标文档目前只有标题和两段正文。来源研究笔记中包含访谈发现、样本局限说明及三项研究计划的完成进度，建议将进度以普通段落补充到文档末尾，并在其后注明样本局限性，保持现有 Normal 样式。",
+          "actions": [
+            "在段落 2（“下一步需要……流程。”）之后插入一段，样式沿用 Normal，内容为“研究进度：原型访谈 8 人次已完成 2；交互测试 6 已完成 3；场景验证 4 已完成 1。”",
+            "在同段后补充一句说明：“样本有限，结论不推广为所有用户。”"
+          ],
+          "questions": [
+            "是否需要把三项研究计划整理成表格，而不是纯文字段落？"
+          ],
+          "needsClarification": false,
+          "suggestions": [
+            "在文末插入三项研究计划完成进度一段",
+            "补充样本局限说明，提示结论不外推",
+            "将三项计划进度整理成三列表格"
+          ]
+        }
+      },
+      {
+        "extension": "xlsx",
+        "kind": "spreadsheet",
+        "plan": {
+          "title": "为完成率列填入公式",
+          "summary": "完成率列 D2:D4 目前为空，计划写入 =C2/B2 等公式并将该列设为百分比格式，其余内容保持不变。",
+          "actions": [
+            "在研究计划表 D2:D4 写入公式 =C2/B2、=C3/B3、=C4/B4",
+            "将 D2:D4 数字格式设为百分比样式，保持现有字体与配色不变"
+          ],
+          "questions": [],
+          "needsClarification": false,
+          "suggestions": [
+            "在D2:D4填写完成率公式并设为百分比",
+            "给A1:D1表头加浅色底纹并加粗",
+            "在F2插入柱状图对比计划与已完成人次"
+          ]
+        }
+      },
+      {
+        "extension": "pptx",
+        "kind": "presentation",
+        "plan": {
+          "title": "新增研究进度概览页",
+          "summary": "来源是合成研究笔记，包含两项访谈发现和三项研究计划的进度数据（原型访谈 8 人次已完成 2、交互测试 6 已完成 3、场景验证 4 已完成 1）。当前 research.pptx 只有一页封面和一页内容占位。计划基于来源在演示文稿末尾新增一页\"研究进度概览\"，沿用 Title and Content 版式，列出现有目标与进度，并保留来源关于样本有限的提示。",
+          "actions": [
+            "在 research.pptx 末尾用 Title and Content 版式新增一页，标题为“研究进度概览”",
+            "正文写入：原型访谈 8 人次已完成 2；交互测试计划 6 已完成 3；场景验证计划 4 已完成 1",
+            "补充来源提示：两次探索性访谈显示用户希望先预览再应用，样本有限不宜推广为普遍结论"
+          ],
+          "questions": [],
+          "needsClarification": false,
+          "suggestions": [
+            "新增一页研究进度概览，列出三项计划的完成情况",
+            "把封面标题改为来源笔记标题并在正文注明样本局限",
+            "新增两栏对比页，左侧列计划目标，右侧列已完成进度"
+          ]
+        }
+      }
+    ]
+  },
+  "executions": [
+    {
+      "extension": "docx",
+      "sourceType": "text",
+      "instruction": "参考来源中的用户观察，在现有文档末尾追加一段研究发现。保留已有全部文字和标题，说明只有两次探索性访谈，不要把计划人次误写成访谈样本。",
+      "plan": "在文末追加\"研究发现\"段落",
+      "summary": "已在副本文末追加一段 Normal 样式的“研究发现”，概括两次探索性访谈的发现（简短可执行建议、可预览可撤回），并明确样本仅两次、不能推广；计划人次未写入。原 3 段标题和正文经重读确认完整未改动。如需为该段加小标题或附研究进度小表格，可再告知。",
+      "originalUnchangedDuringPreview": true,
+      "applied": true,
+      "undoRestored": true,
+      "before": {
+        "kind": "document",
+        "paragraphCount": 3,
+        "paragraphs": [
+          {
+            "index": 0,
+            "text": "妥帖用户研究",
+            "style": "Title"
+          },
+          {
+            "index": 1,
+            "text": "目标用户希望复制来源后，在目标应用里得到合适的操作建议。",
+            "style": "Normal"
+          },
+          {
+            "index": 2,
+            "text": "下一步需要结合目标上下文验证复制与执行流程。",
+            "style": "Normal"
+          }
+        ],
+        "tables": [],
+        "styles": [
+          "Normal",
+          "Header",
+          "Footer",
+          "Heading 1",
+          "Heading 2",
+          "Heading 3",
+          "Heading 4",
+          "Heading 5",
+          "Heading 6",
+          "Heading 7",
+          "Heading 8",
+          "Heading 9",
+          "No Spacing",
+          "Title",
+          "Subtitle",
+          "List Paragraph",
+          "Body Text",
+          "Body Text 2",
+          "Body Text 3",
+          "List",
+          "List 2",
+          "List 3",
+          "List Bullet",
+          "List Bullet 2",
+          "List Bullet 3",
+          "List Number",
+          "List Number 2",
+          "List Number 3",
+          "List Continue",
+          "List Continue 2",
+          "List Continue 3",
+          "macro",
+          "Quote",
+          "Caption",
+          "Intense Quote",
+          "TOC Heading"
+        ],
+        "imageCount": 0,
+        "page": {
+          "widthCm": 21.59,
+          "heightCm": 27.94,
+          "contentWidthCm": 15.24
+        },
+        "truncated": false,
+        "name": "research.docx",
+        "fingerprint": "039ee96bec323aa586ba0f4b0b177746776615eedfaa5f12fccc892d1d047270"
+      },
+      "preview": {
+        "kind": "document",
+        "paragraphCount": 4,
+        "paragraphs": [
+          {
+            "index": 0,
+            "text": "妥帖用户研究",
+            "style": "Title"
+          },
+          {
+            "index": 1,
+            "text": "目标用户希望复制来源后，在目标应用里得到合适的操作建议。",
+            "style": "Normal"
+          },
+          {
+            "index": 2,
+            "text": "下一步需要结合目标上下文验证复制与执行流程。",
+            "style": "Normal"
+          },
+          {
+            "index": 3,
+            "text": "研究发现：两次探索性访谈显示，用户希望复制来源后，结合目标文档的内容得到简短、可执行的建议；执行前需要查看预览，并可以撤回。由于样本仅有两次访谈，结论不能推广为所有用户的情况。",
+            "style": "Normal"
+          }
+        ],
+        "tables": [],
+        "styles": [
+          "Normal",
+          "Header",
+          "Footer",
+          "Heading 1",
+          "Heading 2",
+          "Heading 3",
+          "Heading 4",
+          "Heading 5",
+          "Heading 6",
+          "Heading 7",
+          "Heading 8",
+          "Heading 9",
+          "No Spacing",
+          "Title",
+          "Subtitle",
+          "List Paragraph",
+          "Body Text",
+          "Body Text 2",
+          "Body Text 3",
+          "List",
+          "List 2",
+          "List 3",
+          "List Bullet",
+          "List Bullet 2",
+          "List Bullet 3",
+          "List Number",
+          "List Number 2",
+          "List Number 3",
+          "List Continue",
+          "List Continue 2",
+          "List Continue 3",
+          "macro",
+          "Quote",
+          "Caption",
+          "Intense Quote",
+          "TOC Heading"
+        ],
+        "imageCount": 0,
+        "page": {
+          "widthCm": 21.59,
+          "heightCm": 27.94,
+          "contentWidthCm": 15.24
+        },
+        "truncated": false,
+        "name": "预览-research.docx",
+        "fingerprint": "3e098dc4668394a9e8a1ea5ebb0127a889e55385e17ec903d25a24f87a74230d"
+      },
+      "checkedAt": "2026-10-27T17:30:54.037Z"
+    },
+    {
+      "extension": "xlsx",
+      "sourceType": "text",
+      "instruction": "结合来源和当前表头，为已有三项任务补全完成率公式和百分比格式。保留原始任务名称与数字，公式引用现有单元格，不新增工作表或图表。",
+      "plan": "补全研究计划完成率列",
+      "summary": "已在文件副本的 D2:D4 写入真实公式（=C2/B2、=C3/B3、=C4/B4），并设为 0.00% 百分比格式；重新读取确认任务名称与原有数字均未改动，也未新增工作表或图表。预览不计算公式，打开表格应用后会显示 25%、50%、25% 等结果。",
+      "originalUnchangedDuringPreview": true,
+      "applied": true,
+      "undoRestored": true,
+      "before": {
+        "kind": "spreadsheet",
+        "sheets": [
+          {
+            "name": "研究计划",
+            "rows": 4,
+            "columns": 4,
+            "charts": 0
+          }
+        ],
+        "activeSheet": "研究计划",
+        "savedSelection": "D2",
+        "cells": [
+          {
+            "cell": "A1",
+            "value": "任务",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B1",
+            "value": "计划人次",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C1",
+            "value": "已完成人次",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "D1",
+            "value": "完成率",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "A2",
+            "value": "原型访谈",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B2",
+            "value": 8,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C2",
+            "value": 2,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "A3",
+            "value": "交互测试",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B3",
+            "value": 6,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C3",
+            "value": 3,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "A4",
+            "value": "场景验证",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B4",
+            "value": 4,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C4",
+            "value": 1,
+            "numberFormat": "General"
+          }
+        ],
+        "mergedRanges": [],
+        "readRange": "A1:D4",
+        "truncated": false,
+        "formulaNote": "公式是真实单元格公式；预览读取不计算公式，打开表格应用后重算",
+        "name": "research.xlsx",
+        "fingerprint": "a331f2d104f35fb6c93cd82df3cdb3721be214ba91690a39ee4a37e8e10c6008"
+      },
+      "preview": {
+        "kind": "spreadsheet",
+        "sheets": [
+          {
+            "name": "研究计划",
+            "rows": 4,
+            "columns": 4,
+            "charts": 0
+          }
+        ],
+        "activeSheet": "研究计划",
+        "savedSelection": "D2",
+        "cells": [
+          {
+            "cell": "A1",
+            "value": "任务",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B1",
+            "value": "计划人次",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C1",
+            "value": "已完成人次",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "D1",
+            "value": "完成率",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "A2",
+            "value": "原型访谈",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B2",
+            "value": 8,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C2",
+            "value": 2,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "D2",
+            "value": "=C2/B2",
+            "numberFormat": "0.00%"
+          },
+          {
+            "cell": "A3",
+            "value": "交互测试",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B3",
+            "value": 6,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C3",
+            "value": 3,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "D3",
+            "value": "=C3/B3",
+            "numberFormat": "0.00%"
+          },
+          {
+            "cell": "A4",
+            "value": "场景验证",
+            "numberFormat": "General"
+          },
+          {
+            "cell": "B4",
+            "value": 4,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "C4",
+            "value": 1,
+            "numberFormat": "General"
+          },
+          {
+            "cell": "D4",
+            "value": "=C4/B4",
+            "numberFormat": "0.00%"
+          }
+        ],
+        "mergedRanges": [],
+        "readRange": "A1:D4",
+        "truncated": false,
+        "formulaNote": "公式是真实单元格公式；预览读取不计算公式，打开表格应用后重算",
+        "name": "预览-research.xlsx",
+        "fingerprint": "c1390b7b376f75de2f18fd2c56fca30c37587248d75a30adf584ef96722f1980"
+      },
+      "checkedAt": "2026-10-27T17:26:03.811Z"
+    },
+    {
+      "extension": "pptx",
+      "sourceType": "text",
+      "instruction": "保留现有第一页全部内容，参考来源新增一页研究发现，标题与正文分开，沿用现有版式。说明是两次探索性访谈，结论不能推广为所有用户。",
+      "plan": "新增研究发现页（沿用现有版式）",
+      "summary": "已在文件副本末尾新增一页，沿用现有 Title and Content 版式：标题为“研究发现：两次探索性访谈”，正文为四个简短要点，明确注明样本有限、结论不能推广为所有用户。重新读取核对无误，第一页内容保持不变；如需附上研究进度数据（如访谈 2/8），请告知。",
+      "originalUnchangedDuringPreview": true,
+      "applied": true,
+      "undoRestored": true,
+      "before": {
+        "kind": "presentation",
+        "slideCount": 1,
+        "slides": [
+          {
+            "index": 0,
+            "shapes": [
+              {
+                "id": 2,
+                "name": "Title 1",
+                "type": "PLACEHOLDER (14)",
+                "leftCm": 1.27,
+                "topCm": 0.7628833333333334,
+                "widthCm": 22.86,
+                "heightCm": 3.175,
+                "text": "妥帖交互原型"
+              },
+              {
+                "id": 3,
+                "name": "Content Placeholder 2",
+                "type": "PLACEHOLDER (14)",
+                "leftCm": 1.27,
+                "topCm": 4.445,
+                "widthCm": 22.86,
+                "heightCm": 12.572119444444445,
+                "text": "来源内容与目标上下文共同决定可执行的操作。\n保留现有内容，先预览再应用。"
+              }
+            ]
+          }
+        ],
+        "widthCm": 33.86581944444445,
+        "heightCm": 19.05,
+        "layouts": [
+          {
+            "index": 0,
+            "name": "Title Slide"
+          },
+          {
+            "index": 1,
+            "name": "Title and Content"
+          },
+          {
+            "index": 2,
+            "name": "Section Header"
+          },
+          {
+            "index": 3,
+            "name": "Two Content"
+          },
+          {
+            "index": 4,
+            "name": "Comparison"
+          },
+          {
+            "index": 5,
+            "name": "Title Only"
+          },
+          {
+            "index": 6,
+            "name": "Blank"
+          },
+          {
+            "index": 7,
+            "name": "Content with Caption"
+          },
+          {
+            "index": 8,
+            "name": "Picture with Caption"
+          },
+          {
+            "index": 9,
+            "name": "Title and Vertical Text"
+          },
+          {
+            "index": 10,
+            "name": "Vertical Title and Text"
+          }
+        ],
+        "truncated": false,
+        "name": "research.pptx",
+        "fingerprint": "95ae086ca3aa21968061039a15491132f26a895a970bacc5284dbfd9cf98c6b3"
+      },
+      "preview": {
+        "kind": "presentation",
+        "slideCount": 2,
+        "slides": [
+          {
+            "index": 0,
+            "shapes": [
+              {
+                "id": 2,
+                "name": "Title 1",
+                "type": "PLACEHOLDER (14)",
+                "leftCm": 1.27,
+                "topCm": 0.7628833333333334,
+                "widthCm": 22.86,
+                "heightCm": 3.175,
+                "text": "妥帖交互原型"
+              },
+              {
+                "id": 3,
+                "name": "Content Placeholder 2",
+                "type": "PLACEHOLDER (14)",
+                "leftCm": 1.27,
+                "topCm": 4.445,
+                "widthCm": 22.86,
+                "heightCm": 12.572119444444445,
+                "text": "来源内容与目标上下文共同决定可执行的操作。\n保留现有内容，先预览再应用。"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "shapes": [
+              {
+                "id": 2,
+                "name": "Title 1",
+                "type": "PLACEHOLDER (14)",
+                "leftCm": 1.27,
+                "topCm": 0.7628833333333334,
+                "widthCm": 22.86,
+                "heightCm": 3.175,
+                "text": "研究发现：两次探索性访谈"
+              },
+              {
+                "id": 3,
+                "name": "Content Placeholder 2",
+                "type": "PLACEHOLDER (14)",
+                "leftCm": 1.27,
+                "topCm": 4.445,
+                "widthCm": 22.86,
+                "heightCm": 12.572119444444445,
+                "text": "用户希望复制来源后，结合目标文档内容得到简短、可执行的建议\n执行前可查看预览，并可随时撤回\n共两次探索性访谈，样本有限\n结论不能推广为所有用户"
+              }
+            ]
+          }
+        ],
+        "widthCm": 33.86581944444445,
+        "heightCm": 19.05,
+        "layouts": [
+          {
+            "index": 0,
+            "name": "Title Slide"
+          },
+          {
+            "index": 1,
+            "name": "Title and Content"
+          },
+          {
+            "index": 2,
+            "name": "Section Header"
+          },
+          {
+            "index": 3,
+            "name": "Two Content"
+          },
+          {
+            "index": 4,
+            "name": "Comparison"
+          },
+          {
+            "index": 5,
+            "name": "Title Only"
+          },
+          {
+            "index": 6,
+            "name": "Blank"
+          },
+          {
+            "index": 7,
+            "name": "Content with Caption"
+          },
+          {
+            "index": 8,
+            "name": "Picture with Caption"
+          },
+          {
+            "index": 9,
+            "name": "Title and Vertical Text"
+          },
+          {
+            "index": 10,
+            "name": "Vertical Title and Text"
+          }
+        ],
+        "truncated": false,
+        "name": "预览-research.pptx",
+        "fingerprint": "3578ff330c5717bfa0fdd3d34b3f98cf93fef4d5c7aaa421c955d0fdc9cbe0d7"
+      },
+      "checkedAt": "2026-10-27T17:45:25.685Z"
+    }
+  ],
+  "renderQA": {
+    "method": "LibreOffice separate profile + local system-font config + PDF rasterization",
+    "docx": "Original paragraphs preserved; appended paragraph readable and within page",
+    "xlsx": "Header/data/formulas readable; recalculated D2:D4 = 25%, 50%, 25%",
+    "pptx": "Original first slide preserved; new slide title and body separate; autofit and single native bullets",
+    "formulaRecalculation": {
+      "cells": [
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "values": [
+        0.25,
+        0.5,
+        0.25
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+<Id>20ef87c5-5b18-42b8-ac5c-2b8850544b7f</Id><Version>0.1.0.1</Version><ProviderName>妥帖</ProviderName><DefaultLocale>zh-CN</DefaultLocale>
+<DisplayName DefaultValue="妥帖 · PowerPoint"/><Description DefaultValue="结合整份演示文稿和内容包，在选中对象的位置预览并替换图片。"/>
+<Hosts><Host Name="Presentation"/></Hosts>
+<DefaultSettings><SourceLocation DefaultValue="https://localhost:47722/powerpoint.html"/></DefaultSettings><Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-29",
+  "trigger": "user supplied before / after clicking the floating avatar",
+  "previousMaterial": "NSGlassEffectView clear with system managed active appearance",
+  "newMaterial": {
+    "class": "NSVisualEffectView",
+    "material": "popover",
+    "blendingMode": "behindWindow",
+    "state": "active",
+    "appearance": "aqua",
+    "emphasized": false
+  },
+  "coatingAlpha": 0.3,
+  "verification": {
+    "nativeLifecycle": {
+      "sizes": [
+        [
+          240,
+          44
+        ],
+        [
+          300,
+          49
+        ],
+        [
+          300,
+          180
+        ]
+      ],
+      "parentAppearances": [
+        "aqua",
+        "darkAqua"
+      ],
+      "notifications": [
+        "didBecomeKey",
+        "didBecomeMain",
+        "didResignKey",
+        "didResignMain"
+      ],
+      "reattachResize": true,
+      "passed": true
+    },
+    "sharedDesktopTests": 21,
+    "appBuild": true,
+    "selectionToolbarRealViewRender": true,
+    "nativeUI": {
+      "avatarCollapseExpand": true,
+      "composerClicked": true,
+      "sourceCountPreserved": true,
+      "scope": "Actual installed app observed via computer use; single-window capture excludes the desktop behind the app, so no desktop-pixel equivalence claim."
+    },
+    "accessibilityAfterFinalRestart": true
+  },
+  "limits": "Native lifecycle test posts activation notifications and asserts the public material state. It is not a desktop pixel comparison or a real mouse end-to-end test.",
+  "installation": "updated same installed app; existing Accessibility permission re-registered"
+}

@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-05",
+  "request": "Avoid repeated macOS Accessibility authorization after native rebuilds.",
+  "implemented": {
+    "dailyInstallFailsClosedWithoutStableIdentity": true,
+    "persistentIdentityConfiguration": true,
+    "candidateMustSatisfyExistingCertificateDR": true,
+    "reviewOnlyExplicitAdhocSupported": true,
+    "automaticTrustOrTccEdits": false,
+    "temporaryDedicatedKeychainSearchMembership": true,
+    "directRuntimeInstallerValidatesBeforeResourceWritesAndBeforeCopy": true
+  },
+  "localIdentity": {
+    "sha1": "B0C9263870349554BCF239E8F8571A88803E953D",
+    "subject": "Tuotie Local Code Signing",
+    "basicConstraints": "CA:false",
+    "extendedKeyUsage": [
+      "codeSigning"
+    ],
+    "keyStorage": "dedicated owner-only local keychain",
+    "loginPasswordCollected": false,
+    "searchListRestored": true,
+    "trustSettingsChanged": true,
+    "trustPolicy": "current-user-codeSign-only"
+  },
+  "validation": {
+    "signingBehaviorTestsPassed": 29,
+    "setupSafetyTestsPassed": 3,
+    "desktopTestsPassed": 106,
+    "differentNativeBinariesPrepared": 2,
+    "actualSignatureComparison": "passed_for_two_different_native_test_binaries",
+    "crossVersionAccessibilityRetention": "passed_for_real_A_to_B_native_update",
+    "adHocNegativeControlRejected": true,
+    "tlsPolicyRejected": true,
+    "actualNativeAppBinaryComparison": "passed_for_real_pre_motion_A_and_motion_B",
+    "actualAppVariants": [
+      {
+        "variant": "A-before-motion",
+        "requirement": "identifier \"cn.tuotie.desktop-preview\" and certificate leaf = H\"b0c9263870349554bcf239e8f8571a88803e953d\"",
+        "cdhash": "b9a423403df76a100a8320c9acc02f43d0aa3ec6",
+        "binarySHA256": "d149f1ac444069e674b2e593e07a5b66e3b0f8229b673efac9fa1d7c44d58434"
+      },
+      {
+        "variant": "B-with-motion",
+        "requirement": "identifier \"cn.tuotie.desktop-preview\" and certificate leaf = H\"b0c9263870349554bcf239e8f8571a88803e953d\"",
+        "cdhash": "6f38064bccdd7fcd76161fcdb8e04f6272bae1bc",
+        "binarySHA256": "d554d828cd363cafea4d420659c0dde2d7014c7272fab7a1ddee18fc35b6bce9"
+      }
+    ],
+    "accessibilityBeforeUpdate": {
+      "time": "2026-11-05T03:18:11.713020+00:00",
+      "variant": "A-before-motion",
+      "phase": "idle",
+      "canUndo": false,
+      "accessibility": true,
+      "mutationUncertain": false
+    },
+    "accessibilityAfterUpdate": {
+      "time": "2026-11-05T03:18:59.932575+00:00",
+      "variant": "B-with-motion",
+      "health": true,
+      "phase": "idle",
+      "canUndo": false,
+      "accessibility": true,
+      "mutationUncertain": false,
+      "additionalAccessibilityChangesAfterA": false
+    },
+    "sameDesignatedRequirement": true,
+    "differentNativeCodeDirectoryHashes": true,
+    "keychainSearchRestoredAfterSigning": true,
+    "signingLockReleased": true,
+    "installationGuardRealSignedCandidateAccepted": true,
+    "installationGuardRealAdhocCandidateRejected": true
+  },
+  "approvalBlock": {
+    "action": "Add current-user codeSign trust for the single pinned Tuotie Local Code Signing certificate.",
+    "executed": true,
+    "source": "automatic approval review",
+    "reason": "Persistent code-signing trust is a security-sensitive access change requiring explicit user authorization.",
+    "workaroundAttempted": false,
+    "resolvedByExplicitUserApproval": true
+  },
+  "currentRuntime": {
+    "dragMotionAppInstalledAndRelaunched": true,
+    "signingMode": "certificate",
+    "serviceHealthy": true,
+    "accessibility": true,
+    "oldAccessibilityEntryRemoved": true,
+    "activeVariant": "B-with-motion",
+    "uiAndBlenderSourceMatchRepository": true
+  },
+  "sources": [
+    "https://developer.apple.com/documentation/technotes/tn3127-inside-code-signing-requirements/",
+    "https://developer.apple.com/library/archive/technotes/tn2206/_index.html"
+  ],
+  "accessibilityMigration": {
+    "failedOldEntryRefreshMethods": [
+      "add-current-app-without-removal",
+      "toggle-off-on"
+    ],
+    "initialRemovalAutoReviewRejected": true,
+    "explicitUserApproval": "允许这一次删除并重加",
+    "rejectionResolvedByExplicitUserApproval": true,
+    "oldEntryRemovedOnce": true,
+    "currentSignedAppReadded": true,
+    "systemAuthenticationCompletedByUser": true,
+    "passwordCollectedOrEnteredByAgent": false,
+    "tccDatabaseEdited": false,
+    "additionalPermissionChangeDuringAtoB": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-07",
+  "provider": "official DeepSeek",
+  "model": "deepseek-flash",
+  "requestFix": {
+    "issue": "Provider non-stream response tool_calls contained index; calls were replayed verbatim.",
+    "normalization": "Replay only id/type/function{name,arguments}; preserve tool_call_id and actual image data.",
+    "gateways": [
+      "ModelGateway",
+      "DeepSeekGateway"
+    ],
+    "automaticRetryAdded": false
+  },
+  "liveObservations": {
+    "modelsEndpoint": 200,
+    "firstImageToolCall": 200,
+    "toolThenText": 200,
+    "originalToolThenImage": 503,
+    "sanitizedToolThenImage": 200,
+    "subsequentSanitizedToolThenImage": 503,
+    "productionGatewayMultiImage": "timeout",
+    "isolatedBlenderPlanning": 503,
+    "providerMessage": "Service is too busy",
+    "isolatedBlenderRecheck": {
+      "planning": 200,
+      "execution": 503,
+      "providerMessage": "Service is too busy",
+      "transactionCancelled": true,
+      "commitAttempted": false
+    }
+  },
+  "conclusion": "Normalization is verified locally; one normalized live image roundtrip succeeded. Inconsistent live failures also occur without tool history. Cannot establish extra fields as the sole cause of earlier HTTP 500. Provider availability blocks full host validation.",
+  "checks": {
+    "backendPassed": 320,
+    "targetedHTTPAndGatewayPassed": 33,
+    "typescript": true,
+    "frontendBuild": true,
+    "uiCheck": true
+  },
+  "boundaries": {
+    "runtimeSwitched": false,
+    "userSceneWritten": false,
+    "newPermissions": false,
+    "credentialsIncluded": false
+  }
+}

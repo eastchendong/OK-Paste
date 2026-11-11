@@ -1,0 +1,100 @@
+{
+  "synthetic": true,
+  "hostWrites": false,
+  "at": "2026-11-07T05:48:49.693Z",
+  "results": [
+    {
+      "scene": "vector-character",
+      "initial": {
+        "recommendation": {
+          "text": "参考现有瓶子与杯子角色的风格，为这张玻璃瓶轮廓补全同系列可编辑矢量角色。",
+          "sourceIds": [
+            "brief",
+            "source-image"
+          ],
+          "output": "vector",
+          "scene": "vector-character"
+        },
+        "modelMs": 1039
+      },
+      "followupMs": 16900,
+      "followup": {
+        "scene": "vector-character",
+        "options": [
+          {
+            "label": "嘴改微笑弧",
+            "instruction": "把当前较宽的椭圆嘴（rx=8）改为更小的微笑弧线或短圆嘴，保持青绿描边与脸部位置不变，其余五官、瓶身和瓶塞保留原样。",
+            "direction": "vector-expression"
+          },
+          {
+            "label": "比例微调",
+            "instruction": "把瓶颈与瓶身衔接处做得更自然：瓶颈底部与瓶身顶部对齐收窄（如瓶颈宽 32 保持，衔接处圆角过渡），保留瓶塞、描边粗细、配色和五官位置不变。",
+            "direction": "vector-shape"
+          }
+        ]
+      }
+    },
+    {
+      "scene": "vector-icon",
+      "initial": {
+        "recommendation": {
+          "text": "参照现有单色线性风格，绘制一个历史记录图标，不添加五官，保持青绿描边圆润轮廓。",
+          "sourceIds": [
+            "brief",
+            "source-image"
+          ],
+          "output": "vector",
+          "scene": "vector-icon"
+        },
+        "modelMs": 1024
+      },
+      "followupMs": 14409,
+      "followup": {
+        "scene": "vector-icon",
+        "options": [
+          {
+            "label": "指针改纯描边",
+            "instruction": "将时针、分针由填充矩形（fill+描边）改为与圆环一致的单色线性描边线条（fill:none，仅 #245858 描边，端点圆润），保留现有指针角度、位置、圆环轮廓、描边粗细和整体尺寸。",
+            "direction": "vector-simplify"
+          },
+          {
+            "label": "增强指针主体",
+            "instruction": "把指针组合整体向圆心方向适当加粗或加长，使时针、分针在 200×200 画框中的视觉重量更接近现有单色线性图标的主体占比，保留圆环轮廓、颜色和当前尺寸不变。",
+            "direction": "vector-weight"
+          }
+        ]
+      }
+    },
+    {
+      "scene": "vector-empty-state",
+      "initial": {
+        "recommendation": {
+          "text": "在固定画框内按现有风格绘制搜索无结果空状态插画，透明背景，不含文字或按钮",
+          "sourceIds": [
+            "brief",
+            "source-image"
+          ],
+          "output": "vector",
+          "scene": "vector-empty-state"
+        },
+        "modelMs": 1148
+      },
+      "followupMs": 12766,
+      "followup": {
+        "scene": "vector-empty-state",
+        "options": [
+          {
+            "label": "放大镜主体放大",
+            "instruction": "将放大镜作为主体放大并整体居中（搜索圈及手柄相应上移、盒体下移避让重叠），保留现有青绿描边、浅绿填色、4px 描边和两枚装饰点，不新增文字或按钮，画框尺寸与透明背景不变。",
+            "direction": "vector-emphasis"
+          },
+          {
+            "label": "删去零散装饰点",
+            "instruction": "移除左上与右上两枚装饰点，只保留空盒和放大镜两组核心图形，保持现有配色、描边粗细和位置关系不变，画框内其余元素不动。",
+            "direction": "vector-simplify"
+          }
+        ]
+      }
+    }
+  ]
+}
